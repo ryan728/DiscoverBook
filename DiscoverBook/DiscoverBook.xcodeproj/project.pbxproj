@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49ED10A7159072A30092CF9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A6159072A30092CF9D /* UIKit.framework */; };
+		49ED10A9159072A30092CF9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A8159072A30092CF9D /* Foundation.framework */; };
+		49ED10AB159072A30092CF9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10AA159072A30092CF9D /* CoreGraphics.framework */; };
+		49ED10B1159072A30092CF9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49ED10AF159072A30092CF9D /* InfoPlist.strings */; };
+		49ED10B3159072A30092CF9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10B2159072A30092CF9D /* main.m */; };
+		49ED10B7159072A30092CF9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10B6159072A30092CF9D /* AppDelegate.m */; };
+		49ED10BA159072A30092CF9D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49ED10B8159072A30092CF9D /* MainStoryboard.storyboard */; };
+		49ED10BD159072A30092CF9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10BC159072A30092CF9D /* ViewController.m */; };
+		49ED10E115916C050092CF9D /* libDoubanAPIEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10DC15916B160092CF9D /* libDoubanAPIEngine.a */; };
+		49ED10E315916C180092CF9D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E215916C180092CF9D /* libxml2.dylib */; };
+		49ED10E515916C220092CF9D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E415916C220092CF9D /* libz.dylib */; };
+		49ED10E715916C2E0092CF9D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E615916C2E0092CF9D /* CFNetwork.framework */; };
+		49ED10E915916C360092CF9D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E815916C360092CF9D /* Security.framework */; };
+		49ED10EB15916C3D0092CF9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EA15916C3D0092CF9D /* SystemConfiguration.framework */; };
+		49ED10ED15916C4B0092CF9D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EC15916C4B0092CF9D /* MobileCoreServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49ED10DB15916B160092CF9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D800D538146907B2009F64FD;
+			remoteInfo = DoubanAPIEngine;
+		};
+		49ED10DD15916B160092CF9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D800D548146907B2009F64FD;
+			remoteInfo = DoubanAPIEngineTests;
+		};
+		49ED10DF15916BEE0092CF9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D800D537146907B2009F64FD;
+			remoteInfo = DoubanAPIEngine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		49ED10A2159072A30092CF9D /* DiscoverBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscoverBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49ED10A6159072A30092CF9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		49ED10A8159072A30092CF9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		49ED10AA159072A30092CF9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		49ED10AE159072A30092CF9D /* DiscoverBook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DiscoverBook-Info.plist"; sourceTree = "<group>"; };
+		49ED10B0159072A30092CF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49ED10B2159072A30092CF9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49ED10B4159072A30092CF9D /* DiscoverBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DiscoverBook-Prefix.pch"; sourceTree = "<group>"; };
+		49ED10B5159072A30092CF9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		49ED10B6159072A30092CF9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		49ED10B9159072A30092CF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		49ED10BB159072A30092CF9D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		49ED10BC159072A30092CF9D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DoubanAPIEngine.xcodeproj; path = "../lib/douban-objc-client/DoubanAPIEngine/DoubanAPIEngine.xcodeproj"; sourceTree = "<group>"; };
+		49ED10E215916C180092CF9D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		49ED10E415916C220092CF9D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		49ED10E615916C2E0092CF9D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		49ED10E815916C360092CF9D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		49ED10EA15916C3D0092CF9D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		49ED10EC15916C4B0092CF9D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		49ED10EE15916C5C0092CF9D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49ED109F159072A30092CF9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49ED10ED15916C4B0092CF9D /* MobileCoreServices.framework in Frameworks */,
+				49ED10EB15916C3D0092CF9D /* SystemConfiguration.framework in Frameworks */,
+				49ED10E915916C360092CF9D /* Security.framework in Frameworks */,
+				49ED10E715916C2E0092CF9D /* CFNetwork.framework in Frameworks */,
+				49ED10E515916C220092CF9D /* libz.dylib in Frameworks */,
+				49ED10E315916C180092CF9D /* libxml2.dylib in Frameworks */,
+				49ED10E115916C050092CF9D /* libDoubanAPIEngine.a in Frameworks */,
+				49ED10A7159072A30092CF9D /* UIKit.framework in Frameworks */,
+				49ED10A9159072A30092CF9D /* Foundation.framework in Frameworks */,
+				49ED10AB159072A30092CF9D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49ED1097159072A30092CF9D = {
+			isa = PBXGroup;
+			children = (
+				49ED10D115916AE30092CF9D /* lib */,
+				49ED10AC159072A30092CF9D /* src */,
+				49ED10A5159072A30092CF9D /* Frameworks */,
+				49ED10A3159072A30092CF9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49ED10A3159072A30092CF9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49ED10A2159072A30092CF9D /* DiscoverBook.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49ED10A5159072A30092CF9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49ED10EE15916C5C0092CF9D /* SenTestingKit.framework */,
+				49ED10EC15916C4B0092CF9D /* MobileCoreServices.framework */,
+				49ED10EA15916C3D0092CF9D /* SystemConfiguration.framework */,
+				49ED10E815916C360092CF9D /* Security.framework */,
+				49ED10E615916C2E0092CF9D /* CFNetwork.framework */,
+				49ED10E415916C220092CF9D /* libz.dylib */,
+				49ED10E215916C180092CF9D /* libxml2.dylib */,
+				49ED10A6159072A30092CF9D /* UIKit.framework */,
+				49ED10A8159072A30092CF9D /* Foundation.framework */,
+				49ED10AA159072A30092CF9D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49ED10AC159072A30092CF9D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				49ED10B5159072A30092CF9D /* AppDelegate.h */,
+				49ED10B6159072A30092CF9D /* AppDelegate.m */,
+				49ED10B8159072A30092CF9D /* MainStoryboard.storyboard */,
+				49ED10BB159072A30092CF9D /* ViewController.h */,
+				49ED10BC159072A30092CF9D /* ViewController.m */,
+				49ED10AD159072A30092CF9D /* Supporting Files */,
+			);
+			name = src;
+			path = DiscoverBook;
+			sourceTree = "<group>";
+		};
+		49ED10AD159072A30092CF9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49ED10AE159072A30092CF9D /* DiscoverBook-Info.plist */,
+				49ED10AF159072A30092CF9D /* InfoPlist.strings */,
+				49ED10B2159072A30092CF9D /* main.m */,
+				49ED10B4159072A30092CF9D /* DiscoverBook-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49ED10D115916AE30092CF9D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		49ED10D415916B150092CF9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49ED10DC15916B160092CF9D /* libDoubanAPIEngine.a */,
+				49ED10DE15916B160092CF9D /* DoubanAPIEngineTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49ED10A1159072A30092CF9D /* DiscoverBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49ED10C0159072A30092CF9D /* Build configuration list for PBXNativeTarget "DiscoverBook" */;
+			buildPhases = (
+				49ED109E159072A30092CF9D /* Sources */,
+				49ED109F159072A30092CF9D /* Frameworks */,
+				49ED10A0159072A30092CF9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49ED10E015916BEE0092CF9D /* PBXTargetDependency */,
+			);
+			name = DiscoverBook;
+			productName = DiscoverBook;
+			productReference = 49ED10A2159072A30092CF9D /* DiscoverBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49ED1099159072A30092CF9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = ThoughtWorks;
+			};
+			buildConfigurationList = 49ED109C159072A30092CF9D /* Build configuration list for PBXProject "DiscoverBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 49ED1097159072A30092CF9D;
+			productRefGroup = 49ED10A3159072A30092CF9D /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 49ED10D415916B150092CF9D /* Products */;
+					ProjectRef = 49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				49ED10A1159072A30092CF9D /* DiscoverBook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		49ED10DC15916B160092CF9D /* libDoubanAPIEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDoubanAPIEngine.a;
+			remoteRef = 49ED10DB15916B160092CF9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		49ED10DE15916B160092CF9D /* DoubanAPIEngineTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DoubanAPIEngineTests.octest;
+			remoteRef = 49ED10DD15916B160092CF9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49ED10A0159072A30092CF9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49ED10B1159072A30092CF9D /* InfoPlist.strings in Resources */,
+				49ED10BA159072A30092CF9D /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49ED109E159072A30092CF9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49ED10B3159072A30092CF9D /* main.m in Sources */,
+				49ED10B7159072A30092CF9D /* AppDelegate.m in Sources */,
+				49ED10BD159072A30092CF9D /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49ED10E015916BEE0092CF9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DoubanAPIEngine;
+			targetProxy = 49ED10DF15916BEE0092CF9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49ED10AF159072A30092CF9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49ED10B0159072A30092CF9D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		49ED10B8159072A30092CF9D /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49ED10B9159072A30092CF9D /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49ED10BE159072A30092CF9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		49ED10BF159072A30092CF9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49ED10C1159072A30092CF9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DiscoverBook/DiscoverBook-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"DoubanAPIEngine/OtherSources/**",
+					"DoubanAPIEngine/Sources/**",
+					"${SDK_DIR}/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = "DiscoverBook/DiscoverBook-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		49ED10C2159072A30092CF9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DiscoverBook/DiscoverBook-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"DoubanAPIEngine/OtherSources/**",
+					"DoubanAPIEngine/Sources/**",
+					"${SDK_DIR}/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = "DiscoverBook/DiscoverBook-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49ED109C159072A30092CF9D /* Build configuration list for PBXProject "DiscoverBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49ED10BE159072A30092CF9D /* Debug */,
+				49ED10BF159072A30092CF9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49ED10C0159072A30092CF9D /* Build configuration list for PBXNativeTarget "DiscoverBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49ED10C1159072A30092CF9D /* Debug */,
+				49ED10C2159072A30092CF9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49ED1099159072A30092CF9D /* Project object */;
+}

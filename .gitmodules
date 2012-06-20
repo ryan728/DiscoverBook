@@ -1,0 +1,3 @@
+[submodule "lib/douban-objc-client"]
+	path = lib/douban-objc-client
+	url = git@github.com:ryan728/douban-objc-client.git
