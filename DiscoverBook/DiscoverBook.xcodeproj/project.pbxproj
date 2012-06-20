@@ -10,11 +10,6 @@
 		49ED10A7159072A30092CF9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A6159072A30092CF9D /* UIKit.framework */; };
 		49ED10A9159072A30092CF9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A8159072A30092CF9D /* Foundation.framework */; };
 		49ED10AB159072A30092CF9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10AA159072A30092CF9D /* CoreGraphics.framework */; };
-		49ED10B1159072A30092CF9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49ED10AF159072A30092CF9D /* InfoPlist.strings */; };
-		49ED10B3159072A30092CF9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10B2159072A30092CF9D /* main.m */; };
-		49ED10B7159072A30092CF9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10B6159072A30092CF9D /* AppDelegate.m */; };
-		49ED10BA159072A30092CF9D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49ED10B8159072A30092CF9D /* MainStoryboard.storyboard */; };
-		49ED10BD159072A30092CF9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10BC159072A30092CF9D /* ViewController.m */; };
 		49ED10E115916C050092CF9D /* libDoubanAPIEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10DC15916B160092CF9D /* libDoubanAPIEngine.a */; };
 		49ED10E315916C180092CF9D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E215916C180092CF9D /* libxml2.dylib */; };
 		49ED10E515916C220092CF9D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E415916C220092CF9D /* libz.dylib */; };
@@ -22,7 +17,11 @@
 		49ED10E915916C360092CF9D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E815916C360092CF9D /* Security.framework */; };
 		49ED10EB15916C3D0092CF9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EA15916C3D0092CF9D /* SystemConfiguration.framework */; };
 		49ED10ED15916C4B0092CF9D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EC15916C4B0092CF9D /* MobileCoreServices.framework */; };
-		49ED10FD159172BA0092CF9D /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FC159172BA0092CF9D /* NSString+Additions.m */; };
+		49ED110415917AEE0092CF9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED110315917A9E0092CF9D /* ViewController.m */; };
+		49ED110715917B080092CF9D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49ED110515917B080092CF9D /* MainStoryboard.storyboard */; };
+		49ED110E15917B410092CF9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49ED110C15917B410092CF9D /* InfoPlist.strings */; };
+		49ED110F15917CFA0092CF9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED110115917A9E0092CF9D /* AppDelegate.m */; };
+		49ED111015917D050092CF9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED110A15917B240092CF9D /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,15 +53,6 @@
 		49ED10A6159072A30092CF9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49ED10A8159072A30092CF9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49ED10AA159072A30092CF9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		49ED10AE159072A30092CF9D /* DiscoverBook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DiscoverBook-Info.plist"; sourceTree = "<group>"; };
-		49ED10B0159072A30092CF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		49ED10B2159072A30092CF9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		49ED10B4159072A30092CF9D /* DiscoverBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DiscoverBook-Prefix.pch"; sourceTree = "<group>"; };
-		49ED10B5159072A30092CF9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		49ED10B6159072A30092CF9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		49ED10B9159072A30092CF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		49ED10BB159072A30092CF9D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		49ED10BC159072A30092CF9D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DoubanAPIEngine.xcodeproj; path = "../lib/douban-objc-client/DoubanAPIEngine/DoubanAPIEngine.xcodeproj"; sourceTree = "<group>"; };
 		49ED10E215916C180092CF9D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		49ED10E415916C220092CF9D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -71,8 +61,17 @@
 		49ED10EA15916C3D0092CF9D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		49ED10EC15916C4B0092CF9D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		49ED10EE15916C5C0092CF9D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		49ED10FB159172BA0092CF9D /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
-		49ED10FC159172BA0092CF9D /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		49ED10FE15917A890092CF9D /* NSString+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "src/NSString+Additions.h"; sourceTree = SOURCE_ROOT; };
+		49ED10FF15917A890092CF9D /* NSString+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "src/NSString+Additions.m"; sourceTree = SOURCE_ROOT; };
+		49ED110015917A9E0092CF9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		49ED110115917A9E0092CF9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = src/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		49ED110215917A9E0092CF9D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = src/ViewController.h; sourceTree = SOURCE_ROOT; };
+		49ED110315917A9E0092CF9D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = src/ViewController.m; sourceTree = SOURCE_ROOT; };
+		49ED110615917B080092CF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = src/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		49ED110815917B240092CF9D /* DiscoverBook-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DiscoverBook-Info.plist"; path = "src/DiscoverBook-Info.plist"; sourceTree = SOURCE_ROOT; };
+		49ED110915917B240092CF9D /* DiscoverBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DiscoverBook-Prefix.pch"; path = "src/DiscoverBook-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		49ED110A15917B240092CF9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = SOURCE_ROOT; };
+		49ED110D15917B410092CF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = src/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +98,8 @@
 		49ED1097159072A30092CF9D = {
 			isa = PBXGroup;
 			children = (
-				49ED10D115916AE30092CF9D /* lib */,
 				49ED10AC159072A30092CF9D /* src */,
+				49ED10D115916AE30092CF9D /* lib */,
 				49ED10A5159072A30092CF9D /* Frameworks */,
 				49ED10A3159072A30092CF9D /* Products */,
 			);
@@ -135,11 +134,11 @@
 			isa = PBXGroup;
 			children = (
 				49ED10FA159171D20092CF9D /* additions */,
-				49ED10B5159072A30092CF9D /* AppDelegate.h */,
-				49ED10B6159072A30092CF9D /* AppDelegate.m */,
-				49ED10B8159072A30092CF9D /* MainStoryboard.storyboard */,
-				49ED10BB159072A30092CF9D /* ViewController.h */,
-				49ED10BC159072A30092CF9D /* ViewController.m */,
+				49ED110015917A9E0092CF9D /* AppDelegate.h */,
+				49ED110115917A9E0092CF9D /* AppDelegate.m */,
+				49ED110215917A9E0092CF9D /* ViewController.h */,
+				49ED110315917A9E0092CF9D /* ViewController.m */,
+				49ED110515917B080092CF9D /* MainStoryboard.storyboard */,
 				49ED10AD159072A30092CF9D /* Supporting Files */,
 			);
 			name = src;
@@ -149,10 +148,10 @@
 		49ED10AD159072A30092CF9D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				49ED10AE159072A30092CF9D /* DiscoverBook-Info.plist */,
-				49ED10AF159072A30092CF9D /* InfoPlist.strings */,
-				49ED10B2159072A30092CF9D /* main.m */,
-				49ED10B4159072A30092CF9D /* DiscoverBook-Prefix.pch */,
+				49ED110815917B240092CF9D /* DiscoverBook-Info.plist */,
+				49ED110915917B240092CF9D /* DiscoverBook-Prefix.pch */,
+				49ED110C15917B410092CF9D /* InfoPlist.strings */,
+				49ED110A15917B240092CF9D /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -177,8 +176,8 @@
 		49ED10FA159171D20092CF9D /* additions */ = {
 			isa = PBXGroup;
 			children = (
-				49ED10FB159172BA0092CF9D /* NSString+Additions.h */,
-				49ED10FC159172BA0092CF9D /* NSString+Additions.m */,
+				49ED10FE15917A890092CF9D /* NSString+Additions.h */,
+				49ED10FF15917A890092CF9D /* NSString+Additions.m */,
 			);
 			name = additions;
 			sourceTree = "<group>";
@@ -258,8 +257,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49ED10B1159072A30092CF9D /* InfoPlist.strings in Resources */,
-				49ED10BA159072A30092CF9D /* MainStoryboard.storyboard in Resources */,
+				49ED110715917B080092CF9D /* MainStoryboard.storyboard in Resources */,
+				49ED110E15917B410092CF9D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,10 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49ED10B3159072A30092CF9D /* main.m in Sources */,
-				49ED10B7159072A30092CF9D /* AppDelegate.m in Sources */,
-				49ED10BD159072A30092CF9D /* ViewController.m in Sources */,
-				49ED10FD159172BA0092CF9D /* NSString+Additions.m in Sources */,
+				49ED110415917AEE0092CF9D /* ViewController.m in Sources */,
+				49ED110F15917CFA0092CF9D /* AppDelegate.m in Sources */,
+				49ED111015917D050092CF9D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,20 +286,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		49ED10AF159072A30092CF9D /* InfoPlist.strings */ = {
+		49ED110515917B080092CF9D /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				49ED10B0159072A30092CF9D /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		49ED10B8159072A30092CF9D /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49ED10B9159072A30092CF9D /* en */,
+				49ED110615917B080092CF9D /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		49ED110C15917B410092CF9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49ED110D15917B410092CF9D /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -360,13 +358,13 @@
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DiscoverBook/DiscoverBook-Prefix.pch";
+				GCC_PREFIX_HEADER = "src/DiscoverBook-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"DoubanAPIEngine/OtherSources/**",
 					"DoubanAPIEngine/Sources/**",
 					"${SDK_DIR}/usr/include/libxml2",
 				);
-				INFOPLIST_FILE = "DiscoverBook/DiscoverBook-Info.plist";
+				INFOPLIST_FILE = "src/DiscoverBook-Info.plist";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -385,13 +383,13 @@
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DiscoverBook/DiscoverBook-Prefix.pch";
+				GCC_PREFIX_HEADER = "src/DiscoverBook-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"DoubanAPIEngine/OtherSources/**",
 					"DoubanAPIEngine/Sources/**",
 					"${SDK_DIR}/usr/include/libxml2",
 				);
-				INFOPLIST_FILE = "DiscoverBook/DiscoverBook-Info.plist";
+				INFOPLIST_FILE = "src/DiscoverBook-Info.plist";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",

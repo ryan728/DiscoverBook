@@ -80,5 +80,5 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
   NSLog(@"failed®!");
 }
 
-
+#pragma mark end
 @end
