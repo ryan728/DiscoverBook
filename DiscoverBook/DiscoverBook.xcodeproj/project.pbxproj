@@ -22,6 +22,7 @@
 		49ED10E915916C360092CF9D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E815916C360092CF9D /* Security.framework */; };
 		49ED10EB15916C3D0092CF9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EA15916C3D0092CF9D /* SystemConfiguration.framework */; };
 		49ED10ED15916C4B0092CF9D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EC15916C4B0092CF9D /* MobileCoreServices.framework */; };
+		49ED10FD159172BA0092CF9D /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FC159172BA0092CF9D /* NSString+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		49ED10EA15916C3D0092CF9D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		49ED10EC15916C4B0092CF9D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		49ED10EE15916C5C0092CF9D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		49ED10FB159172BA0092CF9D /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		49ED10FC159172BA0092CF9D /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,7 @@
 		49ED10AC159072A30092CF9D /* src */ = {
 			isa = PBXGroup;
 			children = (
+				49ED10FA159171D20092CF9D /* additions */,
 				49ED10B5159072A30092CF9D /* AppDelegate.h */,
 				49ED10B6159072A30092CF9D /* AppDelegate.m */,
 				49ED10B8159072A30092CF9D /* MainStoryboard.storyboard */,
@@ -168,6 +172,15 @@
 				49ED10DE15916B160092CF9D /* DoubanAPIEngineTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		49ED10FA159171D20092CF9D /* additions */ = {
+			isa = PBXGroup;
+			children = (
+				49ED10FB159172BA0092CF9D /* NSString+Additions.h */,
+				49ED10FC159172BA0092CF9D /* NSString+Additions.m */,
+			);
+			name = additions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +273,7 @@
 				49ED10B3159072A30092CF9D /* main.m in Sources */,
 				49ED10B7159072A30092CF9D /* AppDelegate.m in Sources */,
 				49ED10BD159072A30092CF9D /* ViewController.m in Sources */,
+				49ED10FD159172BA0092CF9D /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +372,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -382,6 +397,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
