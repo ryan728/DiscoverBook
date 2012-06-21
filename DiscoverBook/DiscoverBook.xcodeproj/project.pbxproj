@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FF15917A890092CF9D /* NSString+Additions.m */; };
+		49BCF6AB1592BDC1005DD14E /* ReadingBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BCF6AA1592BDC1005DD14E /* ReadingBookController.m */; };
+		49BCF6C31592CA22005DD14E /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BCF6C21592CA22005DD14E /* NSArray+Additions.m */; };
 		49ED10A7159072A30092CF9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A6159072A30092CF9D /* UIKit.framework */; };
 		49ED10A9159072A30092CF9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A8159072A30092CF9D /* Foundation.framework */; };
 		49ED10AB159072A30092CF9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10AA159072A30092CF9D /* CoreGraphics.framework */; };
@@ -50,6 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49BCF6A91592BDC1005DD14E /* ReadingBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReadingBookController.h; path = src/ReadingBookController.h; sourceTree = SOURCE_ROOT; };
+		49BCF6AA1592BDC1005DD14E /* ReadingBookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReadingBookController.m; path = src/ReadingBookController.m; sourceTree = SOURCE_ROOT; };
+		49BCF6C11592CA22005DD14E /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Additions.h"; path = "src/NSArray+Additions.h"; sourceTree = SOURCE_ROOT; };
+		49BCF6C21592CA22005DD14E /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Additions.m"; path = "src/NSArray+Additions.m"; sourceTree = SOURCE_ROOT; };
+		49BCF6C41592F0F5005DD14E /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = src/Macros.h; sourceTree = SOURCE_ROOT; };
 		49ED10A2159072A30092CF9D /* DiscoverBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscoverBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49ED10A6159072A30092CF9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49ED10A8159072A30092CF9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,6 +103,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49BCF6A81592BD70005DD14E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49ED110215917A9E0092CF9D /* ViewController.h */,
+				49ED110315917A9E0092CF9D /* ViewController.m */,
+				49BCF6A91592BDC1005DD14E /* ReadingBookController.h */,
+				49BCF6AA1592BDC1005DD14E /* ReadingBookController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		49BCF6C01592C9FA005DD14E /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				49BCF6C11592CA22005DD14E /* NSArray+Additions.h */,
+				49BCF6C21592CA22005DD14E /* NSArray+Additions.m */,
+				49ED10FE15917A890092CF9D /* NSString+Additions.h */,
+				49ED10FF15917A890092CF9D /* NSString+Additions.m */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
 		49ED1097159072A30092CF9D = {
 			isa = PBXGroup;
 			children = (
@@ -134,11 +163,10 @@
 		49ED10AC159072A30092CF9D /* src */ = {
 			isa = PBXGroup;
 			children = (
-				49ED10FA159171D20092CF9D /* additions */,
+				49BCF6A81592BD70005DD14E /* Controllers */,
+				49ED10FA159171D20092CF9D /* Additions */,
 				49ED110015917A9E0092CF9D /* AppDelegate.h */,
 				49ED110115917A9E0092CF9D /* AppDelegate.m */,
-				49ED110215917A9E0092CF9D /* ViewController.h */,
-				49ED110315917A9E0092CF9D /* ViewController.m */,
 				49ED110515917B080092CF9D /* MainStoryboard.storyboard */,
 				49ED10AD159072A30092CF9D /* Supporting Files */,
 			);
@@ -174,13 +202,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		49ED10FA159171D20092CF9D /* additions */ = {
+		49ED10FA159171D20092CF9D /* Additions */ = {
 			isa = PBXGroup;
 			children = (
-				49ED10FE15917A890092CF9D /* NSString+Additions.h */,
-				49ED10FF15917A890092CF9D /* NSString+Additions.m */,
+				49BCF6C41592F0F5005DD14E /* Macros.h */,
+				49BCF6C01592C9FA005DD14E /* Foundation */,
 			);
-			name = additions;
+			name = Additions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +302,8 @@
 				49ED110F15917CFA0092CF9D /* AppDelegate.m in Sources */,
 				49ED111015917D050092CF9D /* main.m in Sources */,
 				493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */,
+				49BCF6AB1592BDC1005DD14E /* ReadingBookController.m in Sources */,
+				49BCF6C31592CA22005DD14E /* NSArray+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +402,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -397,7 +427,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

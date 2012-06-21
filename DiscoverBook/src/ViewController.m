@@ -1,7 +1,5 @@
 #import "ViewController.h"
 #import "NSString+Additions.h"
-#import "DoubanEntryPeople.h"
-#import "SBJson.h"
 
 @interface ViewController ()
 
@@ -32,11 +30,23 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
   [webView_ loadRequest:[self createRequest]];
 }
 
+- (BOOL)hasAccessToken {
+  DOUOAuthStore *const store = [DOUOAuthStore sharedInstance];
+  return store.accessToken != nil;
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.navigationItem.title = @"登录";
-  [self initWebView];
-  [self.view addSubview:webView_];
+
+  if ([self hasAccessToken]) {
+    [self initWebView];
+    [self.view addSubview:webView_];
+  }
+
+  DOUService *service = [DOUService sharedInstance];
+  service.clientId = kAPIKey;
+  service.clientSecret = kPrivateKey;
+  service.apiBaseUrlString = kHttpsApiBaseUrl;
 }
 
 - (void)viewDidUnload {
@@ -57,25 +67,24 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
   }];
 }
 
-#pragma mark - UIWebViewDelegate
 - (void)printAccessToken {
   DOUOAuthStore *store = [DOUOAuthStore sharedInstance];
   NSLog(@"store.accessToken = %@", store.accessToken);
 }
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-  NSURL *const requestUrl = request.URL;
-  NSString *const urlString = requestUrl.absoluteString;
+#pragma mark - UIWebViewDelegate
 
-  DOUOAuthStore *store = [DOUOAuthStore sharedInstance];
-  if (store.accessToken) {
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+  NSString *const urlString = request.URL.absoluteString;
+
+  if ([self hasAccessToken]) {
     [self printAccessToken];
     [self dismissWebView];
     return NO;
   }
 
   if ([urlString hasPrefix:kRedirectUrl]) {
-    NSString *const authQuery = requestUrl.query;
+    NSString *const authQuery = request.URL.query;
     NSMutableDictionary *const parsedQueryDictionary = [authQuery explodeToDictionaryInnerGlue:@"=" outterGlue:@"&"];
     NSString *code = [parsedQueryDictionary objectForKey:@"code"];
 
@@ -101,24 +110,6 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 - (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
   NSLog(@"success!");
   [self dismissWebView];
-
-  DOUService *service = [DOUService sharedInstance];
-  service.clientId = kAPIKey;
-  service.clientSecret = kPrivateKey;
-  service.apiBaseUrlString = kHttpsApiBaseUrl;
-  
-  DOUQuery *query = [[DOUQuery alloc] initWithSubPath:@"/people/@me" parameters:nil];
-  DOUReqBlock completionBlock = ^(DOUHttpRequest *httpRequest){
-    NSLog(@"response : %@", httpRequest.responseString);
-    
-    if (!httpRequest.error) {
-      DoubanEntryPeople *me = [[DoubanEntryPeople alloc] initWithData:httpRequest.responseData];
-      NSLog(@"uid : %@", me.uid);
-      NSLog(@"title : %@", me.title.stringValue);
-    }
-  };
-  
-  [service get:query callback:completionBlock];
 }
 
 - (void)OAuthClient:(DOUOAuthService *)client didFailWithError:(NSError *)error {
