@@ -1,5 +1,7 @@
 #import "ViewController.h"
 #import "NSString+Additions.h"
+#import "DoubanEntryPeople.h"
+#import "SBJson.h"
 
 @interface ViewController ()
 
@@ -10,7 +12,7 @@
 @implementation ViewController
 
 static NSString *const kAPIKey = @"0f08a77e67e884452d19f67b37b98ccf";
-static NSString *const kPrivateKey = @"Secretbec2de010015fa6e";
+static NSString *const kPrivateKey = @"bec2de010015fa6e";
 static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 
 @synthesize webView = webView_;
@@ -45,25 +47,49 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
   return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (void)dismissWebView {
+  [UIView animateWithDuration:1.0 animations:^void() {
+    webView_.alpha = 0;
+  }                completion:^void(BOOL finished) {
+    if (finished) {
+      [webView_ removeFromSuperview];
+    }
+  }];
+}
+
 #pragma mark - UIWebViewDelegate
+- (void)printAccessToken {
+  DOUOAuthStore *store = [DOUOAuthStore sharedInstance];
+  NSLog(@"store.accessToken = %@", store.accessToken);
+}
+
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
   NSURL *const requestUrl = request.URL;
   NSString *const urlString = requestUrl.absoluteString;
 
+  DOUOAuthStore *store = [DOUOAuthStore sharedInstance];
+  if (store.accessToken) {
+    [self printAccessToken];
+    [self dismissWebView];
+    return NO;
+  }
+
   if ([urlString hasPrefix:kRedirectUrl]) {
-    NSString *const query = requestUrl.query;
-    NSMutableDictionary *const parsedQueryDictionary = [query explodeToDictionaryInnerGlue:@"=" outterGlue:@"&"];
+    NSString *const authQuery = requestUrl.query;
+    NSMutableDictionary *const parsedQueryDictionary = [authQuery explodeToDictionaryInnerGlue:@"=" outterGlue:@"&"];
     NSString *code = [parsedQueryDictionary objectForKey:@"code"];
 
-    DOUOAuthService *service = [DOUOAuthService sharedInstance];
-    service.authorizationURL = kTokenUrl;
-    service.delegate = self;
-    service.clientId = kAPIKey;
-    service.clientSecret = kPrivateKey;
-    service.callbackURL = kRedirectUrl;
-    service.authorizationCode = code;
+    DOUOAuthService *authService = [DOUOAuthService sharedInstance];
+    authService.authorizationURL = kTokenUrl;
+    authService.delegate = self;
+    authService.clientId = kAPIKey;
+    authService.clientSecret = kPrivateKey;
+    authService.callbackURL = kRedirectUrl;
+    authService.authorizationCode = code;
 
-    [service validateAuthorizationCode];
+    [authService validateAuthorizationCodeWithCallback:^{
+      [self printAccessToken];
+    }];
     return NO;
   }
   return YES;
@@ -74,6 +100,25 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 
 - (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
   NSLog(@"success!");
+  [self dismissWebView];
+
+  DOUService *service = [DOUService sharedInstance];
+  service.clientId = kAPIKey;
+  service.clientSecret = kPrivateKey;
+  service.apiBaseUrlString = kHttpsApiBaseUrl;
+  
+  DOUQuery *query = [[DOUQuery alloc] initWithSubPath:@"/people/@me" parameters:nil];
+  DOUReqBlock completionBlock = ^(DOUHttpRequest *httpRequest){
+    NSLog(@"response : %@", httpRequest.responseString);
+    
+    if (!httpRequest.error) {
+      DoubanEntryPeople *me = [[DoubanEntryPeople alloc] initWithData:httpRequest.responseData];
+      NSLog(@"uid : %@", me.uid);
+      NSLog(@"title : %@", me.title.stringValue);
+    }
+  };
+  
+  [service get:query callback:completionBlock];
 }
 
 - (void)OAuthClient:(DOUOAuthService *)client didFailWithError:(NSError *)error {
