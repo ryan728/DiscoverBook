@@ -70,7 +70,7 @@
       DoubanFeedSubject *const feedSubject = [[DoubanFeedSubject alloc] initWithData:request.responseData];
       NSArray *const entries = feedSubject.entries;
       readingBooks_ = [NSArray arrayWithArray:entries];
-      
+
       [[self tableView] reloadData];
       [[self tableView] layoutIfNeeded];
     } else {
@@ -100,14 +100,20 @@
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
   if (cell == nil) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     DoubanEntrySubject *book = [readingBooks_ objectAtIndex:indexPath.row];
-//    GDataLink *const imageLink = book.imageLink;
-    cell.textLabel.text = book.title.stringValue;
+    DoubanEntrySubject *subject = [[DoubanEntrySubject alloc] initWithXMLElement:[[[book XMLElement] elementsForName:@"db:subject"] objectAtIndex:0] parent:nil];
+    cell.textLabel.text = subject.title.stringValue;
+    NSURL *const imageUrl = [[subject linkWithRelAttributeValue:@"image"] URL];
+    NSData *const imageData = [NSData dataWithContentsOfURL:imageUrl];
+    UIImage *const image = [UIImage imageWithData:imageData];
+    [cell.imageView setImage:image];
+    NSMutableString *authors = [NSMutableString string];
+    [subject.authors each:^(GDataAtomAuthor *author) {
+      [authors appendString:author.name];
+    }];
+    cell.detailTextLabel.text = authors;
   }
-
-  // Configure the cell...
-
   return cell;
 }
 
