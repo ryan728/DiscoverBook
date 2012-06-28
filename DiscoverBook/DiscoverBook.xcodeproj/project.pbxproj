@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4912EB87159C8047000D469C /* MathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EB86159C8047000D469C /* MathSpec.m */; };
+		493BB48D159C7EA600E99887 /* UnitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 493BB48B159C7EA600E99887 /* UnitTests-Info.plist */; };
+		493BB490159C7EAC00E99887 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 493BB48E159C7EAC00E99887 /* InfoPlist.strings */; };
 		493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FF15917A890092CF9D /* NSString+Additions.m */; };
 		49703E9E15985760004CA5E9 /* DOUOAuthStore+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */; };
 		49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */; };
@@ -17,6 +20,10 @@
 		49A5FC45159C77110092C640 /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC3E159C77110092C640 /* DCFrameView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49A5FC46159C77110092C640 /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC40159C77110092C640 /* DCIntrospect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49A5FC47159C77110092C640 /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC43159C77110092C640 /* DCStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		49A5FC62159C7B3A0092C640 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EE15916C5C0092CF9D /* SenTestingKit.framework */; };
+		49A5FC63159C7B3A0092C640 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A6159072A30092CF9D /* UIKit.framework */; };
+		49A5FC64159C7B3A0092C640 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A8159072A30092CF9D /* Foundation.framework */; };
+		49A5FC74159C7BC30092C640 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A5FC55159C7A4C0092C640 /* libKiwi.a */; };
 		49BCF6AB1592BDC1005DD14E /* MyBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BCF6AA1592BDC1005DD14E /* MyBookController.m */; };
 		49BCF6C31592CA22005DD14E /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BCF6C21592CA22005DD14E /* NSArray+Additions.m */; };
 		49ED10A7159072A30092CF9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A6159072A30092CF9D /* UIKit.framework */; };
@@ -37,6 +44,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		49A5FC54159C7A4C0092C640 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49A5FC49159C7A4C0092C640 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5015B9F11583A77002E9A98;
+			remoteInfo = Kiwi;
+		};
+		49A5FC56159C7A4C0092C640 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49A5FC49159C7A4C0092C640 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 832C83C7157263B300F160D5;
+			remoteInfo = "Kiwi-OSX";
+		};
+		49A5FC58159C7A4C0092C640 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49A5FC49159C7A4C0092C640 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5015C9E11584017002E9A98;
+			remoteInfo = KiwiTests;
+		};
+		49A5FC5A159C7A4C0092C640 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49A5FC49159C7A4C0092C640 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A3B16542139967B800E9CC6E;
+			remoteInfo = KiwiExamples;
+		};
 		49ED10DB15916B160092CF9D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */;
@@ -61,6 +96,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4912EB86159C8047000D469C /* MathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathSpec.m; path = test/MathSpec.m; sourceTree = SOURCE_ROOT; };
+		493BB48B159C7EA600E99887 /* UnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "UnitTests-Info.plist"; path = "test/UnitTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		493BB48C159C7EA600E99887 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UnitTests-Prefix.pch"; path = "test/UnitTests-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		493BB48F159C7EAC00E99887 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = test/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		49703E9C15985760004CA5E9 /* DOUOAuthStore+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DOUOAuthStore+Additions.h"; path = "src/DOUOAuthStore+Additions.h"; sourceTree = SOURCE_ROOT; };
 		49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUOAuthStore+Additions.m"; path = "src/DOUOAuthStore+Additions.m"; sourceTree = SOURCE_ROOT; };
 		49703EAC15985AF7004CA5E9 /* DOUService+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DOUService+Additions.h"; path = "src/DOUService+Additions.h"; sourceTree = SOURCE_ROOT; };
@@ -79,7 +118,9 @@
 		49A5FC41159C77110092C640 /* DCIntrospectSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospectSettings.h; sourceTree = "<group>"; };
 		49A5FC42159C77110092C640 /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
 		49A5FC43159C77110092C640 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
-		49BCF6A91592BDC1005DD14E /* MyBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = MyBookController.h; path = src/MyBookController.h; sourceTree = SOURCE_ROOT; };
+		49A5FC49159C7A4C0092C640 /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = ../lib/Kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
+		49A5FC61159C7B3A0092C640 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49BCF6A91592BDC1005DD14E /* MyBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyBookController.h; path = src/MyBookController.h; sourceTree = SOURCE_ROOT; };
 		49BCF6AA1592BDC1005DD14E /* MyBookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyBookController.m; path = src/MyBookController.m; sourceTree = SOURCE_ROOT; };
 		49BCF6C11592CA22005DD14E /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Additions.h"; path = "src/NSArray+Additions.h"; sourceTree = SOURCE_ROOT; };
 		49BCF6C21592CA22005DD14E /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Additions.m"; path = "src/NSArray+Additions.m"; sourceTree = SOURCE_ROOT; };
@@ -110,6 +151,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		49A5FC5D159C7B3A0092C640 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A5FC74159C7BC30092C640 /* libKiwi.a in Frameworks */,
+				49A5FC62159C7B3A0092C640 /* SenTestingKit.framework in Frameworks */,
+				49A5FC63159C7B3A0092C640 /* UIKit.framework in Frameworks */,
+				49A5FC64159C7B3A0092C640 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49ED109F159072A30092CF9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,6 +219,37 @@
 			path = DCIntrospect;
 			sourceTree = "<group>";
 		};
+		49A5FC4A159C7A4C0092C640 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49A5FC55159C7A4C0092C640 /* libKiwi.a */,
+				49A5FC57159C7A4C0092C640 /* libKiwi-OSX.a */,
+				49A5FC59159C7A4C0092C640 /* KiwiTests.octest */,
+				49A5FC5B159C7A4C0092C640 /* KiwiExamples.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49A5FC65159C7B3A0092C640 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				4912EB86159C8047000D469C /* MathSpec.m */,
+				49A5FC66159C7B3A0092C640 /* Supporting Files */,
+			);
+			name = test;
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		49A5FC66159C7B3A0092C640 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				493BB48E159C7EAC00E99887 /* InfoPlist.strings */,
+				493BB48B159C7EA600E99887 /* UnitTests-Info.plist */,
+				493BB48C159C7EA600E99887 /* UnitTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		49BCF6A81592BD70005DD14E /* controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				49ED10AC159072A30092CF9D /* src */,
+				49A5FC65159C7B3A0092C640 /* test */,
 				49ED10D115916AE30092CF9D /* lib */,
 				49ED10A5159072A30092CF9D /* Frameworks */,
 				49ED10A3159072A30092CF9D /* Products */,
@@ -212,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				49ED10A2159072A30092CF9D /* DiscoverBook.app */,
+				49A5FC61159C7B3A0092C640 /* UnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,6 +350,7 @@
 		49ED10D115916AE30092CF9D /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				49A5FC49159C7A4C0092C640 /* Kiwi.xcodeproj */,
 				49A5FC3A159C77110092C640 /* DCIntrospect */,
 				49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */,
 			);
@@ -300,6 +386,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		49A5FC60159C7B3A0092C640 /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A5FC6F159C7B3A0092C640 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				49A5FC5C159C7B3A0092C640 /* Sources */,
+				49A5FC5D159C7B3A0092C640 /* Frameworks */,
+				49A5FC5E159C7B3A0092C640 /* Resources */,
+				49A5FC5F159C7B3A0092C640 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = 49A5FC61159C7B3A0092C640 /* UnitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		49ED10A1159072A30092CF9D /* DiscoverBook */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49ED10C0159072A30092CF9D /* Build configuration list for PBXNativeTarget "DiscoverBook" */;
@@ -342,15 +446,48 @@
 					ProductGroup = 49ED10D415916B150092CF9D /* Products */;
 					ProjectRef = 49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */;
 				},
+				{
+					ProductGroup = 49A5FC4A159C7A4C0092C640 /* Products */;
+					ProjectRef = 49A5FC49159C7A4C0092C640 /* Kiwi.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
 				49ED10A1159072A30092CF9D /* DiscoverBook */,
+				49A5FC60159C7B3A0092C640 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		49A5FC55159C7A4C0092C640 /* libKiwi.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKiwi.a;
+			remoteRef = 49A5FC54159C7A4C0092C640 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		49A5FC57159C7A4C0092C640 /* libKiwi-OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libKiwi-OSX.a";
+			remoteRef = 49A5FC56159C7A4C0092C640 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		49A5FC59159C7A4C0092C640 /* KiwiTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KiwiTests.octest;
+			remoteRef = 49A5FC58159C7A4C0092C640 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		49A5FC5B159C7A4C0092C640 /* KiwiExamples.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KiwiExamples.octest;
+			remoteRef = 49A5FC5A159C7A4C0092C640 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		49ED10DC15916B160092CF9D /* libDoubanAPIEngine.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -368,6 +505,15 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		49A5FC5E159C7B3A0092C640 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493BB48D159C7EA600E99887 /* UnitTests-Info.plist in Resources */,
+				493BB490159C7EAC00E99887 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49ED10A0159072A30092CF9D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,7 +525,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49A5FC5F159C7B3A0092C640 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		49A5FC5C159C7B3A0092C640 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4912EB87159C8047000D469C /* MathSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49ED109E159072A30092CF9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -412,6 +582,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		493BB48E159C7EAC00E99887 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				493BB48F159C7EAC00E99887 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		49ED110515917B080092CF9D /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -431,6 +609,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		49A5FC70159C7B3A0092C640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "test/UnitTests-Prefix.pch";
+				INFOPLIST_FILE = "test/UnitTests-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../lib/Kiwi/Kiwi\"";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		49A5FC71159C7B3A0092C640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "test/UnitTests-Prefix.pch";
+				INFOPLIST_FILE = "test/UnitTests-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../lib/Kiwi/Kiwi\"";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		49ED10BE159072A30092CF9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -529,6 +741,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		49A5FC6F159C7B3A0092C640 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A5FC70159C7B3A0092C640 /* Debug */,
+				49A5FC71159C7B3A0092C640 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		49ED109C159072A30092CF9D /* Build configuration list for PBXProject "DiscoverBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
