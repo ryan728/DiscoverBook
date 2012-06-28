@@ -26,11 +26,11 @@
             </objects>
             <point key="canvasLocation" x="-308" y="-35"/>
         </scene>
-        <!--Reading Book Controller - Reading-->
+        <!--Reading Book Controller - reading-->
         <scene sceneID="szv-tE-l3v">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UA1-1r-5fw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="CIy-4e-ON8" customClass="ReadingBookController" sceneMemberID="viewController">
+                <tableViewController title="reading" id="CIy-4e-ON8" customClass="ReadingBookController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ozF-KP-ZGj">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,11 +54,11 @@
             </objects>
             <point key="canvasLocation" x="668" y="-288"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Reading Book Controller - read-->
         <scene sceneID="BfI-Pn-267">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ri-qa-set" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="p7g-pA-nVo" sceneMemberID="viewController">
+                <tableViewController title="read" id="p7g-pA-nVo" customClass="ReadingBookController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ND2-r3-0dW">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="zfg-Cv-Csh"/>
+                    <navigationItem key="navigationItem" title="Read" id="zfg-Cv-Csh"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="681" y="904"/>
@@ -96,11 +96,11 @@
             </objects>
             <point key="canvasLocation" x="147" y="904"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Reading Book Controller - wish-->
         <scene sceneID="MJc-oN-JrK">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8H-dW-fDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="Hl6-oI-wZn" sceneMemberID="viewController">
+                <tableViewController title="wish" id="Hl6-oI-wZn" customClass="ReadingBookController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BUP-t2-3kL">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="eNq-hF-CIj"/>
+                    <navigationItem key="navigationItem" title="Wish" id="eNq-hF-CIj"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="681" y="297"/>
@@ -155,6 +155,14 @@
             <point key="canvasLocation" x="157" y="-297"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="ReadingBookController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ReadingBookController.h"/>
+        </class>
+        <class className="ViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

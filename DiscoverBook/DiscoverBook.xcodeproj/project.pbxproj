@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FF15917A890092CF9D /* NSString+Additions.m */; };
+		49682D8D1599446700DC2308 /* BookDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49682D8B1599446700DC2308 /* BookDetailView.xib */; };
+		49682D90159987CF00DC2308 /* BookNetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49682D8F159987CF00DC2308 /* BookNetController.m */; };
+		49703E9E15985760004CA5E9 /* DOUOAuthStore+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */; };
+		49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */; };
+		49989570159989850048B5B3 /* BookNetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4998956E159989850048B5B3 /* BookNetView.xib */; };
 		49BCF6AB1592BDC1005DD14E /* ReadingBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BCF6AA1592BDC1005DD14E /* ReadingBookController.m */; };
 		49BCF6C31592CA22005DD14E /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BCF6C21592CA22005DD14E /* NSArray+Additions.m */; };
+		49BCF6C815985505005DD14E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BCF6C715985505005DD14E /* User.m */; };
 		49ED10A7159072A30092CF9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A6159072A30092CF9D /* UIKit.framework */; };
 		49ED10A9159072A30092CF9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A8159072A30092CF9D /* Foundation.framework */; };
 		49ED10AB159072A30092CF9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10AA159072A30092CF9D /* CoreGraphics.framework */; };
@@ -25,6 +31,8 @@
 		49ED110E15917B410092CF9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49ED110C15917B410092CF9D /* InfoPlist.strings */; };
 		49ED110F15917CFA0092CF9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED110115917A9E0092CF9D /* AppDelegate.m */; };
 		49ED111015917D050092CF9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED110A15917B240092CF9D /* main.m */; };
+		49ED111015917D050092CF9F /* BookDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CF9E /* BookDetailController.m */; };
+		49ED111015917D050092CFA2 /* BookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA1 /* BookView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +60,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49682D8C1599446700DC2308 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = src/en.lproj/BookDetailView.xib; sourceTree = SOURCE_ROOT; };
+		49682D8E159987CF00DC2308 /* BookNetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookNetController.h; path = src/BookNetController.h; sourceTree = SOURCE_ROOT; };
+		49682D8F159987CF00DC2308 /* BookNetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookNetController.m; path = src/BookNetController.m; sourceTree = SOURCE_ROOT; };
+		49703E9C15985760004CA5E9 /* DOUOAuthStore+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DOUOAuthStore+Additions.h"; path = "src/DOUOAuthStore+Additions.h"; sourceTree = SOURCE_ROOT; };
+		49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUOAuthStore+Additions.m"; path = "src/DOUOAuthStore+Additions.m"; sourceTree = SOURCE_ROOT; };
+		49703EAC15985AF7004CA5E9 /* DOUService+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DOUService+Additions.h"; path = "src/DOUService+Additions.h"; sourceTree = SOURCE_ROOT; };
+		49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUService+Additions.m"; path = "src/DOUService+Additions.m"; sourceTree = SOURCE_ROOT; };
+		4998956F159989850048B5B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = src/en.lproj/BookNetView.xib; sourceTree = SOURCE_ROOT; };
+		4998957515998E8A0048B5B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		49BCF6A91592BDC1005DD14E /* ReadingBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReadingBookController.h; path = src/ReadingBookController.h; sourceTree = SOURCE_ROOT; };
 		49BCF6AA1592BDC1005DD14E /* ReadingBookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReadingBookController.m; path = src/ReadingBookController.m; sourceTree = SOURCE_ROOT; };
 		49BCF6C11592CA22005DD14E /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Additions.h"; path = "src/NSArray+Additions.h"; sourceTree = SOURCE_ROOT; };
 		49BCF6C21592CA22005DD14E /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Additions.m"; path = "src/NSArray+Additions.m"; sourceTree = SOURCE_ROOT; };
 		49BCF6C41592F0F5005DD14E /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = src/Macros.h; sourceTree = SOURCE_ROOT; };
+		49BCF6C615985505005DD14E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = SOURCE_ROOT; };
+		49BCF6C715985505005DD14E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = SOURCE_ROOT; };
 		49ED10A2159072A30092CF9D /* DiscoverBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscoverBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49ED10A6159072A30092CF9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49ED10A8159072A30092CF9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,6 +99,10 @@
 		49ED110915917B240092CF9D /* DiscoverBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DiscoverBook-Prefix.pch"; path = "src/DiscoverBook-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		49ED110A15917B240092CF9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = SOURCE_ROOT; };
 		49ED110D15917B410092CF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = src/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		49ED111015917D050092CF9E /* BookDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookDetailController.m; path = src/BookDetailController.m; sourceTree = SOURCE_ROOT; };
+		49ED111015917D050092CFA0 /* BookDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookDetailController.h; path = src/BookDetailController.h; sourceTree = SOURCE_ROOT; };
+		49ED111015917D050092CFA1 /* BookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookView.m; path = src/BookView.m; sourceTree = SOURCE_ROOT; };
+		49ED111015917D050092CFA3 /* BookView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookView.h; path = src/BookView.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +126,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49703E9B159856B3004CA5E9 /* Douban */ = {
+			isa = PBXGroup;
+			children = (
+				49703E9C15985760004CA5E9 /* DOUOAuthStore+Additions.h */,
+				49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */,
+				49703EAC15985AF7004CA5E9 /* DOUService+Additions.h */,
+				49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */,
+			);
+			name = Douban;
+			sourceTree = "<group>";
+		};
 		49BCF6A81592BD70005DD14E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				49ED111015917D050092CFA0 /* BookDetailController.h */,
+				49ED111015917D050092CF9E /* BookDetailController.m */,
 				49ED110215917A9E0092CF9D /* ViewController.h */,
 				49ED110315917A9E0092CF9D /* ViewController.m */,
 				49BCF6A91592BDC1005DD14E /* ReadingBookController.h */,
 				49BCF6AA1592BDC1005DD14E /* ReadingBookController.m */,
+				49682D8E159987CF00DC2308 /* BookNetController.h */,
+				49682D8F159987CF00DC2308 /* BookNetController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +161,15 @@
 				49ED10FF15917A890092CF9D /* NSString+Additions.m */,
 			);
 			name = Foundation;
+			sourceTree = "<group>";
+		};
+		49BCF6C515985451005DD14E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				49BCF6C615985505005DD14E /* User.h */,
+				49BCF6C715985505005DD14E /* User.m */,
+			);
+			name = Domain;
 			sourceTree = "<group>";
 		};
 		49ED1097159072A30092CF9D = {
@@ -146,6 +193,7 @@
 		49ED10A5159072A30092CF9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4998957515998E8A0048B5B3 /* QuartzCore.framework */,
 				49ED10EE15916C5C0092CF9D /* SenTestingKit.framework */,
 				49ED10EC15916C4B0092CF9D /* MobileCoreServices.framework */,
 				49ED10EA15916C3D0092CF9D /* SystemConfiguration.framework */,
@@ -163,12 +211,16 @@
 		49ED10AC159072A30092CF9D /* src */ = {
 			isa = PBXGroup;
 			children = (
+				49BCF6C515985451005DD14E /* Domain */,
 				49BCF6A81592BD70005DD14E /* Controllers */,
 				49ED10FA159171D20092CF9D /* Additions */,
 				49ED110015917A9E0092CF9D /* AppDelegate.h */,
 				49ED110115917A9E0092CF9D /* AppDelegate.m */,
 				49ED110515917B080092CF9D /* MainStoryboard.storyboard */,
 				49ED10AD159072A30092CF9D /* Supporting Files */,
+				49682D8B1599446700DC2308 /* BookDetailView.xib */,
+				4998956E159989850048B5B3 /* BookNetView.xib */,
+				49ED111015917D050092CFA4 /* Views */,
 			);
 			name = src;
 			path = DiscoverBook;
@@ -205,10 +257,20 @@
 		49ED10FA159171D20092CF9D /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				49703E9B159856B3004CA5E9 /* Douban */,
 				49BCF6C41592F0F5005DD14E /* Macros.h */,
 				49BCF6C01592C9FA005DD14E /* Foundation */,
 			);
 			name = Additions;
+			sourceTree = "<group>";
+		};
+		49ED111015917D050092CFA4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49ED111015917D050092CFA1 /* BookView.m */,
+				49ED111015917D050092CFA3 /* BookView.h */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +350,8 @@
 			files = (
 				49ED110715917B080092CF9D /* MainStoryboard.storyboard in Resources */,
 				49ED110E15917B410092CF9D /* InfoPlist.strings in Resources */,
+				49682D8D1599446700DC2308 /* BookDetailView.xib in Resources */,
+				49989570159989850048B5B3 /* BookNetView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +368,12 @@
 				493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */,
 				49BCF6AB1592BDC1005DD14E /* ReadingBookController.m in Sources */,
 				49BCF6C31592CA22005DD14E /* NSArray+Additions.m in Sources */,
+				49BCF6C815985505005DD14E /* User.m in Sources */,
+				49703E9E15985760004CA5E9 /* DOUOAuthStore+Additions.m in Sources */,
+				49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */,
+				49ED111015917D050092CF9F /* BookDetailController.m in Sources */,
+				49682D90159987CF00DC2308 /* BookNetController.m in Sources */,
+				49ED111015917D050092CFA2 /* BookView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +388,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		49682D8B1599446700DC2308 /* BookDetailView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49682D8C1599446700DC2308 /* en */,
+			);
+			name = BookDetailView.xib;
+			sourceTree = "<group>";
+		};
+		4998956E159989850048B5B3 /* BookNetView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4998956F159989850048B5B3 /* en */,
+			);
+			name = BookNetView.xib;
+			sourceTree = "<group>";
+		};
 		49ED110515917B080092CF9D /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -402,7 +488,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -427,7 +513,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

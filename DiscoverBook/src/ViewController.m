@@ -1,5 +1,7 @@
 #import "ViewController.h"
 #import "NSString+Additions.h"
+#import "DOUOAuthStore+Additions.h"
+#import "DOUService+Additions.h"
 
 @interface ViewController ()
 
@@ -30,31 +32,21 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
   [webView_ loadRequest:[self createRequest]];
 }
 
-- (BOOL)hasAccessToken {
-  DOUOAuthStore *const store = [DOUOAuthStore sharedInstance];
-  return store.accessToken != nil;
-}
-
 - (void)viewDidLoad {
   [super viewDidLoad];
-
-  if ([self hasAccessToken]) {
-    [self initWebView];
-    [self.view addSubview:webView_];
-  }
 
   DOUService *service = [DOUService sharedInstance];
   service.clientId = kAPIKey;
   service.clientSecret = kPrivateKey;
   service.apiBaseUrlString = kHttpsApiBaseUrl;
-}
 
-- (void)viewDidUnload {
-  [super viewDidUnload];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-  return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+  DOUOAuthStore *const store = [DOUOAuthStore sharedInstance];
+  if (!store.hasValidAccessToken) {
+    [self initWebView];
+    [self.view addSubview:webView_];
+  } else {
+    [[DOUService sharedInstance] fetchUserInfo];
+  }
 }
 
 - (void)dismissWebView {
@@ -67,21 +59,10 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
   }];
 }
 
-- (void)printAccessToken {
-  DOUOAuthStore *store = [DOUOAuthStore sharedInstance];
-  NSLog(@"store.accessToken = %@", store.accessToken);
-}
-
 #pragma mark - UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
   NSString *const urlString = request.URL.absoluteString;
-
-  if ([self hasAccessToken]) {
-    [self printAccessToken];
-    [self dismissWebView];
-    return NO;
-  }
 
   if ([urlString hasPrefix:kRedirectUrl]) {
     NSString *const authQuery = request.URL.query;
@@ -96,9 +77,7 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
     authService.callbackURL = kRedirectUrl;
     authService.authorizationCode = code;
 
-    [authService validateAuthorizationCodeWithCallback:^{
-      [self printAccessToken];
-    }];
+    [authService validateAuthorizationCodeWithCallback:nil];
     return NO;
   }
   return YES;
@@ -108,7 +87,9 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 #pragma mark - DOUOAuthServiceDelegate
 
 - (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
-  NSLog(@"success!");
+  DOUOAuthStore *store = [DOUOAuthStore sharedInstance];
+  NSLog(@"store.accessToken = %@", store.accessToken);
+  [[DOUService sharedInstance] fetchUserInfo];
   [self dismissWebView];
 }
 
