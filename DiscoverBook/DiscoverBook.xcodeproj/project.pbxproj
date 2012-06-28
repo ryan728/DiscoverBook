@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4912EB87159C8047000D469C /* MathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EB86159C8047000D469C /* MathSpec.m */; };
+		4912EB8A159C8469000D469C /* Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4912EB89159C8469000D469C /* Shared.xcconfig */; };
+		4912EB8C159C8486000D469C /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4912EB8B159C8486000D469C /* Debug.xcconfig */; };
+		4912EB8E159C84A3000D469C /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4912EB8D159C84A3000D469C /* Release.xcconfig */; };
+		4912EBAE159C8745000D469C /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EBA6159C8745000D469C /* DCCrossHairView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4912EBAF159C8745000D469C /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EBA8159C8745000D469C /* DCFrameView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4912EBB0159C8745000D469C /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EBAA159C8745000D469C /* DCIntrospect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4912EBB1159C8745000D469C /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EBAD159C8745000D469C /* DCStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4912EBB3159C896C000D469C /* UnitTests.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4912EBB2159C896C000D469C /* UnitTests.xcconfig */; };
 		493BB48D159C7EA600E99887 /* UnitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 493BB48B159C7EA600E99887 /* UnitTests-Info.plist */; };
 		493BB490159C7EAC00E99887 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 493BB48E159C7EAC00E99887 /* InfoPlist.strings */; };
 		493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FF15917A890092CF9D /* NSString+Additions.m */; };
@@ -16,10 +24,6 @@
 		49A5FC32159C76870092C640 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998957515998E8A0048B5B3 /* QuartzCore.framework */; };
 		49A5FC36159C76E40092C640 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC35159C76E40092C640 /* User.m */; };
 		49A5FC39159C76ED0092C640 /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC38159C76ED0092C640 /* IntrospectManager.m */; };
-		49A5FC44159C77110092C640 /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC3C159C77110092C640 /* DCCrossHairView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		49A5FC45159C77110092C640 /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC3E159C77110092C640 /* DCFrameView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		49A5FC46159C77110092C640 /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC40159C77110092C640 /* DCIntrospect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		49A5FC47159C77110092C640 /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC43159C77110092C640 /* DCStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49A5FC62159C7B3A0092C640 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EE15916C5C0092CF9D /* SenTestingKit.framework */; };
 		49A5FC63159C7B3A0092C640 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A6159072A30092CF9D /* UIKit.framework */; };
 		49A5FC64159C7B3A0092C640 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A8159072A30092CF9D /* Foundation.framework */; };
@@ -97,6 +101,19 @@
 
 /* Begin PBXFileReference section */
 		4912EB86159C8047000D469C /* MathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathSpec.m; path = test/MathSpec.m; sourceTree = SOURCE_ROOT; };
+		4912EB89159C8469000D469C /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Shared.xcconfig; path = config/Shared.xcconfig; sourceTree = "<group>"; };
+		4912EB8B159C8486000D469C /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = config/Debug.xcconfig; sourceTree = "<group>"; };
+		4912EB8D159C84A3000D469C /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = config/Release.xcconfig; sourceTree = "<group>"; };
+		4912EBA5159C8745000D469C /* DCCrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCrossHairView.h; sourceTree = "<group>"; };
+		4912EBA6159C8745000D469C /* DCCrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCrossHairView.m; sourceTree = "<group>"; };
+		4912EBA7159C8745000D469C /* DCFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFrameView.h; sourceTree = "<group>"; };
+		4912EBA8159C8745000D469C /* DCFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFrameView.m; sourceTree = "<group>"; };
+		4912EBA9159C8745000D469C /* DCIntrospect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospect.h; sourceTree = "<group>"; };
+		4912EBAA159C8745000D469C /* DCIntrospect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCIntrospect.m; sourceTree = "<group>"; };
+		4912EBAB159C8745000D469C /* DCIntrospectSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospectSettings.h; sourceTree = "<group>"; };
+		4912EBAC159C8745000D469C /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
+		4912EBAD159C8745000D469C /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
+		4912EBB2159C896C000D469C /* UnitTests.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = UnitTests.xcconfig; path = config/UnitTests.xcconfig; sourceTree = "<group>"; };
 		493BB48B159C7EA600E99887 /* UnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "UnitTests-Info.plist"; path = "test/UnitTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		493BB48C159C7EA600E99887 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UnitTests-Prefix.pch"; path = "test/UnitTests-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		493BB48F159C7EAC00E99887 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = test/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
@@ -109,15 +126,6 @@
 		49A5FC35159C76E40092C640 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = src/User.m; sourceTree = SOURCE_ROOT; };
 		49A5FC37159C76ED0092C640 /* IntrospectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntrospectManager.h; path = src/IntrospectManager.h; sourceTree = SOURCE_ROOT; };
 		49A5FC38159C76ED0092C640 /* IntrospectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntrospectManager.m; path = src/IntrospectManager.m; sourceTree = SOURCE_ROOT; };
-		49A5FC3B159C77110092C640 /* DCCrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCrossHairView.h; sourceTree = "<group>"; };
-		49A5FC3C159C77110092C640 /* DCCrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCrossHairView.m; sourceTree = "<group>"; };
-		49A5FC3D159C77110092C640 /* DCFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFrameView.h; sourceTree = "<group>"; };
-		49A5FC3E159C77110092C640 /* DCFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFrameView.m; sourceTree = "<group>"; };
-		49A5FC3F159C77110092C640 /* DCIntrospect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospect.h; sourceTree = "<group>"; };
-		49A5FC40159C77110092C640 /* DCIntrospect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCIntrospect.m; sourceTree = "<group>"; };
-		49A5FC41159C77110092C640 /* DCIntrospectSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospectSettings.h; sourceTree = "<group>"; };
-		49A5FC42159C77110092C640 /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
-		49A5FC43159C77110092C640 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
 		49A5FC49159C7A4C0092C640 /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = ../lib/Kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
 		49A5FC61159C7B3A0092C640 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BCF6A91592BDC1005DD14E /* MyBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyBookController.h; path = src/MyBookController.h; sourceTree = SOURCE_ROOT; };
@@ -183,6 +191,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4912EB88159C811D000D469C /* config */ = {
+			isa = PBXGroup;
+			children = (
+				4912EB89159C8469000D469C /* Shared.xcconfig */,
+				4912EB8B159C8486000D469C /* Debug.xcconfig */,
+				4912EB8D159C84A3000D469C /* Release.xcconfig */,
+				4912EBB2159C896C000D469C /* UnitTests.xcconfig */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
+		4912EBA4159C8745000D469C /* DCIntrospect */ = {
+			isa = PBXGroup;
+			children = (
+				4912EBA5159C8745000D469C /* DCCrossHairView.h */,
+				4912EBA6159C8745000D469C /* DCCrossHairView.m */,
+				4912EBA7159C8745000D469C /* DCFrameView.h */,
+				4912EBA8159C8745000D469C /* DCFrameView.m */,
+				4912EBA9159C8745000D469C /* DCIntrospect.h */,
+				4912EBAA159C8745000D469C /* DCIntrospect.m */,
+				4912EBAB159C8745000D469C /* DCIntrospectSettings.h */,
+				4912EBAC159C8745000D469C /* DCStatusBarOverlay.h */,
+				4912EBAD159C8745000D469C /* DCStatusBarOverlay.m */,
+			);
+			name = DCIntrospect;
+			path = ../lib/DCIntrospect/DCIntrospect;
+			sourceTree = "<group>";
+		};
 		49703E9B159856B3004CA5E9 /* Douban */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,22 +237,6 @@
 				49A5FC38159C76ED0092C640 /* IntrospectManager.m */,
 			);
 			name = managers;
-			sourceTree = "<group>";
-		};
-		49A5FC3A159C77110092C640 /* DCIntrospect */ = {
-			isa = PBXGroup;
-			children = (
-				49A5FC3B159C77110092C640 /* DCCrossHairView.h */,
-				49A5FC3C159C77110092C640 /* DCCrossHairView.m */,
-				49A5FC3D159C77110092C640 /* DCFrameView.h */,
-				49A5FC3E159C77110092C640 /* DCFrameView.m */,
-				49A5FC3F159C77110092C640 /* DCIntrospect.h */,
-				49A5FC40159C77110092C640 /* DCIntrospect.m */,
-				49A5FC41159C77110092C640 /* DCIntrospectSettings.h */,
-				49A5FC42159C77110092C640 /* DCStatusBarOverlay.h */,
-				49A5FC43159C77110092C640 /* DCStatusBarOverlay.m */,
-			);
-			path = DCIntrospect;
 			sourceTree = "<group>";
 		};
 		49A5FC4A159C7A4C0092C640 /* Products */ = {
@@ -286,6 +306,7 @@
 			children = (
 				49ED10AC159072A30092CF9D /* src */,
 				49A5FC65159C7B3A0092C640 /* test */,
+				4912EB88159C811D000D469C /* config */,
 				49ED10D115916AE30092CF9D /* lib */,
 				49ED10A5159072A30092CF9D /* Frameworks */,
 				49ED10A3159072A30092CF9D /* Products */,
@@ -350,8 +371,8 @@
 		49ED10D115916AE30092CF9D /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				4912EBA4159C8745000D469C /* DCIntrospect */,
 				49A5FC49159C7A4C0092C640 /* Kiwi.xcodeproj */,
-				49A5FC3A159C77110092C640 /* DCIntrospect */,
 				49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */,
 			);
 			name = lib;
@@ -511,6 +532,7 @@
 			files = (
 				493BB48D159C7EA600E99887 /* UnitTests-Info.plist in Resources */,
 				493BB490159C7EAC00E99887 /* InfoPlist.strings in Resources */,
+				4912EBB3159C896C000D469C /* UnitTests.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +542,9 @@
 			files = (
 				49ED110715917B080092CF9D /* MainStoryboard.storyboard in Resources */,
 				49ED110E15917B410092CF9D /* InfoPlist.strings in Resources */,
+				4912EB8A159C8469000D469C /* Shared.xcconfig in Resources */,
+				4912EB8C159C8486000D469C /* Debug.xcconfig in Resources */,
+				4912EB8E159C84A3000D469C /* Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,10 +589,10 @@
 				49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */,
 				49A5FC36159C76E40092C640 /* User.m in Sources */,
 				49A5FC39159C76ED0092C640 /* IntrospectManager.m in Sources */,
-				49A5FC44159C77110092C640 /* DCCrossHairView.m in Sources */,
-				49A5FC45159C77110092C640 /* DCFrameView.m in Sources */,
-				49A5FC46159C77110092C640 /* DCIntrospect.m in Sources */,
-				49A5FC47159C77110092C640 /* DCStatusBarOverlay.m in Sources */,
+				4912EBAE159C8745000D469C /* DCCrossHairView.m in Sources */,
+				4912EBAF159C8745000D469C /* DCFrameView.m in Sources */,
+				4912EBB0159C8745000D469C /* DCIntrospect.m in Sources */,
+				4912EBB1159C8745000D469C /* DCStatusBarOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +636,7 @@
 /* Begin XCBuildConfiguration section */
 		49A5FC70159C7B3A0092C640 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4912EBB2159C896C000D469C /* UnitTests.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -628,6 +654,7 @@
 		};
 		49A5FC71159C7B3A0092C640 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4912EBB2159C896C000D469C /* UnitTests.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -645,6 +672,7 @@
 		};
 		49ED10BE159072A30092CF9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4912EB8B159C8486000D469C /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -670,6 +698,7 @@
 		};
 		49ED10BF159072A30092CF9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4912EB8D159C84A3000D469C /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -690,6 +719,7 @@
 		};
 		49ED10C1159072A30092CF9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4912EB8B159C8486000D469C /* Debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -708,13 +738,14 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		49ED10C2159072A30092CF9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4912EB8D159C84A3000D469C /* Release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -733,7 +764,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
