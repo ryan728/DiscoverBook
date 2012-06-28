@@ -1,4 +1,3 @@
-#import "ReadingBookController.h"
 #import "DOUQuery.h"
 #import "DOUAPIEngine.h"
 #import "DoubanEntryPeople.h"
@@ -6,16 +5,16 @@
 #import "NSArray+Additions.h"
 #import "Macros.h"
 #import "User.h"
-#import "BookDetailController.h"
+#import "MyBookController.h"
 
-@interface ReadingBookController ()
+@interface MyBookController ()
 
 @property(nonatomic, assign) DoubanEntryPeople *me;
 @property(nonatomic, strong) NSMutableArray *readingBooks;
 
 @end
 
-@implementation ReadingBookController
+@implementation MyBookController
 
 #pragma mark - Properties
 @synthesize me = me_;
@@ -102,8 +101,6 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  DoubanEntrySubject *book = [readingBooks_ objectAtIndex:indexPath.row];
-  [[self navigationController] pushViewController:[[BookDetailController alloc] initWithBookId:book.identifier] animated:YES];
 }
 
 @end
