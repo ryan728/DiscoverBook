@@ -638,17 +638,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4912EBB2159C896C000D469C /* UnitTests.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "test/UnitTests-Prefix.pch";
-				INFOPLIST_FILE = "test/UnitTests-Info.plist";
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../lib/Kiwi/Kiwi\"";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -656,17 +645,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4912EBB2159C896C000D469C /* UnitTests.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "test/UnitTests-Prefix.pch";
-				INFOPLIST_FILE = "test/UnitTests-Info.plist";
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../lib/Kiwi/Kiwi\"";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -721,25 +699,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4912EB8B159C8486000D469C /* Debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "src/DiscoverBook-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"DoubanAPIEngine/OtherSources/**",
-					"DoubanAPIEngine/Sources/**",
-					"${SDK_DIR}/usr/include/libxml2",
-				);
-				INFOPLIST_FILE = "src/DiscoverBook-Info.plist";
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine\"/**";
-				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
@@ -747,25 +706,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4912EB8D159C84A3000D469C /* Release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "src/DiscoverBook-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"DoubanAPIEngine/OtherSources/**",
-					"DoubanAPIEngine/Sources/**",
-					"${SDK_DIR}/usr/include/libxml2",
-				);
-				INFOPLIST_FILE = "src/DiscoverBook-Info.plist";
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine\"/**";
-				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
