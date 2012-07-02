@@ -24,7 +24,7 @@
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="-308" y="-35"/>
+            <point key="canvasLocation" x="-332" y="159"/>
         </scene>
         <!--My Book Controller - reading-->
         <scene sceneID="szv-tE-l3v">
@@ -52,7 +52,7 @@
                     </navigationItem>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="668" y="-288"/>
+            <point key="canvasLocation" x="937" y="-475"/>
         </scene>
         <!--My Book Controller - read-->
         <scene sceneID="BfI-Pn-267">
@@ -78,7 +78,7 @@
                     <navigationItem key="navigationItem" title="Read" id="zfg-Cv-Csh"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="681" y="904"/>
+            <point key="canvasLocation" x="937" y="800"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yr9-bI-e3i">
@@ -94,7 +94,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="147" y="904"/>
+            <point key="canvasLocation" x="323" y="800"/>
         </scene>
         <!--My Book Controller - wish-->
         <scene sceneID="MJc-oN-JrK">
@@ -120,7 +120,7 @@
                     <navigationItem key="navigationItem" title="Wish" id="eNq-hF-CIj"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="681" y="297"/>
+            <point key="canvasLocation" x="937" y="159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bcw-ea-ROS">
@@ -136,7 +136,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="147" y="297"/>
+            <point key="canvasLocation" x="323" y="159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w4D-hG-YVN">
@@ -152,9 +152,17 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="157" y="-297"/>
+            <point key="canvasLocation" x="323" y="-475"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MyBookController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyBookController.h"/>
+        </class>
+        <class className="ViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
