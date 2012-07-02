@@ -775,10 +775,6 @@
 			baseConfigurationReference = 4912EB8B159C8486000D469C /* Debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Zhang (TED6CQ59XN)";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../lib/TestFlightSDK1.0\"",
-				);
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
 				VERSION_INFO_BUILDER = 1.0;
 			};
@@ -789,10 +785,6 @@
 			baseConfigurationReference = 4912EB8D159C84A3000D469C /* Release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Zhang (TED6CQ59XN)";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../lib/TestFlightSDK1.0\"",
-				);
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
 				VERSION_INFO_BUILDER = 1.0;
 			};
