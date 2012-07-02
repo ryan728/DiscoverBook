@@ -1,4 +1,3 @@
-#import <QuartzCore/QuartzCore.h>
 #import "DOUQuery.h"
 #import "DOUAPIEngine.h"
 #import "DoubanEntryPeople.h"
@@ -7,6 +6,7 @@
 #import "Macros.h"
 #import "User.h"
 #import "MyBookController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface MyBookController ()
 
@@ -16,6 +16,13 @@
 @end
 
 @implementation MyBookController
+
+static UIImage *DEFAULT_BOOK_COVER_IMAGE = nil;
+
++ (void)initialize {
+  NSString *defaultBookCoverPath = [[NSBundle mainBundle] pathForResource:@"default_book_cover" ofType:@"jpg"];
+  DEFAULT_BOOK_COVER_IMAGE = [UIImage imageWithContentsOfFile:defaultBookCoverPath];
+}
 
 #pragma mark - Properties
 @synthesize me = me_;
@@ -87,21 +94,14 @@
     DoubanEntrySubject *book = [readingBooks_ objectAtIndex:indexPath.row];
     cell.textLabel.text = book.title.stringValue;
 
-    NSString *defaultBookCover = [[NSBundle mainBundle] pathForResource:@"default_book_cover" ofType:@"jpg"];
-    [cell.imageView setImage:[UIImage imageWithContentsOfFile:defaultBookCover]];
     NSURL *const imageUrl = [[book linkWithRelAttributeValue:@"image"] URL];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
-      NSData *const imageData = [NSData dataWithContentsOfURL:imageUrl];
-      UIImage *const image = [UIImage imageWithData:imageData];
-      dispatch_async(dispatch_get_main_queue(), ^(void) {
-        cell.imageView.alpha = 0.0;
-        [cell.imageView setImage:image];
-
-        [UIView animateWithDuration:1.0 animations:^(void){
-          cell.imageView.alpha = 1.0f;
-        }];
-      });
-    });
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:imageUrl cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
+    [cell.imageView setImageWithURLRequest:request placeholderImage:DEFAULT_BOOK_COVER_IMAGE success:^void(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+      cell.imageView.alpha = 0.0;
+      [UIView animateWithDuration:1.0 animations:^(void) {
+        cell.imageView.alpha = 1.0f;
+      }];
+    } failure:nil];
 
     NSMutableString *authors = [NSMutableString string];
     [book.authors each:^(GDataAtomAuthor *author) {

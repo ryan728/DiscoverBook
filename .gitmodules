@@ -7,3 +7,6 @@
 [submodule "lib/Kiwi"]
 	path = lib/Kiwi
 	url = git@github.com:ryan728/Kiwi.git
+[submodule "lib/AFNetworking"]
+	path = lib/AFNetworking
+	url = git://github.com/AFNetworking/AFNetworking.git
