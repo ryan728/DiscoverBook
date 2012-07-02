@@ -97,8 +97,7 @@ static NSUInteger RESULT_BATCH_SIZE = 10;
   if (readingBooks_.count == 0) {
     return 0;
   }
-  return readingBooks_.count;
-//  return hasMore_ ? readingBooks_.count + 1 : readingBooks_.count;
+  return hasMore_ ? readingBooks_.count + 1 : readingBooks_.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath; {
@@ -107,42 +106,43 @@ static NSUInteger RESULT_BATCH_SIZE = 10;
 
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
-   
   if (cell == nil) {
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    if (indexPath.row == readingBooks_.count) {
-      cell.textLabel.text = @"Load more ...";
-      UIActivityIndicatorView *const indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-      [cell addSubview:indicatorView];
-    } else {
-      cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+  }
+  if (indexPath.row == readingBooks_.count) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    cell.textLabel.text = @"Load more ...";
+  } else {
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
-      DoubanEntrySubject *book = [readingBooks_ objectAtIndex:indexPath.row];
-      NSLog(@"book.identifier = %@", book.identifier);
-      cell.textLabel.text = book.title.stringValue;
+    DoubanEntrySubject *book = [readingBooks_ objectAtIndex:indexPath.row];
+    NSLog(@"book.identifier = %@", book.identifier);
+    cell.textLabel.text = book.title.stringValue;
 
-      NSURL *const imageUrl = [[book linkWithRelAttributeValue:@"image"] URL];
-      NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:imageUrl cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
-      [cell.imageView setImageWithURLRequest:request placeholderImage:DEFAULT_BOOK_COVER_IMAGE success:^void(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-        cell.imageView.alpha = 0.0;
-        [UIView animateWithDuration:1.0 animations:^(void) {
-          cell.imageView.alpha = 1.0f;
-        }];
-      } failure:nil];
-
-      NSMutableString *authors = [NSMutableString string];
-      [book.authors each:^(GDataAtomAuthor *author) {
-        [authors appendString:author.name];
+    NSURL *const imageUrl = [[book linkWithRelAttributeValue:@"image"] URL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:imageUrl cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
+    [cell.imageView setImageWithURLRequest:request placeholderImage:DEFAULT_BOOK_COVER_IMAGE success:^void(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+      cell.imageView.alpha = 0.0;
+      [UIView animateWithDuration:1.0 animations:^(void) {
+        cell.imageView.alpha = 1.0f;
       }];
-      cell.detailTextLabel.text = authors;
-    }
-  
+    } failure:nil];
+
+    NSMutableString *authors = [NSMutableString string];
+    [book.authors each:^(GDataAtomAuthor *author) {
+      [authors appendString:author.name];
+    }];
+    cell.detailTextLabel.text = authors;
+  }
+
   return cell;
 }
 
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  if (indexPath.row == readingBooks_.count) {
+    [self loadReadingListFrom:readingBooks_.count - 1];
+  }
 }
 
 @end
