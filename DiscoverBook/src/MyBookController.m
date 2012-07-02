@@ -1,3 +1,4 @@
+#import <QuartzCore/QuartzCore.h>
 #import "DOUQuery.h"
 #import "DOUAPIEngine.h"
 #import "DoubanEntryPeople.h"
@@ -83,12 +84,25 @@
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
-    DoubanEntrySubject *book  = [readingBooks_ objectAtIndex:indexPath.row];
+    DoubanEntrySubject *book = [readingBooks_ objectAtIndex:indexPath.row];
     cell.textLabel.text = book.title.stringValue;
+
+    NSString *defaultBookCover = [[NSBundle mainBundle] pathForResource:@"default_book_cover" ofType:@"jpg"];
+    [cell.imageView setImage:[UIImage imageWithContentsOfFile:defaultBookCover]];
     NSURL *const imageUrl = [[book linkWithRelAttributeValue:@"image"] URL];
-    NSData *const imageData = [NSData dataWithContentsOfURL:imageUrl];
-    UIImage *const image = [UIImage imageWithData:imageData];
-    [cell.imageView setImage:image];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+      NSData *const imageData = [NSData dataWithContentsOfURL:imageUrl];
+      UIImage *const image = [UIImage imageWithData:imageData];
+      dispatch_async(dispatch_get_main_queue(), ^(void) {
+        cell.imageView.alpha = 0.0;
+        [cell.imageView setImage:image];
+
+        [UIView animateWithDuration:1.0 animations:^(void){
+          cell.imageView.alpha = 1.0f;
+        }];
+      });
+    });
+
     NSMutableString *authors = [NSMutableString string];
     [book.authors each:^(GDataAtomAuthor *author) {
       [authors appendString:author.name];

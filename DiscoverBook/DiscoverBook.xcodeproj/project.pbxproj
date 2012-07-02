@@ -48,6 +48,7 @@
 		49ED110E15917B410092CF9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49ED110C15917B410092CF9D /* InfoPlist.strings */; };
 		49ED110F15917CFA0092CF9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED110115917A9E0092CF9D /* AppDelegate.m */; };
 		49ED111015917D050092CF9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED110A15917B240092CF9D /* main.m */; };
+		49ED111015917D050092CFA6 /* default_book_cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA5 /* default_book_cover.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		49ED110915917B240092CF9D /* DiscoverBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DiscoverBook-Prefix.pch"; path = "src/DiscoverBook-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		49ED110A15917B240092CF9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = SOURCE_ROOT; };
 		49ED110D15917B410092CF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = src/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		49ED111015917D050092CFA5 /* default_book_cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default_book_cover.jpg; path = resources/default_book_cover.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		49B9D75115A17CAA00B4C734 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				49ED111015917D050092CFA5 /* default_book_cover.jpg */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
 		49BCF6A81592BD70005DD14E /* controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +337,7 @@
 				49ED10AC159072A30092CF9D /* src */,
 				49A5FC65159C7B3A0092C640 /* test */,
 				4912EB88159C811D000D469C /* config */,
+				49B9D75115A17CAA00B4C734 /* resources */,
 				49ED10D115916AE30092CF9D /* lib */,
 				49ED10A5159072A30092CF9D /* Frameworks */,
 				49ED10A3159072A30092CF9D /* Products */,
@@ -568,6 +579,7 @@
 				4912EB8E159C84A3000D469C /* Release.xcconfig in Resources */,
 				4912EBF7159D700A000D469C /* README.txt in Resources */,
 				4912EBF8159D700A000D469C /* release_notes.txt in Resources */,
+				49ED111015917D050092CFA6 /* default_book_cover.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
