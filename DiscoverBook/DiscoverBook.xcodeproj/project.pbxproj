@@ -16,6 +16,9 @@
 		4912EBB0159C8745000D469C /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EBAA159C8745000D469C /* DCIntrospect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4912EBB1159C8745000D469C /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EBAD159C8745000D469C /* DCStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4912EBB3159C896C000D469C /* UnitTests.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4912EBB2159C896C000D469C /* UnitTests.xcconfig */; };
+		4912EBF6159D700A000D469C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4912EBF2159D700A000D469C /* libTestFlight.a */; };
+		4912EBF7159D700A000D469C /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4912EBF3159D700A000D469C /* README.txt */; };
+		4912EBF8159D700A000D469C /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4912EBF4159D700A000D469C /* release_notes.txt */; };
 		493BB48D159C7EA600E99887 /* UnitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 493BB48B159C7EA600E99887 /* UnitTests-Info.plist */; };
 		493BB490159C7EAC00E99887 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 493BB48E159C7EAC00E99887 /* InfoPlist.strings */; };
 		493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FF15917A890092CF9D /* NSString+Additions.m */; };
@@ -114,6 +117,10 @@
 		4912EBAC159C8745000D469C /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
 		4912EBAD159C8745000D469C /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
 		4912EBB2159C896C000D469C /* UnitTests.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = UnitTests.xcconfig; path = config/UnitTests.xcconfig; sourceTree = "<group>"; };
+		4912EBF2159D700A000D469C /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		4912EBF3159D700A000D469C /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		4912EBF4159D700A000D469C /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
+		4912EBF5159D700A000D469C /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		493BB48B159C7EA600E99887 /* UnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "UnitTests-Info.plist"; path = "test/UnitTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		493BB48C159C7EA600E99887 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UnitTests-Prefix.pch"; path = "test/UnitTests-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		493BB48F159C7EAC00E99887 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = test/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
@@ -185,6 +192,7 @@
 				49ED10A7159072A30092CF9D /* UIKit.framework in Frameworks */,
 				49ED10A9159072A30092CF9D /* Foundation.framework in Frameworks */,
 				49ED10AB159072A30092CF9D /* CoreGraphics.framework in Frameworks */,
+				4912EBF6159D700A000D469C /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +225,18 @@
 			);
 			name = DCIntrospect;
 			path = ../lib/DCIntrospect/DCIntrospect;
+			sourceTree = "<group>";
+		};
+		4912EBF1159D700A000D469C /* TestFlightSDK1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				4912EBF2159D700A000D469C /* libTestFlight.a */,
+				4912EBF3159D700A000D469C /* README.txt */,
+				4912EBF4159D700A000D469C /* release_notes.txt */,
+				4912EBF5159D700A000D469C /* TestFlight.h */,
+			);
+			name = TestFlightSDK1.0;
+			path = ../lib/TestFlightSDK1.0;
 			sourceTree = "<group>";
 		};
 		49703E9B159856B3004CA5E9 /* Douban */ = {
@@ -371,6 +391,7 @@
 		49ED10D115916AE30092CF9D /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				4912EBF1159D700A000D469C /* TestFlightSDK1.0 */,
 				4912EBA4159C8745000D469C /* DCIntrospect */,
 				49A5FC49159C7A4C0092C640 /* Kiwi.xcodeproj */,
 				49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */,
@@ -545,6 +566,8 @@
 				4912EB8A159C8469000D469C /* Shared.xcconfig in Resources */,
 				4912EB8C159C8486000D469C /* Debug.xcconfig in Resources */,
 				4912EB8E159C84A3000D469C /* Release.xcconfig in Resources */,
+				4912EBF7159D700A000D469C /* README.txt in Resources */,
+				4912EBF8159D700A000D469C /* release_notes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,25 +675,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4912EB8B159C8486000D469C /* Debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -678,20 +683,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4912EB8D159C84A3000D469C /* Release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -699,6 +691,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4912EB8B159C8486000D469C /* Debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Zhang (TED6CQ59XN)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../lib/TestFlightSDK1.0\"",
+				);
+				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
+				VERSION_INFO_BUILDER = 1.0;
 			};
 			name = Debug;
 		};
@@ -706,6 +705,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4912EB8D159C84A3000D469C /* Release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Zhang (TED6CQ59XN)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../lib/TestFlightSDK1.0\"",
+				);
+				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
+				VERSION_INFO_BUILDER = 1.0;
 			};
 			name = Release;
 		};

@@ -1,7 +1,3 @@
-//
-// Prefix header for all source files of the 'DiscoverBook' target in the 'DiscoverBook' project
-//
-
 #import <Availability.h>
 
 #ifndef __IPHONE_5_0
@@ -11,4 +7,5 @@
 #ifdef __OBJC__
   #import <UIKit/UIKit.h>
   #import <Foundation/Foundation.h>
+  #import "TestFlight.h"
 #endif
