@@ -1,6 +1,6 @@
 #import "DOUAPIEngine.h"
 
-@interface RootController : UIViewController<UIWebViewDelegate, DOUOAuthServiceDelegate>
+@interface RootController : UIViewController<UIWebViewDelegate, DOUOAuthServiceDelegate, UISearchBarDelegate>
 
 @property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, strong) IBOutlet UIButton *signOutButton;

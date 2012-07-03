@@ -5,6 +5,7 @@
 #import "NSString+Additions.h"
 #import "MyBookController.h"
 #import "User.h"
+#import "SearchController.h"
 
 
 @implementation RootController {
@@ -24,6 +25,14 @@ static DOUOAuthStore *authStore = nil;
 
 + (void)initialize {
   authStore = [DOUOAuthStore sharedInstance];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  [super prepareForSegue:segue sender:sender];
+  if ([segue.identifier isEqualToString:@"search"]) {
+    SearchController *searchController = segue.destinationViewController;
+    searchController.term = searchBar_.text;
+  }
 }
 
 #pragma mark - View lifecycle
@@ -128,6 +137,16 @@ static DOUOAuthStore *authStore = nil;
 - (void)OAuthClient:(DOUOAuthService *)client didFailWithError:(NSError *)error {
   NSLog(@"failed®!");
   [self dismissWebView];
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+  [self performSegueWithIdentifier:@"search" sender:self];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+  [searchBar_ resignFirstResponder];
 }
 
 @end
