@@ -38,15 +38,16 @@ static short const RADIUS = 150;
   SearchResultLabel *termLabel = [[SearchResultLabel alloc] initWithText:term_ andCenter:CGPointMake(centerX, centerY)];
   termLabel.matcher = -1;
   termLabel.textColor = [UIColor greenColor];
+  termLabel.scrollView = scrollView_;
 
   for (int i = 0; i < 8; i++) {
     CGFloat anotherCenterX = centerX + sin(M_PI_4 * i) * RADIUS;
     CGFloat anotherCenterY = centerY - cos(M_PI_4 * i) * RADIUS;
     SearchResultLabel *anotherLabel = [[SearchResultLabel alloc] initWithText:[NSString stringWithFormat:@"result %li", i] andCenter:CGPointMake(anotherCenterX, anotherCenterY)];
     anotherLabel.matcher = 1;
+    anotherLabel.scrollView = scrollView_;
     [background_ addSubview:anotherLabel];
   }
-
 
   [background_ addSubview:termLabel];
 
