@@ -9,27 +9,34 @@
 
 @implementation User
 @synthesize doubanEntryPeople = _doubanEntryPeople;
+@synthesize id = id_;
+@synthesize title = title_;
 
 
 - (id)initWithDoubanEntryPeople:(DoubanEntryPeople *)people; {
   if ((self = [super init])) {
-    self.doubanEntryPeople = people;
+    id_ = people.uid.content;
+    title_ = people.title.stringValue;
   }
 
+  [User saveDefaultUserWithId:id_ andName:title_];
   return self;
 }
 
 #pragma mark - Class
+static User *defaultUser = nil;
 
-// your classes methods here
++ (void)saveDefaultUserWithId:(NSString *)id andName:(NSString *)name {
+  NSUserDefaults *const userDefaults = [NSUserDefaults standardUserDefaults];
+  [userDefaults setObject:id forKey:@"userId"];
+  [userDefaults setObject:name forKey:@"userName"];
+  [userDefaults synchronize];
+}
 
++ (void)clearDefaultUser {
+  [User saveDefaultUserWithId:nil andName:nil];
+}
 
-#pragma mark - NSObject Methods
-
-// your base class overrides here
-
-
-static User* defaultUser = nil;
 
 + (void)initDefaultUser:(DoubanEntryPeople *)people {
   if (!defaultUser) {
@@ -38,11 +45,18 @@ static User* defaultUser = nil;
 }
 
 + (User *)defaultUser {
- return defaultUser;
-}
+  if (defaultUser == nil) {
+    NSUserDefaults *const userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *userId = [userDefaults objectForKey:@"userId"];
+    NSString *userName = [userDefaults objectForKey:@"userName"];
 
-- (NSString *)id {
-  return _doubanEntryPeople.uid.content;
+    if (userId && userName) {
+      defaultUser = [[self alloc] init];
+      defaultUser.id = userId;
+      defaultUser.title = userName;
+    }
+  }
+  return defaultUser;
 }
 
 @end

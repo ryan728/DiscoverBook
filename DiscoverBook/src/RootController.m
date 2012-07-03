@@ -4,6 +4,7 @@
 #import "DOUOAuthStore+Additions.h"
 #import "NSString+Additions.h"
 #import "MyBookController.h"
+#import "User.h"
 
 
 @implementation RootController {
@@ -12,29 +13,56 @@
 #pragma mark - Properties
 
 @synthesize searchBar = searchBar_;
+@synthesize signOutButton = signOutButton_;
+@synthesize woDuButton = woDuButton_;
 
 static NSString *const kAPIKey = @"0f08a77e67e884452d19f67b37b98ccf";
 static NSString *const kPrivateKey = @"bec2de010015fa6e";
 static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 
+static DOUOAuthStore *authStore = nil;
+
++ (void)initialize {
+  authStore = [DOUOAuthStore sharedInstance];
+}
 
 #pragma mark - View lifecycle
 
 - (void)viewWillAppear:(BOOL)animated {
-  searchBar_.layer.cornerRadius = 10.0f;
-  searchBar_.barStyle = UIBarStyleBlackTranslucent;
+  signOutButton_.hidden = !authStore.hasValidAccessToken;
+  signOutButton_.alpha = 1.0f;
+
+  User *const user = [User defaultUser];
+  if (user) {
+    [woDuButton_ setTitle:[NSString stringWithFormat:@"%@'s books", user.title] forState:UIControlStateNormal];
+  }
   [super viewWillAppear:animated];
 }
 
 - (IBAction)woDu:(id)sender {
-  DOUOAuthStore *const store = [DOUOAuthStore sharedInstance];
-  if (!store.hasValidAccessToken) {
+  if (!authStore.hasValidAccessToken) {
     [self initWebView];
     [self.view addSubview:webView_];
   } else {
     [[DOUService sharedInstance] fetchUserInfo];
     [self performSegueWithIdentifier:@"showMyBooks" sender:self];
   }
+}
+
+- (IBAction)signOut:(id)sender {
+  DOUOAuthService *authService = [DOUOAuthService sharedInstance];
+  [authService logout];
+  [User clearDefaultUser];
+  [woDuButton_ setTitle:@"Wo Du" forState:UIControlStateNormal];
+
+  [UIView animateWithDuration:1.0
+                   animations:^void() {
+                     signOutButton_.alpha = 0;
+                   }
+                   completion:^void(BOOL finished) {
+                     signOutButton_.hidden = YES;
+                   }
+  ];
 }
 
 - (void)initWebView {
@@ -56,7 +84,6 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
   NSString *const urlString = request.URL.absoluteString;
-
   if ([urlString hasPrefix:kRedirectUrl]) {
     NSString *const authQuery = request.URL.query;
     NSMutableDictionary *const parsedQueryDictionary = [authQuery explodeToDictionaryInnerGlue:@"=" outterGlue:@"&"];
@@ -92,8 +119,7 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 #pragma mark - DOUOAuthServiceDelegate
 
 - (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
-  DOUOAuthStore *store = [DOUOAuthStore sharedInstance];
-  NSLog(@"store.accessToken = %@", store.accessToken);
+  NSLog(@"store.accessToken = %@", authStore.accessToken);
   [[DOUService sharedInstance] fetchUserInfo];
   [self dismissWebView];
   [self performSegueWithIdentifier:@"showMyBooks" sender:self];

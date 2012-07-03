@@ -9,7 +9,6 @@
   DOUQuery *query = [[DOUQuery alloc] initWithSubPath:@"/people/@me" parameters:nil];
 
     DOUReqBlock completionBlock = ^(DOUHttpRequest *request) {
-      NSLog(@"response : %@", request.responseString);
       if (!request.error) {
         DoubanEntryPeople *people = [[DoubanEntryPeople alloc] initWithData:request.responseData];
         [User initDefaultUser:people];

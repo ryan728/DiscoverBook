@@ -2,9 +2,11 @@
 
 @interface User : NSObject
 
-+ (void)initDefaultUser:(DoubanEntryPeople *)people;
+@property (nonatomic, strong) NSString *id;
+@property (nonatomic, strong) NSString *title;
 
++ (void)initDefaultUser:(DoubanEntryPeople *)people;
 + (User *)defaultUser;
 
-- (NSString *)id;
++ (void)clearDefaultUser;
 @end
