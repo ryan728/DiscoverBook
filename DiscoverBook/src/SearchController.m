@@ -1,5 +1,11 @@
 #import <QuartzCore/QuartzCore.h>
 #import "SearchController.h"
+#import "SearchView.h"
+#import "SearchResultLabel.h"
+
+static short const MAX_WIDTH = 2560;
+static short const MAX_HEIGHT = 1920;
+static short const RADIUS = 150;
 
 @implementation SearchController {
   UIView *background_;
@@ -15,23 +21,39 @@
   scrollView_.minimumZoomScale = 0.4;
   scrollView_.maximumZoomScale = 2;
   scrollView_.delegate = self;
-  scrollView_.contentSize = CGSizeMake(2560, 1920);
-  background_ = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 2560, 1920)];
+  scrollView_.contentSize = CGSizeMake(MAX_WIDTH, MAX_HEIGHT);
+  scrollView_.backgroundColor = [UIColor yellowColor];
+  background_ = [[SearchView alloc] initWithFrame:CGRectMake(0, 0, MAX_WIDTH, MAX_HEIGHT)];
+  background_.backgroundColor = [UIColor clearColor];
   [scrollView_ addSubview:background_];
 
-  CGRect bounds = [[UIScreen mainScreen] bounds]; 
+  CGRect bounds = [[UIScreen mainScreen] bounds];
 
   CGFloat height = bounds.size.height;
   CGFloat width = bounds.size.width;
 
-  UILabel *termLabel = [[UILabel alloc] init];
-  termLabel.text = term_;
-  termLabel.frame = CGRectMake((2560 - termLabel.frame.size.width) / 2, (1920 - termLabel.frame.size.height) / 2, termLabel.frame.size.width, termLabel.frame.size.height);
-  [termLabel sizeToFit];
-  NSLog(@"NSStringFromCGRect(termLabel.frame) = %@", NSStringFromCGRect(termLabel.frame));
+  CGFloat centerX = MAX_WIDTH / 2;
+  CGFloat centerY = MAX_HEIGHT / 2;
+
+  SearchResultLabel *termLabel = [[SearchResultLabel alloc] initWithText:term_ andCenter:CGPointMake(centerX, centerY)];
+  termLabel.matcher = -1;
+  termLabel.textColor = [UIColor greenColor];
+
+  for (int i = 0; i < 8; i++) {
+    CGFloat anotherCenterX = centerX + sin(M_PI_4 * i) * RADIUS;
+    CGFloat anotherCenterY = centerY - cos(M_PI_4 * i) * RADIUS;
+    SearchResultLabel *anotherLabel = [[SearchResultLabel alloc] initWithText:[NSString stringWithFormat:@"result %li", i] andCenter:CGPointMake(anotherCenterX, anotherCenterY)];
+    anotherLabel.matcher = 1;
+    [background_ addSubview:anotherLabel];
+  }
+
+
   [background_ addSubview:termLabel];
-  [scrollView_ scrollRectToVisible:CGRectMake((2560 - width) / 2, (1920 - height) / 2, width, height) animated:YES];
+
+  [scrollView_ scrollRectToVisible:CGRectMake(centerX - width / 2, centerY - height / 2, width, height) animated:YES];
 }
+
+
 
 #pragma mark - UIScrollViewDelegate
 

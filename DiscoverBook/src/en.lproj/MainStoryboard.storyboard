@@ -194,14 +194,14 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Afb-30-5fa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Ry0-kh-qcA" customClass="SearchController" sceneMemberID="viewController">
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.5" maximumZoomScale="5" id="1kp-yO-cXP" customClass="SearchView">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.5" maximumZoomScale="5" id="1kp-yO-cXP">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94901967050000002" green="0.92941182850000004" blue="0.83137261870000001" alpha="1" colorSpace="deviceRGB"/>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Search" id="fXu-6r-IWi"/>
                     <connections>
-                        <outlet property="scrollView" destination="1kp-yO-cXP" id="qxJ-he-ok8"/>
+                        <outlet property="scrollView" destination="1kp-yO-cXP" id="JO3-gL-zUL"/>
                     </connections>
                 </viewController>
             </objects>
@@ -225,9 +225,6 @@
             <relationships>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
             </relationships>
-        </class>
-        <class className="SearchView" superclassName="UIScrollView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchView.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

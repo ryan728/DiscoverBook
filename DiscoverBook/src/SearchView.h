@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
 
 
-@interface SearchView : UIScrollView
+@interface SearchView : UIView
 @end
