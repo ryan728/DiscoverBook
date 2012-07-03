@@ -24,6 +24,7 @@
 		493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FF15917A890092CF9D /* NSString+Additions.m */; };
 		49703E9E15985760004CA5E9 /* DOUOAuthStore+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */; };
 		49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */; };
+		4979473B15A1CADF00DA964E /* RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979473A15A1CADF00DA964E /* RootController.m */; };
 		49A5FC32159C76870092C640 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998957515998E8A0048B5B3 /* QuartzCore.framework */; };
 		49A5FC36159C76E40092C640 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC35159C76E40092C640 /* User.m */; };
 		49A5FC39159C76ED0092C640 /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC38159C76ED0092C640 /* IntrospectManager.m */; };
@@ -53,7 +54,6 @@
 		49ED10E915916C360092CF9D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E815916C360092CF9D /* Security.framework */; };
 		49ED10EB15916C3D0092CF9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EA15916C3D0092CF9D /* SystemConfiguration.framework */; };
 		49ED10ED15916C4B0092CF9D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EC15916C4B0092CF9D /* MobileCoreServices.framework */; };
-		49ED110415917AEE0092CF9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED110315917A9E0092CF9D /* ViewController.m */; };
 		49ED110715917B080092CF9D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49ED110515917B080092CF9D /* MainStoryboard.storyboard */; };
 		49ED110E15917B410092CF9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49ED110C15917B410092CF9D /* InfoPlist.strings */; };
 		49ED110F15917CFA0092CF9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED110115917A9E0092CF9D /* AppDelegate.m */; };
@@ -139,6 +139,8 @@
 		49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUOAuthStore+Additions.m"; path = "src/DOUOAuthStore+Additions.m"; sourceTree = SOURCE_ROOT; };
 		49703EAC15985AF7004CA5E9 /* DOUService+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DOUService+Additions.h"; path = "src/DOUService+Additions.h"; sourceTree = SOURCE_ROOT; };
 		49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUService+Additions.m"; path = "src/DOUService+Additions.m"; sourceTree = SOURCE_ROOT; };
+		4979473915A1CADF00DA964E /* RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootController.h; path = src/RootController.h; sourceTree = SOURCE_ROOT; };
+		4979473A15A1CADF00DA964E /* RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootController.m; path = src/RootController.m; sourceTree = SOURCE_ROOT; };
 		4998957515998E8A0048B5B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		49A5FC34159C76E40092C640 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = src/User.h; sourceTree = SOURCE_ROOT; };
 		49A5FC35159C76E40092C640 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = src/User.m; sourceTree = SOURCE_ROOT; };
@@ -188,8 +190,6 @@
 		49ED10FF15917A890092CF9D /* NSString+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "src/NSString+Additions.m"; sourceTree = SOURCE_ROOT; };
 		49ED110015917A9E0092CF9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		49ED110115917A9E0092CF9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = src/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		49ED110215917A9E0092CF9D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = src/ViewController.h; sourceTree = SOURCE_ROOT; };
-		49ED110315917A9E0092CF9D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = src/ViewController.m; sourceTree = SOURCE_ROOT; };
 		49ED110615917B080092CF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = src/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		49ED110815917B240092CF9D /* DiscoverBook-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DiscoverBook-Info.plist"; path = "src/DiscoverBook-Info.plist"; sourceTree = SOURCE_ROOT; };
 		49ED110915917B240092CF9D /* DiscoverBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DiscoverBook-Prefix.pch"; path = "src/DiscoverBook-Prefix.pch"; sourceTree = SOURCE_ROOT; };
@@ -363,10 +363,10 @@
 		49BCF6A81592BD70005DD14E /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				49ED110215917A9E0092CF9D /* ViewController.h */,
-				49ED110315917A9E0092CF9D /* ViewController.m */,
 				49BCF6A91592BDC1005DD14E /* MyBookController.h */,
 				49BCF6AA1592BDC1005DD14E /* MyBookController.m */,
+				4979473915A1CADF00DA964E /* RootController.h */,
+				4979473A15A1CADF00DA964E /* RootController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -675,7 +675,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49ED110415917AEE0092CF9D /* ViewController.m in Sources */,
 				49ED110F15917CFA0092CF9D /* AppDelegate.m in Sources */,
 				49ED111015917D050092CF9D /* main.m in Sources */,
 				493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */,
@@ -699,6 +698,7 @@
 				49B9D78215A1843500B4C734 /* AFURLConnectionOperation.m in Sources */,
 				49B9D78315A1843500B4C734 /* AFXMLRequestOperation.m in Sources */,
 				49B9D78415A1843500B4C734 /* UIImageView+AFNetworking.m in Sources */,
+				4979473B15A1CADF00DA964E /* RootController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,6 +776,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Zhang (TED6CQ59XN)";
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				VERSION_INFO_BUILDER = 1.0;
 			};
 			name = Debug;
@@ -786,6 +787,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Zhang (TED6CQ59XN)";
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				VERSION_INFO_BUILDER = 1.0;
 			};
 			name = Release;

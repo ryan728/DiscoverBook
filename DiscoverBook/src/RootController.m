@@ -1,27 +1,40 @@
-#import "ViewController.h"
-#import "NSString+Additions.h"
-#import "DOUOAuthStore+Additions.h"
+#import <QuartzCore/QuartzCore.h>
+#import "RootController.h"
 #import "DOUService+Additions.h"
+#import "DOUOAuthStore+Additions.h"
+#import "NSString+Additions.h"
+#import "MyBookController.h"
 
-@interface ViewController ()
 
-@property(nonatomic, retain) UIWebView *webView;
+@implementation RootController {
+  UIWebView *webView_;
+}
+#pragma mark - Properties
 
-@end
-
-@implementation ViewController
+@synthesize searchBar = searchBar_;
 
 static NSString *const kAPIKey = @"0f08a77e67e884452d19f67b37b98ccf";
 static NSString *const kPrivateKey = @"bec2de010015fa6e";
 static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 
-@synthesize webView = webView_;
 
-- (NSURLRequest *)createRequest {
-  NSString *str = [NSString stringWithFormat:@"https://www.douban.com/service/auth2/auth?client_id=%@&redirect_uri=%@&response_type=code", kAPIKey, kRedirectUrl];
-  NSString *urlStr = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-  NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
-  return request;
+#pragma mark - View lifecycle
+
+- (void)viewWillAppear:(BOOL)animated {
+  searchBar_.layer.cornerRadius = 10.0f;
+  searchBar_.barStyle = UIBarStyleBlackTranslucent;
+  [super viewWillAppear:animated];
+}
+
+- (IBAction)woDu:(id)sender {
+  DOUOAuthStore *const store = [DOUOAuthStore sharedInstance];
+  if (!store.hasValidAccessToken) {
+    [self initWebView];
+    [self.view addSubview:webView_];
+  } else {
+    [[DOUService sharedInstance] fetchUserInfo];
+    [self performSegueWithIdentifier:@"showMyBooks" sender:self];
+  }
 }
 
 - (void)initWebView {
@@ -32,34 +45,14 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
   [webView_ loadRequest:[self createRequest]];
 }
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
 
-  DOUService *service = [DOUService sharedInstance];
-  service.clientId = kAPIKey;
-  service.clientSecret = kPrivateKey;
-  service.apiBaseUrlString = kHttpsApiBaseUrl;
-
-  DOUOAuthStore *const store = [DOUOAuthStore sharedInstance];
-  if (!store.hasValidAccessToken) {
-    [self initWebView];
-    [self.view addSubview:webView_];
-  } else {
-    [[DOUService sharedInstance] fetchUserInfo];
-  }
+- (NSURLRequest *)createRequest {
+  NSString *str = [NSString stringWithFormat:@"https://www.douban.com/service/auth2/auth?client_id=%@&redirect_uri=%@&response_type=code", kAPIKey, kRedirectUrl];
+  NSString *urlStr = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  return [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
 }
 
-- (void)dismissWebView {
-  [UIView animateWithDuration:1.0 animations:^void() {
-    webView_.alpha = 0;
-  }                completion:^void(BOOL finished) {
-    if (finished) {
-      [webView_ removeFromSuperview];
-    }
-  }];
-}
-
-#pragma mark - UIWebViewDelegate
+#pragma mark UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
   NSString *const urlString = request.URL.absoluteString;
@@ -82,7 +75,19 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
   }
   return YES;
 }
-#pragma mark end
+
+- (void)dismissWebView {
+  [UIView animateWithDuration:1.0
+                   animations:^void() {
+                     webView_.alpha = 0;
+                   }
+                   completion:^void(BOOL finished) {
+                     if (finished) {
+                       [webView_ removeFromSuperview];
+                     }
+                   }
+  ];
+}
 
 #pragma mark - DOUOAuthServiceDelegate
 
@@ -91,11 +96,12 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
   NSLog(@"store.accessToken = %@", store.accessToken);
   [[DOUService sharedInstance] fetchUserInfo];
   [self dismissWebView];
+  [self performSegueWithIdentifier:@"showMyBooks" sender:self];
 }
 
 - (void)OAuthClient:(DOUOAuthService *)client didFailWithError:(NSError *)error {
   NSLog(@"failed®!");
+  [self dismissWebView];
 }
 
-#pragma mark end
 @end

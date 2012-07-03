@@ -34,6 +34,12 @@ static NSUInteger RESULT_BATCH_SIZE = 10;
 
 #pragma mark - View lifecycle
 
+- (void)viewWillAppear:(BOOL)animated {
+  self.tabBarController.navigationItem.title = self.title;
+  [super viewWillAppear:animated];
+}
+
+
 - (void)viewDidLoad; {
   [super viewDidLoad];
 
@@ -57,7 +63,7 @@ static NSUInteger RESULT_BATCH_SIZE = 10;
 
 - (void)loadReadingListFrom:(int)startIndex {
   User *user = [User defaultUser];
-  NSDictionary *const parameters = [NSDictionary dictionaryWithObjects:Array(@"book", self.title, [NSString stringWithFormat:@"%u", RESULT_BATCH_SIZE], [NSString stringWithFormat:@"%u", startIndex]) forKeys:Array(@"cat", @"status", @"max-results", @"start-index")];
+  NSDictionary *const parameters = [NSDictionary dictionaryWithObjects:Array(@"book", self.title.lowercaseString, [NSString stringWithFormat:@"%u", RESULT_BATCH_SIZE], [NSString stringWithFormat:@"%u", startIndex]) forKeys:Array(@"cat", @"status", @"max-results", @"start-index")];
   DOUQuery *const bookQuery = [[DOUQuery alloc] initWithSubPath:[NSString stringWithFormat:@"/people/%@/collection", user.id] parameters:parameters];
 
   DOUService *service = [DOUService sharedInstance];
@@ -102,7 +108,6 @@ static NSUInteger RESULT_BATCH_SIZE = 10;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath; {
   NSString *CellIdentifier = @"READING_BOOK_ITEM";
-  NSLog(@"indexPath.row = %li", indexPath.row);
 
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
@@ -116,7 +121,6 @@ static NSUInteger RESULT_BATCH_SIZE = 10;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     DoubanEntrySubject *book = [readingBooks_ objectAtIndex:indexPath.row];
-    NSLog(@"book.identifier = %@", book.identifier);
     cell.textLabel.text = book.title.stringValue;
 
     NSURL *const imageUrl = [[book linkWithRelAttributeValue:@"image"] URL];
@@ -141,7 +145,7 @@ static NSUInteger RESULT_BATCH_SIZE = 10;
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   if (indexPath.row == readingBooks_.count) {
-    [self loadReadingListFrom:readingBooks_.count - 1];
+    [self loadReadingListFrom:readingBooks_.count + 1];
   }
 }
 

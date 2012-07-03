@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FSD-gN-SjK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="sTq-8R-Ox7">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="0B2-Da-JKW">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beq-D9-ROl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController definesPresentationContext="YES" id="FSD-gN-SjK" customClass="ViewController" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="FSD-gN-SjK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UWk-JY-gs0"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="cV2-2f-qrd">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -18,19 +19,19 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="VwQ-ue-58T" kind="relationship" relationship="viewControllers" id="Ild-59-Eyh"/>
-                        <segue destination="7Ts-FY-hOo" kind="relationship" relationship="viewControllers" id="x7s-ba-puF"/>
-                        <segue destination="OSr-kg-T8C" kind="relationship" relationship="viewControllers" id="jcW-nd-rh4"/>
+                        <segue destination="CIy-4e-ON8" kind="relationship" relationship="viewControllers" id="Bii-Vc-oIV"/>
+                        <segue destination="Hl6-oI-wZn" kind="relationship" relationship="viewControllers" id="DsB-0C-JMy"/>
+                        <segue destination="p7g-pA-nVo" kind="relationship" relationship="viewControllers" id="XiX-Ts-i6l"/>
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="-332" y="159"/>
+            <point key="canvasLocation" x="-2" y="-922"/>
         </scene>
-        <!--My Book Controller - reading-->
+        <!--My Book Controller - Reading-->
         <scene sceneID="szv-tE-l3v">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UA1-1r-5fw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController title="reading" id="CIy-4e-ON8" customClass="MyBookController" sceneMemberID="viewController">
+                <tableViewController title="Reading" id="CIy-4e-ON8" customClass="MyBookController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ozF-KP-ZGj">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,18 +48,16 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Reading" id="jwP-wM-mNM">
-                        <barButtonItem key="backBarButtonItem" title="Reading..." id="JCC-bO-oP9"/>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="u9N-y9-HZU"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="937" y="-475"/>
+            <point key="canvasLocation" x="551" y="-1193"/>
         </scene>
-        <!--My Book Controller - read-->
+        <!--My Book Controller - Read-->
         <scene sceneID="BfI-Pn-267">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ri-qa-set" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController title="read" id="p7g-pA-nVo" customClass="MyBookController" sceneMemberID="viewController">
+                <tableViewController title="Read" id="p7g-pA-nVo" customClass="MyBookController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ND2-r3-0dW">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,32 +74,17 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="2MY-WU-zle"/>
                     <navigationItem key="navigationItem" title="Read" id="zfg-Cv-Csh"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="937" y="800"/>
+            <point key="canvasLocation" x="561" y="42"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="yr9-bI-e3i">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PYC-bK-ecB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" id="OSr-kg-T8C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="aRZ-DO-70W"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="J9k-Xr-Ejk">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="p7g-pA-nVo" kind="relationship" relationship="rootViewController" id="Aik-jZ-KXh"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="323" y="800"/>
-        </scene>
-        <!--My Book Controller - wish-->
+        <!--My Book Controller - Wish-->
         <scene sceneID="MJc-oN-JrK">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8H-dW-fDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController title="wish" id="Hl6-oI-wZn" customClass="MyBookController" sceneMemberID="viewController">
+                <tableViewController title="Wish" id="Hl6-oI-wZn" customClass="MyBookController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BUP-t2-3kL">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,50 +101,92 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Wish" id="eNq-hF-CIj"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="vJN-eW-vzf"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="937" y="159"/>
+            <point key="canvasLocation" x="561" y="-567"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="bcw-ea-ROS">
+        <scene sceneID="8Ag-2J-Dgw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dbs-kR-arv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" id="7Ts-FY-hOo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="f3X-3P-2p3"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="NxL-OI-OPE">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7v-w4-ifp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="sTq-8R-Ox7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="KeN-vf-JjT">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Hl6-oI-wZn" kind="relationship" relationship="rootViewController" id="SRU-U9-XWC"/>
+                        <segue destination="bVs-NI-NHS" kind="relationship" relationship="rootViewController" id="ER4-FD-BgN"/>
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="323" y="159"/>
+            <point key="canvasLocation" x="-1033" y="-924"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="w4D-hG-YVN">
+        <!--Root Controller - Discover Book-->
+        <scene sceneID="0UE-if-CTX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4jY-NO-hl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" id="VwQ-ue-58T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="2JQ-D0-2KS"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="6u1-kB-OGJ">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MK4-IC-5Zg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="bVs-NI-NHS" customClass="RootController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Hk-mT-w8c">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" id="rh7-wp-Wpf">
+                                <rect key="frame" x="24" y="126" width="273" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bVs-NI-NHS" id="Yl2-mc-wmj"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mk1-dd-pfU">
+                                <rect key="frame" x="48" y="253" width="225" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Wo Du">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="woDu:" destination="bVs-NI-NHS" eventType="touchUpInside" id="0a7-aK-ErD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Discover Book" id="lJf-pH-emh">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="jb1-bg-rZp"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="CIy-4e-ON8" kind="relationship" relationship="rootViewController" id="jc2-wj-x2n"/>
+                        <outlet property="searchBar" destination="rh7-wp-Wpf" id="fnU-Sc-nHA"/>
+                        <outlet property="searchDisplayController" destination="SqI-od-FSi" id="tX1-Jg-OXG"/>
+                        <segue destination="FSD-gN-SjK" kind="push" identifier="showMyBooks" id="c7i-DE-jBF"/>
                     </connections>
-                </navigationController>
+                </viewController>
+                <searchDisplayController id="SqI-od-FSi">
+                    <connections>
+                        <outlet property="delegate" destination="bVs-NI-NHS" id="Fli-6h-eOD"/>
+                        <outlet property="searchBar" destination="rh7-wp-Wpf" id="LHf-X5-Om1"/>
+                        <outlet property="searchContentsController" destination="bVs-NI-NHS" id="xD9-5J-1uI"/>
+                        <outlet property="searchResultsDataSource" destination="bVs-NI-NHS" id="SHq-Cq-rEe"/>
+                        <outlet property="searchResultsDelegate" destination="bVs-NI-NHS" id="5iN-DN-1tb"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="323" y="-475"/>
+            <point key="canvasLocation" x="-554" y="-924"/>
         </scene>
     </scenes>
     <classes>
         <class className="MyBookController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MyBookController.h"/>
         </class>
-        <class className="ViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        <class className="RootController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RootController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
