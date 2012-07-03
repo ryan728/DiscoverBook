@@ -107,7 +107,7 @@ static NSUInteger RESULT_BATCH_SIZE = 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath; {
-  NSString *CellIdentifier = @"READING_BOOK_ITEM";
+  NSString *CellIdentifier = @"myBookTableViewCell";
 
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 

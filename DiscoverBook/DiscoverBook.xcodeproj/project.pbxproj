@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490D3C7115A2B782006A7FD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 493BB48E159C7EAC00E99887 /* InfoPlist.strings */; };
 		4912EB87159C8047000D469C /* MathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EB86159C8047000D469C /* MathSpec.m */; };
 		4912EB8A159C8469000D469C /* Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4912EB89159C8469000D469C /* Shared.xcconfig */; };
 		4912EB8C159C8486000D469C /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4912EB8B159C8486000D469C /* Debug.xcconfig */; };
@@ -19,8 +20,6 @@
 		4912EBF6159D700A000D469C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4912EBF2159D700A000D469C /* libTestFlight.a */; };
 		4912EBF7159D700A000D469C /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4912EBF3159D700A000D469C /* README.txt */; };
 		4912EBF8159D700A000D469C /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4912EBF4159D700A000D469C /* release_notes.txt */; };
-		493BB48D159C7EA600E99887 /* UnitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 493BB48B159C7EA600E99887 /* UnitTests-Info.plist */; };
-		493BB490159C7EAC00E99887 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 493BB48E159C7EAC00E99887 /* InfoPlist.strings */; };
 		493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FF15917A890092CF9D /* NSString+Additions.m */; };
 		49703E9E15985760004CA5E9 /* DOUOAuthStore+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */; };
 		49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */; };
@@ -623,8 +622,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				493BB48D159C7EA600E99887 /* UnitTests-Info.plist in Resources */,
-				493BB490159C7EAC00E99887 /* InfoPlist.strings in Resources */,
+				490D3C7115A2B782006A7FD3 /* InfoPlist.strings in Resources */,
 				4912EBB3159C896C000D469C /* UnitTests.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
