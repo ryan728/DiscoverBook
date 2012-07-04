@@ -43,7 +43,7 @@ static DOUOAuthStore *authStore = nil;
 
   User *const user = [User defaultUser];
   if (user) {
-    [woDuButton_ setTitle:[NSString stringWithFormat:@"%@'s books", user.title] forState:UIControlStateNormal];
+    [woDuButton_ setTitle:user.title forState:UIControlStateNormal];
   }
   [super viewWillAppear:animated];
 }
