@@ -8,7 +8,7 @@ static short const MAX_HEIGHT = 1920;
 static short const RADIUS = 150;
 
 @implementation SearchController {
-  UIView *background_;
+  SearchView *background_;
 }
 @synthesize term = term_;
 @synthesize scrollView = scrollView_;
@@ -39,17 +39,20 @@ static short const RADIUS = 150;
   termLabel.matcher = -1;
   termLabel.textColor = [UIColor greenColor];
   termLabel.scrollView = scrollView_;
+  [background_ addSubview:termLabel];
 
-  for (int i = 0; i < 8; i++) {
-    CGFloat anotherCenterX = centerX + sin(M_PI_4 * i) * RADIUS;
-    CGFloat anotherCenterY = centerY - cos(M_PI_4 * i) * RADIUS;
-    SearchResultLabel *anotherLabel = [[SearchResultLabel alloc] initWithText:[NSString stringWithFormat:@"result %li", i] andCenter:CGPointMake(anotherCenterX, anotherCenterY)];
+  int resultCount = 7;
+  for (int i = 0; i < resultCount; i++) {
+    const double angle = M_PI * 2 / resultCount * i;
+    CGFloat anotherCenterX = centerX + sin(angle) * RADIUS;
+    CGFloat anotherCenterY = centerY - cos(angle) * RADIUS;
+    SearchResultLabel *anotherLabel = [[SearchResultLabel alloc] initWithText:[NSString stringWithFormat:@"result %li", i] andCenter:CGPointMake(centerX, centerY)];
     anotherLabel.matcher = 1;
     anotherLabel.scrollView = scrollView_;
     [background_ addSubview:anotherLabel];
   }
 
-  [background_ addSubview:termLabel];
+  [background_ scatter];
 
   [scrollView_ scrollRectToVisible:CGRectMake(centerX - width / 2, centerY - height / 2, width, height) animated:YES];
 }

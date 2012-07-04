@@ -2,4 +2,5 @@
 
 
 @interface SearchView : UIView
+- (void)scatter;
 @end

@@ -37,7 +37,6 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-  NSLog(@"touch ended");
   _scrollView.scrollEnabled = YES;
   _scrollView.userInteractionEnabled = YES;
 }
