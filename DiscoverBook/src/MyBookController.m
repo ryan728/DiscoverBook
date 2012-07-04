@@ -1,12 +1,11 @@
 #import "DOUQuery.h"
 #import "DOUAPIEngine.h"
-#import "DoubanEntryPeople.h"
 #import "DoubanFeedSubject.h"
 #import "NSArray+Additions.h"
 #import "Macros.h"
 #import "User.h"
 #import "MyBookController.h"
-#import "UIImageView+AFNetworking.h"
+#import "TWImageView+Additions.h"
 
 @implementation MyBookController
 
@@ -39,20 +38,14 @@ static UIImage *DEFAULT_BOOK_COVER_IMAGE = nil;
   DoubanEntrySubject *book = [self.myEntries objectAtIndex:indexPath.row];
   cell.textLabel.text = book.title.stringValue;
 
-  NSURL *const imageUrl = [[book linkWithRelAttributeValue:@"image"] URL];
-  NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:imageUrl cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
-  [cell.imageView setImageWithURLRequest:request placeholderImage:DEFAULT_BOOK_COVER_IMAGE success:^void(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-    cell.imageView.alpha = 0.0;
-    [UIView animateWithDuration:1.0 animations:^(void) {
-      cell.imageView.alpha = 1.0f;
-    }];
-  } failure:nil];
-
   NSMutableString *authors = [NSMutableString string];
   [book.authors each:^(GDataAtomAuthor *author) {
     [authors appendString:author.name];
   }];
   cell.detailTextLabel.text = authors;
+
+  NSURL *const imageUrl = [[book linkWithRelAttributeValue:@"image"] URL];
+  [cell.imageView setImageWithAnimation:imageUrl andPlaceHolder:DEFAULT_BOOK_COVER_IMAGE];
 }
 
 @end

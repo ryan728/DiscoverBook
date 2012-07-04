@@ -45,8 +45,8 @@
         hasMore_ = NO;
       }
 
-      [[self tableView] reloadData];
-      [[self tableView] layoutIfNeeded];
+//      [self.tableView reloadRowsAtIndexPaths:<#(NSArray *)indexPaths#> withRowAnimation:<#(UITableViewRowAnimation)animation#>]
+      [self.tableView reloadData];
     } else {
       NSLog(@"request.error.description = %@", request.error.description);
     }

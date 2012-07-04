@@ -19,6 +19,7 @@
 		493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FF15917A890092CF9D /* NSString+Additions.m */; };
 		4946A5D415A4570300C16C87 /* MyContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A5D315A4570300C16C87 /* MyContactController.m */; };
 		4946A64915A465D100C16C87 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A64815A465D100C16C87 /* MyTableViewController.m */; };
+		4946A68715A46D6000C16C87 /* TWImageView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A68615A46D6000C16C87 /* TWImageView+Additions.m */; };
 		49703E9E15985760004CA5E9 /* DOUOAuthStore+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */; };
 		49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */; };
 		4979473B15A1CADF00DA964E /* RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979473A15A1CADF00DA964E /* RootController.m */; };
@@ -137,6 +138,8 @@
 		4946A5D315A4570300C16C87 /* MyContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyContactController.m; path = src/MyContactController.m; sourceTree = SOURCE_ROOT; };
 		4946A64715A465D100C16C87 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController.h; path = src/MyTableViewController.h; sourceTree = SOURCE_ROOT; };
 		4946A64815A465D100C16C87 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = src/MyTableViewController.m; sourceTree = SOURCE_ROOT; };
+		4946A68515A46D6000C16C87 /* TWImageView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TWImageView+Additions.h"; path = "src/TWImageView+Additions.h"; sourceTree = SOURCE_ROOT; };
+		4946A68615A46D6000C16C87 /* TWImageView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TWImageView+Additions.m"; path = "src/TWImageView+Additions.m"; sourceTree = SOURCE_ROOT; };
 		49703E9C15985760004CA5E9 /* DOUOAuthStore+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DOUOAuthStore+Additions.h"; path = "src/DOUOAuthStore+Additions.h"; sourceTree = SOURCE_ROOT; };
 		49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUOAuthStore+Additions.m"; path = "src/DOUOAuthStore+Additions.m"; sourceTree = SOURCE_ROOT; };
 		49703EAC15985AF7004CA5E9 /* DOUService+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DOUService+Additions.h"; path = "src/DOUService+Additions.h"; sourceTree = SOURCE_ROOT; };
@@ -274,6 +277,15 @@
 			);
 			name = TestFlightSDK1.0;
 			path = ../lib/TestFlightSDK1.0;
+			sourceTree = "<group>";
+		};
+		4946A68415A46D4000C16C87 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				4946A68515A46D6000C16C87 /* TWImageView+Additions.h */,
+				4946A68615A46D6000C16C87 /* TWImageView+Additions.m */,
+			);
+			name = UIKit;
 			sourceTree = "<group>";
 		};
 		49703E9B159856B3004CA5E9 /* Douban */ = {
@@ -493,9 +505,10 @@
 		49ED10FA159171D20092CF9D /* additions */ = {
 			isa = PBXGroup;
 			children = (
+				4946A68415A46D4000C16C87 /* UIKit */,
 				49703E9B159856B3004CA5E9 /* Douban */,
-				49BCF6C41592F0F5005DD14E /* Macros.h */,
 				49BCF6C01592C9FA005DD14E /* Foundation */,
+				49BCF6C41592F0F5005DD14E /* Macros.h */,
 			);
 			name = additions;
 			sourceTree = "<group>";
@@ -707,6 +720,7 @@
 				49ED111015917D050092CFA8 /* SearchController.m in Sources */,
 				4946A5D415A4570300C16C87 /* MyContactController.m in Sources */,
 				4946A64915A465D100C16C87 /* MyTableViewController.m in Sources */,
+				4946A68715A46D6000C16C87 /* TWImageView+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

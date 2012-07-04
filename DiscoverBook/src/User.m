@@ -11,12 +11,15 @@
 @synthesize doubanEntryPeople = _doubanEntryPeople;
 @synthesize id = id_;
 @synthesize title = title_;
+@synthesize signature = signature_;
+@synthesize imageUrl = imageUrl_;
 
-
-- (id)initWithDoubanEntryPeople:(DoubanEntryPeople *)people; {
+- (id)initWithDoubanEntryPeople:(DoubanEntryPeople *)people {
   if ((self = [super init])) {
     id_ = people.uid.content;
     title_ = people.title.stringValue;
+    signature_ = people.signature.content;
+    imageUrl_ = [[people linkWithRelAttributeValue:@"icon"] URL];
   }
 
   [User saveDefaultUserWithId:id_ andName:title_];

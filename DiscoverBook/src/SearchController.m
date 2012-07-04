@@ -1,6 +1,5 @@
 #import "SearchController.h"
 
-
 @implementation SearchController {
 
 }

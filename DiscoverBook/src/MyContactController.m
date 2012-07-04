@@ -3,10 +3,10 @@
 #import "DOUQuery.h"
 #import "DOUService.h"
 #import "DoubanFeedSubject.h"
-#import "AFNetworking.h"
-#import "DOUAPIEngine.h"
 #import "DoubanFeedPeople.h"
 #import "Macros.h"
+#import "TWImageView+Additions.h"
+#import "NSArray+Additions.h"
 
 @implementation MyContactController
 
@@ -24,24 +24,20 @@ static UIImage *DEFAULT_CONTACT_ICON = nil;
 }
 
 - (void)renderCell:(UITableViewCell *)cell at:(NSIndexPath *)indexPath {
-  DoubanEntryPeople *contact = [self.myEntries objectAtIndex:indexPath.row];
-  cell.textLabel.text = contact.title.stringValue;
-
-  NSURL *const imageUrl = [[contact linkWithRelAttributeValue:@"icon"] URL];
-  NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:imageUrl cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
-  [cell.imageView setImageWithURLRequest:request placeholderImage:DEFAULT_CONTACT_ICON success:^void(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-    cell.imageView.alpha = 0.0;
-    [UIView animateWithDuration:1.0 animations:^(void) {
-      cell.imageView.alpha = 1.0f;
-    }];
-  } failure:nil];
-
-  cell.detailTextLabel.text = contact.signature.content;
+  User *user = [self.myEntries objectAtIndex:indexPath.row];
+  cell.textLabel.text = user.title;
+  cell.detailTextLabel.text = user.signature;
+  [cell.imageView setImageWithAnimation:user.imageUrl andPlaceHolder:DEFAULT_CONTACT_ICON];
 }
 
 - (NSArray *)parseResult:(DOUHttpRequest *)request {
   DoubanFeedPeople *const feedSubject = [[DoubanFeedPeople alloc] initWithData:request.responseData];
-  return feedSubject.entries;
+  NSMutableArray *results = [[NSMutableArray alloc] init];
+
+  [feedSubject.entries each:^void(DoubanEntryPeople *people) {
+    [results addObject:[[User alloc] initWithDoubanEntryPeople:people]];
+  }];
+  return results;
 }
 
 
