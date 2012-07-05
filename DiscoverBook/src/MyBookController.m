@@ -6,6 +6,8 @@
 #import "User.h"
 #import "MyBookController.h"
 #import "TWImageView+Additions.h"
+#import "UIImageView+AFNetworking.h"
+#import "BookDetailsController.h"
 
 @implementation MyBookController
 
@@ -48,4 +50,14 @@ static UIImage *DEFAULT_BOOK_COVER_IMAGE = nil;
   [cell.imageView setImageWithAnimation:imageUrl andPlaceHolder:DEFAULT_BOOK_COVER_IMAGE];
 }
 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [super prepareForSegue:segue sender:sender];
+
+    BookDetailsController *const bookDetailsController = segue.destinationViewController;
+    DoubanEntrySubject *currentBook = [self.myEntries objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    [bookDetailsController setBookDetailsUrl:currentBook.identifier];
+    NSString *collectionLink = [[currentBook linkWithRelAttributeValue:@"collection"] href];
+    [bookDetailsController setBookCollectionUrl:collectionLink];
+}
 @end
