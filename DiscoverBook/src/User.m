@@ -21,8 +21,6 @@
     signature_ = people.signature.content;
     imageUrl_ = [[people linkWithRelAttributeValue:@"icon"] URL];
   }
-
-  [User saveDefaultUserWithId:id_ andName:title_];
   return self;
 }
 
@@ -42,9 +40,8 @@ static User *defaultUser = nil;
 
 
 + (void)initDefaultUser:(DoubanEntryPeople *)people {
-  if (!defaultUser) {
-    defaultUser = [[User alloc] initWithDoubanEntryPeople:people];
-  }
+  defaultUser = [[User alloc] initWithDoubanEntryPeople:people];
+  [User saveDefaultUserWithId:defaultUser.id andName:defaultUser.title];
 }
 
 + (User *)defaultUser {
