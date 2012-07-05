@@ -23,7 +23,10 @@
 		494C00E015A34F59002572F2 /* BookDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C00DE15A34F59002572F2 /* BookDetailsController.m */; };
 		49703E9E15985760004CA5E9 /* DOUOAuthStore+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */; };
 		49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */; };
-		4979473B15A1CADF00DA964E /* RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979473A15A1CADF00DA964E /* RootController.m */; };
+		497796E715A5340B00C8DEE0 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 497796DC15A532F400C8DEE0 /* libBox2D.a */; };
+		497796EB15A53C3100C8DEE0 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 497796EA15A53C3100C8DEE0 /* libc++.dylib */; };
+		497796F615A5652600C8DEE0 /* SearchItemView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 497796F515A5652600C8DEE0 /* SearchItemView.mm */; };
+		4979473B15A1CADF00DA964E /* RootController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4979473A15A1CADF00DA964E /* RootController.mm */; };
 		49A5FC32159C76870092C640 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998957515998E8A0048B5B3 /* QuartzCore.framework */; };
 		49A5FC36159C76E40092C640 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC35159C76E40092C640 /* User.m */; };
 		49A5FC39159C76ED0092C640 /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC38159C76ED0092C640 /* IntrospectManager.m */; };
@@ -147,8 +150,13 @@
 		49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUOAuthStore+Additions.m"; path = "src/DOUOAuthStore+Additions.m"; sourceTree = SOURCE_ROOT; };
 		49703EAC15985AF7004CA5E9 /* DOUService+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DOUService+Additions.h"; path = "src/DOUService+Additions.h"; sourceTree = SOURCE_ROOT; };
 		49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUService+Additions.m"; path = "src/DOUService+Additions.m"; sourceTree = SOURCE_ROOT; };
+		497796CF15A532F400C8DEE0 /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = ../lib/Box2D_v2.2.1/Build/xcode4/Box2D.xcodeproj; sourceTree = "<group>"; };
+		497796E815A534BF00C8DEE0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		497796EA15A53C3100C8DEE0 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		497796F415A5652600C8DEE0 /* SearchItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchItemView.h; path = src/SearchItemView.h; sourceTree = SOURCE_ROOT; };
+		497796F515A5652600C8DEE0 /* SearchItemView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SearchItemView.mm; path = src/SearchItemView.mm; sourceTree = SOURCE_ROOT; };
 		4979473915A1CADF00DA964E /* RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootController.h; path = src/RootController.h; sourceTree = SOURCE_ROOT; };
-		4979473A15A1CADF00DA964E /* RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootController.m; path = src/RootController.m; sourceTree = SOURCE_ROOT; };
+		4979473A15A1CADF00DA964E /* RootController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RootController.mm; path = src/RootController.mm; sourceTree = SOURCE_ROOT; };
 		4998957515998E8A0048B5B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		49A5FC34159C76E40092C640 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = src/User.h; sourceTree = SOURCE_ROOT; };
 		49A5FC35159C76E40092C640 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = src/User.m; sourceTree = SOURCE_ROOT; };
@@ -389,7 +397,7 @@
 				49BCF6A91592BDC1005DD14E /* MyBookController.h */,
 				49BCF6AA1592BDC1005DD14E /* MyBookController.m */,
 				4979473915A1CADF00DA964E /* RootController.h */,
-				4979473A15A1CADF00DA964E /* RootController.m */,
+				4979473A15A1CADF00DA964E /* RootController.mm */,
 				4946A5D215A4570300C16C87 /* MyContactController.h */,
 				4946A5D315A4570300C16C87 /* MyContactController.m */,
 				4946A64715A465D100C16C87 /* MyTableViewController.h */,
@@ -521,6 +529,8 @@
 		49ED111015917D050092CFA4 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				497796F415A5652600C8DEE0 /* SearchItemView.h */,
+				497796F515A5652600C8DEE0 /* SearchItemView.mm */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -721,12 +731,12 @@
 				49B9D78215A1843500B4C734 /* AFURLConnectionOperation.m in Sources */,
 				49B9D78315A1843500B4C734 /* AFXMLRequestOperation.m in Sources */,
 				49B9D78415A1843500B4C734 /* UIImageView+AFNetworking.m in Sources */,
-				4979473B15A1CADF00DA964E /* RootController.m in Sources */,
-				49ED111015917D050092CFA8 /* SearchController.m in Sources */,
+				4979473B15A1CADF00DA964E /* RootController.mm in Sources */,
+				49ED111015917D050092CFA8 /* SearchController.mm in Sources */,
 				4946A5D415A4570300C16C87 /* MyContactController.m in Sources */,
 				4946A64915A465D100C16C87 /* MyTableViewController.m in Sources */,
 				4946A68715A46D6000C16C87 /* TWImageView+Additions.m in Sources */,
-				494C00E015A34F59002572F2 /* BookDetailsController.m in Sources */,
+				497796F615A5652600C8DEE0 /* SearchItemView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

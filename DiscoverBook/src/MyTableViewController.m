@@ -35,7 +35,6 @@
 - (void)loadListFrom:(int)startIndex {
   DOUQuery *query = [self createQuery:startIndex];
   DOUService *service = [DOUService sharedInstance];
-
   DOUReqBlock completionBlock = ^(DOUHttpRequest *request) {
     if (!request.error) {
       NSArray *const result = [self parseResult:request];
