@@ -34,13 +34,13 @@
 #import <OpenGL/OpenGL.h>
 #endif
 
-#include "Box2D.h"
+#include <Box2D/Box2D.h>
 
 struct b2AABB;
 
 // This class implements debug drawing callbacks that are invoked
 // inside b2World::Step.
-class GLESDebugDraw : public b2DebugDraw
+class GLESDebugDraw : public b2Draw
 {
 	float32 mRatio;
 public:
