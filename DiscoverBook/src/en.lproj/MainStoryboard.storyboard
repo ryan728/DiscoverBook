@@ -370,11 +370,11 @@
             </objects>
             <point key="canvasLocation" x="-526" y="-476"/>
         </scene>
-        <!--Search Controller - Search-->
+        <!--Search View Controller - Search-->
         <scene sceneID="A4L-r0-tO4">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Afb-30-5fa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Ry0-kh-qcA" customClass="SearchController" sceneMemberID="viewController">
+                <viewController id="Ry0-kh-qcA" customClass="SearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GDx-ht-puR">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -402,11 +402,15 @@
                 <relationship kind="outlet" name="summary" candidateClass="UITextView"/>
             </relationships>
         </class>
-        <class className="MyBookController" superclassName="UITableViewController">
+        <class className="MyBookController" superclassName="MyTableViewController">
+
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MyBookController.h"/>
         </class>
-        <class className="MyContactController" superclassName="UITableViewController">
+        <class className="MyContactController" superclassName="MyTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MyContactController.h"/>
+        </class>
+        <class className="MyTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyTableViewController.h"/>
         </class>
         <class className="RootController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RootController.h"/>
@@ -416,8 +420,8 @@
                 <relationship kind="outlet" name="woDuButton" candidateClass="UIButton"/>
             </relationships>
         </class>
-        <class className="SearchController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchController.h"/>
+        <class className="SearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

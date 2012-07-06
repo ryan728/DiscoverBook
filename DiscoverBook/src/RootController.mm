@@ -5,7 +5,7 @@
 #import "NSString+Additions.h"
 #import "MyBookController.h"
 #import "User.h"
-#import "SearchController.h"
+#import "SearchViewController.h"
 
 
 @implementation RootController {
@@ -30,7 +30,7 @@ static DOUOAuthStore *authStore = nil;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   [super prepareForSegue:segue sender:sender];
   if ([segue.identifier isEqualToString:@"search"]) {
-    SearchController *searchController = segue.destinationViewController;
+    SearchViewController *searchController = segue.destinationViewController;
     searchController.term = searchBar_.text;
   }
 }
