@@ -1,10 +1,13 @@
-home page (search bar, wo du button) (jp, lei)
-contacts  ? what about friends ?
+contacts  ? what about friends ? contact detail
 exception handling
 add tests
-book detail page
+book detail page (jp)
 change status of book (read, reading, wish)
 books/contacts network (native, suoqin)
+
+add sprite for text, people, and book
+add many sprites
+use search result as sprite
 
 use ThoughtWorks account to sign app
 test flight script
