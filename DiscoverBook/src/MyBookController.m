@@ -56,7 +56,7 @@ static UIImage *DEFAULT_BOOK_COVER_IMAGE = nil;
 
     BookDetailsController *const bookDetailsController = segue.destinationViewController;
     DoubanEntrySubject *currentBook = [self.myEntries objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    [bookDetailsController setBookDetailsUrl:currentBook.identifier];
+    bookDetailsController.bookDetailsUrl = currentBook.identifier;
     NSString *collectionLink = [[currentBook linkWithRelAttributeValue:@"collection"] href];
     [bookDetailsController setBookCollectionUrl:collectionLink];
 }

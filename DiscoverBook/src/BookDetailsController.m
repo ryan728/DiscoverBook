@@ -44,7 +44,7 @@ static UIImage *DEFAULT_BOOK_COVER_IMAGE = nil;
 //    [service get:query delegate:self];
 }
 
-- (void)setBookSummaryInfo:(DoubanEntrySubject *)entrySubject {
+- (void)setBookSummaryInfo {
     [_summary setText:entrySubject.summary.stringValue];
 
     CGRect frame = _summary.frame;
@@ -90,7 +90,7 @@ static UIImage *DEFAULT_BOOK_COVER_IMAGE = nil;
             [_numberOfRaters setText:[NSString stringWithFormat:@"(%@ raters)", entrySubject.rating.numberOfRaters.stringValue]];
         }
 
-        [self setBookSummaryInfo:entrySubject];
+        [self setBookSummaryInfo];
 
     } else {
         NSLog(@"request.error.description = %@", aRequest.error.description);
