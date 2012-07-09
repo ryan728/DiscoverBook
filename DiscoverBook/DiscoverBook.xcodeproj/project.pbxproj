@@ -72,6 +72,7 @@
 		49ED111015917D050092CF9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED110A15917B240092CF9D /* main.m */; };
 		49ED111015917D050092CFA6 /* default_book_cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA5 /* default_book_cover.jpg */; };
 		49ED111015917D050092CFA8 /* round_corner_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA7 /* round_corner_bg.png */; };
+		49ED111015917D050092CFAA /* default_contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA9 /* default_contact.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -329,6 +330,7 @@
 		49ED110D15917B410092CF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = src/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		49ED111015917D050092CFA5 /* default_book_cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default_book_cover.jpg; path = resources/default_book_cover.jpg; sourceTree = "<group>"; };
 		49ED111015917D050092CFA7 /* round_corner_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = round_corner_bg.png; path = resources/round_corner_bg.png; sourceTree = "<group>"; };
+		49ED111015917D050092CFA9 /* default_contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_contact.png; path = resources/default_contact.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +504,7 @@
 		49B9D75115A17CAA00B4C734 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				49ED111015917D050092CFA9 /* default_contact.png */,
 				49ED111015917D050092CFA7 /* round_corner_bg.png */,
 				49ED111015917D050092CFA5 /* default_book_cover.jpg */,
 			);
@@ -916,6 +919,7 @@
 				4912EBF8159D700A000D469C /* release_notes.txt in Resources */,
 				49ED111015917D050092CFA6 /* default_book_cover.jpg in Resources */,
 				49ED111015917D050092CFA8 /* round_corner_bg.png in Resources */,
+				49ED111015917D050092CFAA /* default_contact.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,11 +6,41 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
+        <!--My Contact Controller - Friends-->
+        <scene sceneID="i3a-5X-tsr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8HC-uW-h3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController title="Friends" id="PL6-wX-o2Q" customClass="MyContactController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="O1K-eV-v9b">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2Je-gf-AXs">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PL6-wX-o2Q" id="MCR-OA-W07"/>
+                            <outlet property="delegate" destination="PL6-wX-o2Q" id="aRz-jP-GRv"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="7Ia-4R-q7C"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="-396" y="-1216"/>
+        </scene>
         <!--My Contact Controller - Contacts-->
         <scene sceneID="D2f-pe-4fd">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9E-2c-Sxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController title="Contacts" id="1Bp-E7-TCO" customClass="MyContactController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="" title="Contacts" id="1Bp-E7-TCO" customClass="MyContactController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YTp-QU-mbD">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,6 +83,7 @@
                         <segue destination="Hl6-oI-wZn" kind="relationship" relationship="viewControllers" id="DsB-0C-JMy"/>
                         <segue destination="p7g-pA-nVo" kind="relationship" relationship="viewControllers" id="XiX-Ts-i6l"/>
                         <segue destination="1Bp-E7-TCO" kind="relationship" relationship="viewControllers" id="Cjp-l4-kZX"/>
+                        <segue destination="PL6-wX-o2Q" kind="relationship" relationship="viewControllers" id="Zdk-yr-7A7"/>
                     </connections>
                 </tabBarController>
             </objects>
@@ -429,6 +460,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="1Fv-3D-wTS"/>
+        <segue reference="ouh-5j-vjm"/>
     </inferredMetricsTieBreakers>
 </document>

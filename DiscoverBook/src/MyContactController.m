@@ -13,14 +13,14 @@
 static UIImage *DEFAULT_CONTACT_ICON = nil;
 
 + (void)initialize {
-  NSString *defaultBookCoverPath = [[NSBundle mainBundle] pathForResource:@"default_book_cover" ofType:@"jpg"];
+  NSString *defaultBookCoverPath = [[NSBundle mainBundle] pathForResource:@"default_contact" ofType:@"png"];
   DEFAULT_CONTACT_ICON = [UIImage imageWithContentsOfFile:defaultBookCoverPath];
 }
 
 - (DOUQuery *)createQuery:(int)startIndex {
   User *user = [User defaultUser];
   NSDictionary *const parameters = [NSDictionary dictionaryWithObjects:Array([NSString stringWithFormat:@"%u", RESULT_BATCH_SIZE], [NSString stringWithFormat:@"%u", startIndex]) forKeys:Array(@"max-results", @"start-index")];
-  return [[DOUQuery alloc] initWithSubPath:[NSString stringWithFormat:@"/people/%@/contacts", user.id] parameters:parameters];
+  return [[DOUQuery alloc] initWithSubPath:[NSString stringWithFormat:@"/people/%@/%@", user.id, self.title.lowercaseString] parameters:parameters];
 }
 
 - (void)renderCell:(UITableViewCell *)cell at:(NSIndexPath *)indexPath {
