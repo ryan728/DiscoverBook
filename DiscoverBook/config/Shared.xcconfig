@@ -20,5 +20,3 @@ GCC_WARN_UNINITIALIZED_AUTOS = YES
 ARCHS = $(ARCHS_STANDARD_32_BIT)
 SDKROOT = iphoneos
 GCC_VERSION = com.apple.compilers.llvm.clang.1_0
-
-CODE_SIGN_IDENTITY = iPhone Developer: Lei Zhang (TED6CQ59XN)
