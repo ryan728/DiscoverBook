@@ -20,6 +20,7 @@ enum {
   CCSprite *selSprite;
   b2Body *groundBody;
   BOOL hasTouches;
+  CGSize screenSize;
 }
 
 + (CCScene *)scene {
@@ -29,6 +30,60 @@ enum {
   return scene;
 }
 
+- (CGSize)initWorld {
+  b2Vec2 gravity;
+  gravity.Set(0.0f, 0.0f);
+
+  bool doSleep = true;
+  world = new b2World(gravity);
+  world->SetAllowSleeping(doSleep);
+  world->SetContinuousPhysics(true);
+  m_debugDraw = new GLESDebugDraw(PTM_RATIO);
+  world->SetDebugDraw(m_debugDraw);
+
+  uint32 flags = 0;
+  flags += b2DebugDraw::e_shapeBit;
+  flags += b2DebugDraw::e_jointBit;
+  m_debugDraw->SetFlags(flags);
+
+  b2BodyDef groundBodyDef;
+  groundBodyDef.position.Set(0, 0); // bottom-left corner
+
+  groundBody = world->CreateBody(&groundBodyDef);
+
+  b2EdgeShape groundBox;
+  groundBox.Set(b2Vec2(0, 0), b2Vec2(screenSize.width / PTM_RATIO, 0));
+  groundBody->CreateFixture(&groundBox, 0);
+
+  // top
+  groundBox.Set(b2Vec2(0, screenSize.height / PTM_RATIO), b2Vec2(screenSize.width / PTM_RATIO, screenSize.height / PTM_RATIO));
+  groundBody->CreateFixture(&groundBox, 0);
+
+  // left
+  groundBox.Set(b2Vec2(0, screenSize.height / PTM_RATIO), b2Vec2(0, 0));
+  groundBody->CreateFixture(&groundBox, 0);
+
+  // right
+  groundBox.Set(b2Vec2(screenSize.width / PTM_RATIO, screenSize.height / PTM_RATIO), b2Vec2(screenSize.width / PTM_RATIO, 0));
+  groundBody->CreateFixture(&groundBox, 0);
+  return screenSize;
+}
+
+- (void)addSprites {
+//  CCSpriteBatchNode *batch = [CCSpriteBatchNode batchNodeWithFile:@"default_book_cover.jpg" capacity:150];
+//  [self addChild:batch z:0 tag:kTagBatchNode];
+
+  b2Body *body1 = [self addNewSpriteWithCoords:ccp(screenSize.width / 2, screenSize.height / 2)];
+  b2Body *body2 = [self addNewSpriteWithCoords:ccp(screenSize.width / 3, screenSize.height / 3)];
+  [self join:body1 with:body2];
+
+//    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Tap screen" fontName:@"Marker Felt" fontSize:32];
+//    [self addChild:label z:0];
+//    [label setColor:ccc3(0, 0, 255)];
+//    label.position = ccp(screenSize.width / 2, screenSize.height - 50);
+
+}
+
 - (id)init {
   self = [super init];
   if (self) {
@@ -36,58 +91,10 @@ enum {
     self.isTouchEnabled = YES;
     self.isAccelerometerEnabled = YES;
     hasTouches = NO;
+    screenSize = [CCDirector sharedDirector].winSize;
 
-    CGSize screenSize = [CCDirector sharedDirector].winSize;
-
-    b2Vec2 gravity;
-//    gravity.Set(0.0f, -9.8f);
-    gravity.Set(0.0f, 0.0f);
-
-    bool doSleep = true;
-    world = new b2World(gravity);
-    world->SetAllowSleeping(doSleep);
-    world->SetContinuousPhysics(true);
-    m_debugDraw = new GLESDebugDraw(PTM_RATIO);
-    world->SetDebugDraw(m_debugDraw);
-
-    uint32 flags = 0;
-    flags += b2DebugDraw::e_shapeBit;
-    flags += b2DebugDraw::e_jointBit;
-    m_debugDraw->SetFlags(flags);
-
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0, 0); // bottom-left corner
-
-    groundBody = world->CreateBody(&groundBodyDef);
-
-    b2EdgeShape groundBox;
-    groundBox.Set(b2Vec2(0, 0), b2Vec2(screenSize.width / PTM_RATIO, 0));
-    groundBody->CreateFixture(&groundBox, 0);
-
-    // top
-    groundBox.Set(b2Vec2(0, screenSize.height / PTM_RATIO), b2Vec2(screenSize.width / PTM_RATIO, screenSize.height / PTM_RATIO));
-    groundBody->CreateFixture(&groundBox, 0);
-
-    // left
-    groundBox.Set(b2Vec2(0, screenSize.height / PTM_RATIO), b2Vec2(0, 0));
-    groundBody->CreateFixture(&groundBox, 0);
-
-    // right
-    groundBox.Set(b2Vec2(screenSize.width / PTM_RATIO, screenSize.height / PTM_RATIO), b2Vec2(screenSize.width / PTM_RATIO, 0));
-    groundBody->CreateFixture(&groundBox, 0);
-
-    CCSpriteBatchNode *batch = [CCSpriteBatchNode batchNodeWithFile:@"default_book_cover.jpg" capacity:150];
-    [self addChild:batch z:0 tag:kTagBatchNode];
-
-    b2Body *body1 = [self addNewSpriteWithCoords:ccp(screenSize.width / 2, screenSize.height / 2)];
-    b2Body *body2 = [self addNewSpriteWithCoords:ccp(screenSize.width / 3, screenSize.height / 3)];
-    [self joinBody:body1 with:body2];
-
-//    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Tap screen" fontName:@"Marker Felt" fontSize:32];
-//    [self addChild:label z:0];
-//    [label setColor:ccc3(0, 0, 255)];
-//    label.position = ccp(screenSize.width / 2, screenSize.height - 50);
-
+    [self initWorld];
+    [self addSprites];
     [self schedule:@selector(tick:)];
   }
 
@@ -101,6 +108,11 @@ enum {
   glDisable(GL_TEXTURE_2D);
   glDisableClientState(GL_COLOR_ARRAY);
   glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+  glEnable(GL_LINE_SMOOTH);
+  glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+  glEnable(GL_BLEND);
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+  glLineWidth(1);
 
   world->DrawDebugData();
 
@@ -111,7 +123,9 @@ enum {
 
 }
 
-- (void)joinBody:(b2Body *)body1 with:(b2Body *)body2 {
+- (void)join:(b2Body *)body1 with:(b2Body *)body2 {
+  const float32 length = (body1->GetPosition() - body2->GetPosition()).Length();
+
   b2DistanceJointDef distJDef;
   b2Vec2 anchor1 = body1->GetWorldCenter();
   b2Vec2 anchor2 = body2->GetWorldCenter();
@@ -119,11 +133,11 @@ enum {
   distJDef.collideConnected = false;
   distJDef.dampingRatio = 0.9f;
   distJDef.frequencyHz = 3;
-  distJDef.length = (body1->GetPosition() - body2->GetPosition()).Length() * 1.5;
+  distJDef.length = length * 1.5;
   world->CreateJoint(&distJDef);
 
   b2RopeJointDef rDef;
-  rDef.maxLength = (body1->GetPosition() - body2->GetPosition()).Length() * 2.5;
+  rDef.maxLength = length * 2.5;
   rDef.localAnchorA = rDef.localAnchorB = b2Vec2_zero;
   rDef.bodyA = body2;
   rDef.bodyB = body1;
@@ -132,18 +146,25 @@ enum {
 
 - (b2Body *)addNewSpriteWithCoords:(CGPoint)p {
   CCLOG(@"Add sprite %0.2f x %02.f", p.x, p.y);
-  CCSpriteBatchNode *batch = (CCSpriteBatchNode *) [self getChildByTag:kTagBatchNode];
+//  CCSpriteBatchNode *batch = (CCSpriteBatchNode *) [self getChildByTag:kTagBatchNode];
 
   //We have a 64x64 sprite sheet with 4 different 32x32 images.  The following code is
   //just randomly picking one of the images
   int idx = (CCRANDOM_0_1() > .5 ? 0 : 1);
   int idy = (CCRANDOM_0_1() > .5 ? 0 : 1);
 
-  CCSprite *sprite = [CCSprite spriteWithBatchNode:batch rect:CGRectMake(32 * idx, 32 * idy, 32, 32)];
-  [movableSprites_ addObject:sprite];
-  [batch addChild:sprite];
+//  const CGRect rect = CGRectMake(32 * idx, 32 * idy, 32, 32);
+  const CGRect rect = CGRectMake(0, 0, 32, 32);
+//  CCSprite *sprite = [CCSprite spriteWithBatchNode:batch rect:rect];
+  CCSprite *sprite = [CCSprite spriteWithFile:@"default_book_cover.jpg" rect:rect];
+  CCSprite *bg = [CCSprite spriteWithFile:@"round_corner_bg.png"];
+  [sprite addChild:bg z:1];
 
-  sprite.position = ccp( p.x, p.y);
+  [movableSprites_ addObject:sprite];
+  sprite.position = ccp(p.x, p.y);
+  [self addChild:sprite];
+  const CGSize bgSize = bg.boundingBox.size;
+  bg.position = CGPointMake(bgSize.width / 2, bgSize.height / 2);
 
   // Define the dynamic body.
   //Set up a 1m squared box in the physics world
@@ -170,6 +191,12 @@ enum {
   return body;
 }
 
+- (void)fireLongPress:(CCSprite *)sprite {
+  id action = [CCSequence actions:[CCScaleTo actionWithDuration:0.3f scale:2.0f],
+  [CCScaleTo actionWithDuration:0.3f scale:1.0f], nil];
+  CCRepeat *repeatAction = [CCRepeat actionWithAction:action times:5];
+  [[sprite.children objectAtIndex:0] runAction:repeatAction];
+}
 
 - (void)tick:(ccTime)dt {
   //It is recommended that a fixed time step is used with Box2D for stability
@@ -212,13 +239,6 @@ enum {
     }
   }
   if (newSprite != selSprite) {
-    [selSprite stopAllActions];
-    [selSprite runAction:[CCRotateTo actionWithDuration:0.1 angle:0]];
-    CCRotateTo *rotLeft = [CCRotateBy actionWithDuration:0.1 angle:-4.0];
-    CCRotateTo *rotCenter = [CCRotateBy actionWithDuration:0.1 angle:0.0];
-    CCRotateTo *rotRight = [CCRotateBy actionWithDuration:0.1 angle:4.0];
-    CCSequence *rotSeq = [CCSequence actions:rotLeft, rotCenter, rotRight, rotCenter, nil];
-    [newSprite runAction:[CCRepeatForever actionWithAction:rotSeq]];
     selSprite = newSprite;
   }
 }
@@ -226,6 +246,8 @@ enum {
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
   CGPoint touchLocation = [self convertTouchToNodeSpace:[touches anyObject]];
   [self selectSpriteForTouch:touchLocation];
+  [self performSelector:@selector(fireLongPress:)
+             withObject:selSprite afterDelay:1.0f];
   hasTouches = YES;
   NSLog(@"---------------- start position) = %@", NSStringFromCGPoint(selSprite.position));
 }
@@ -273,6 +295,7 @@ enum {
 }
 
 - (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(fireLongPress:) object:selSprite];
   UITouch *touch = [touches anyObject];
   CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
 
@@ -286,6 +309,7 @@ enum {
 
 - (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
   //  Add a new body/atlas sprite at the touched location
+  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(fireLongPress:) object:selSprite];
   NSLog(@"---------------- end position) = %@", NSStringFromCGPoint(selSprite.position));
   hasTouches = NO;
   //  for (UITouch *touch in touches) {
