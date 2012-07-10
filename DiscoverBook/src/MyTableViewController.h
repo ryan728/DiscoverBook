@@ -1,4 +1,5 @@
 #import <UIKit/UIKit.h>
+#import "EGORefreshTableHeaderView.h"
 
 @class DOUQuery;
 @class DOUHttpRequest;
@@ -14,7 +15,7 @@ static NSUInteger const RESULT_BATCH_SIZE = 10;
 
 @end
 
-@interface MyTableViewController : UITableViewController <SearchHandler>
+@interface MyTableViewController : UITableViewController <SearchHandler, EGORefreshTableHeaderDelegate>
 
 @property(nonatomic, strong) NSMutableArray *myEntries;
 @property (nonatomic, strong) NSString *userTitle;

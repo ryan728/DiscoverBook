@@ -6,6 +6,8 @@
 @implementation MyTableViewController {
   NSUInteger currentIndex_;
   BOOL hasMore_;
+  BOOL reloading_;
+  EGORefreshTableHeaderView *refreshHeaderView_;
 }
 
 #pragma mark - Properties
@@ -22,6 +24,20 @@
   }
   return self;
 }
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  if (refreshHeaderView_ == nil) {
+    const CGRect frame = CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height);
+    EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:frame];
+    view.delegate = self;
+    [self.tableView addSubview:view];
+    refreshHeaderView_ = view;
+  }
+
+  [refreshHeaderView_ refreshLastUpdatedDate];
+}
+
 
 - (void)loadData {
   User *const user = [User findUserWithTitle:userTitle_];
@@ -42,13 +58,14 @@
   DOUQuery *query = [self createQuery:startIndex];
   DOUService *service = [DOUService sharedInstance];
   DOUReqBlock completionBlock = ^(DOUHttpRequest *request) {
+    [self doneLoadingTableViewData];
+    if (startIndex == 0) {
+      [myEntries_ removeAllObjects];
+    }
     if (!request.error) {
       NSArray *const result = [self parseResult:request];
       [myEntries_ addObjectsFromArray:result];
-
-      if (result.count != RESULT_BATCH_SIZE) {
-        hasMore_ = NO;
-      }
+      hasMore_ = (result.count == RESULT_BATCH_SIZE);
       [self.tableView reloadData];
     } else {
       NSLog(@"request.error.description = %@", request.error.description);
@@ -125,4 +142,35 @@
   [self throwImplementationException];
 }
 
+#pragma mark Data Source Loading / Reloading Methods
+
+- (void)doneLoadingTableViewData {
+  reloading_ = NO;
+  [refreshHeaderView_ egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+}
+
+#pragma mark UIScrollViewDelegate Methods
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+  [refreshHeaderView_ egoRefreshScrollViewDidScroll:scrollView];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+  [refreshHeaderView_ egoRefreshScrollViewDidEndDragging:scrollView];
+}
+
+#pragma mark EGORefreshTableHeaderDelegate Methods
+
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView *)view {
+  reloading_ = YES;
+  [self loadData];
+}
+
+- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView *)view {
+  return reloading_;
+}
+
+- (NSDate *)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView *)view {
+  return [NSDate date];
+}
 @end
