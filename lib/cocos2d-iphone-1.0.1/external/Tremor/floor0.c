@@ -134,6 +134,12 @@ static const unsigned char MLOOP_2[64]={
 static const unsigned char MLOOP_3[8]={0,1,2,2,3,3,3,3};
 
 void vorbis_lsp_to_curve(ogg_int32_t *curve,int *map,int n,int ln,
+                         ogg_int32_t *lsp,int m,
+                         ogg_int32_t amp,
+                         ogg_int32_t ampoffset,
+                         ogg_int32_t *icos);
+
+void vorbis_lsp_to_curve(ogg_int32_t *curve,int *map,int n,int ln,
 			 ogg_int32_t *lsp,int m,
 			 ogg_int32_t amp,
 			 ogg_int32_t ampoffset,

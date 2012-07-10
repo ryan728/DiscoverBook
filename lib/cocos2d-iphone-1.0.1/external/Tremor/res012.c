@@ -42,6 +42,19 @@ typedef struct {
 
 } vorbis_look_residue0;
 
+void res0_free_info(vorbis_info_residue *i);
+void res0_free_look(vorbis_look_residue *i);
+vorbis_info_residue *res0_unpack(vorbis_info *vi,oggpack_buffer *opb);
+vorbis_look_residue *res0_look(vorbis_dsp_state *vd,vorbis_info_mode *vm,
+                               vorbis_info_residue *vr);
+int res0_inverse(vorbis_block *vb,vorbis_look_residue *vl,
+                 ogg_int32_t **in,int *nonzero,int ch);
+int res1_inverse(vorbis_block *vb,vorbis_look_residue *vl,
+                 ogg_int32_t **in,int *nonzero,int ch);
+int res2_inverse(vorbis_block *vb,vorbis_look_residue *vl,
+                 ogg_int32_t **in,int *nonzero,int ch);
+
+
 void res0_free_info(vorbis_info_residue *i){
   vorbis_info_residue0 *info=(vorbis_info_residue0 *)i;
   if(info){

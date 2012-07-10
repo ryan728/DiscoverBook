@@ -80,6 +80,9 @@ static int ilog(unsigned int v){
 #define WORD_ALIGN 8
 #endif
 
+void *_vorbis_block_alloc(vorbis_block *vb,long bytes);
+void _vorbis_block_ripcord(vorbis_block *vb);
+
 int vorbis_block_init(vorbis_dsp_state *v, vorbis_block *vb){
   memset(vb,0,sizeof(*vb));
   vb->vd=v;

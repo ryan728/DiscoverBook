@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		490D3C7115A2B782006A7FD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 493BB48E159C7EAC00E99887 /* InfoPlist.strings */; };
-		4912EB87159C8047000D469C /* MathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EB86159C8047000D469C /* MathSpec.m */; };
 		4912EBAE159C8745000D469C /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EBA6159C8745000D469C /* DCCrossHairView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4912EBAF159C8745000D469C /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EBA8159C8745000D469C /* DCFrameView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4912EBB0159C8745000D469C /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EBAA159C8745000D469C /* DCIntrospect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -261,7 +260,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4912EB86159C8047000D469C /* MathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathSpec.m; path = test/MathSpec.m; sourceTree = SOURCE_ROOT; };
 		4912EB89159C8469000D469C /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Shared.xcconfig; path = config/Shared.xcconfig; sourceTree = "<group>"; };
 		4912EB8B159C8486000D469C /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = config/Debug.xcconfig; sourceTree = "<group>"; };
 		4912EB8D159C84A3000D469C /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = config/Release.xcconfig; sourceTree = "<group>"; };
@@ -557,7 +555,6 @@
 			children = (
 				497489B415AC2FBC00CDE0C4 /* UserSpec.m */,
 				497489B115AC2F8600CDE0C4 /* resources */,
-				4912EB86159C8047000D469C /* MathSpec.m */,
 				49A5FC66159C7B3A0092C640 /* Supporting Files */,
 			);
 			name = test;
@@ -1041,7 +1038,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4912EB87159C8047000D469C /* MathSpec.m in Sources */,
 				497489B515AC2FBC00CDE0C4 /* UserSpec.m in Sources */,
 				497489B915AC301300CDE0C4 /* User.m in Sources */,
 				497489BA15AC301600CDE0C4 /* Book.m in Sources */,
