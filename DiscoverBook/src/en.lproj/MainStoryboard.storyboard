@@ -137,32 +137,32 @@
                                 <rect key="frame" x="-4" y="1" width="339" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="top" id="wAe-wh-bE8">
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="wAe-wh-bE8">
                                         <rect key="frame" x="23" y="49" width="87" height="103"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Z2A-Gg-MA8">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Z2A-Gg-MA8">
                                         <rect key="frame" x="118" y="73" width="185" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="rate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ZDL-TM-mRY">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ZDL-TM-mRY">
                                         <rect key="frame" x="118" y="49" width="49" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="publisher" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="JnJ-Ug-56h">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="JnJ-Ug-56h">
                                         <rect key="frame" x="118" y="97" width="185" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="numberOfRate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="yVb-H6-stK">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="yVb-H6-stK">
                                         <rect key="frame" x="184" y="49" width="119" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -173,18 +173,17 @@
                                         <rect key="frame" x="20" y="235" width="283" height="132"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration" label=""/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="publishDate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="wFA-0U-jVI">
-                                        <rect key="frame" x="118" y="124" width="188" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="wFA-0U-jVI">
+                                        <rect key="frame" x="118" y="126" width="188" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" id="Sdc-Is-zot">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" id="Sdc-Is-zot">
                                         <rect key="frame" x="23" y="20" width="280" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -207,7 +206,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5mU-Zv-wKK">
-                                        <rect key="frame" x="23" y="169" width="60" height="29"/>
+                                        <rect key="frame" x="118" y="169" width="54" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <state key="normal" title="想读">
@@ -222,7 +221,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tSy-uf-Ai5">
-                                        <rect key="frame" x="112" y="169" width="55" height="29"/>
+                                        <rect key="frame" x="183" y="169" width="55" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <state key="normal" title="在读">
@@ -232,9 +231,13 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addToReading:" destination="Skx-Rg-Vhu" eventType="touchUpInside" id="AUN-cZ-sn1"/>
+                                            <action selector="addToReading:" destination="IwC-XL-Orf" eventType="touchUpInside" id="oZm-zj-n2P"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Qo-Tq-dtz">
-                                        <rect key="frame" x="198" y="169" width="57" height="29"/>
+                                        <rect key="frame" x="249" y="169" width="54" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <state key="normal" title="已读">
@@ -244,6 +247,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addToRead:" destination="Skx-Rg-Vhu" eventType="touchUpInside" id="qiG-A1-76a"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </scrollView>
@@ -257,13 +263,17 @@
                         <outlet property="bookTitle" destination="Sdc-Is-zot" id="gly-k2-4Ep"/>
                         <outlet property="container" destination="TFF-KA-8M7" id="J2O-5V-H72"/>
                         <outlet property="numberOfRaters" destination="yVb-H6-stK" id="2yP-XP-fEP"/>
+                        <outlet property="publishDate" destination="wFA-0U-jVI" id="N5W-vI-oh2"/>
                         <outlet property="publisher" destination="JnJ-Ug-56h" id="23L-9O-fL4"/>
                         <outlet property="rate" destination="ZDL-TM-mRY" id="sOM-gn-Ec4"/>
+                        <outlet property="readButton" destination="9Qo-Tq-dtz" id="ati-J4-NkP"/>
+                        <outlet property="readingButton" destination="tSy-uf-Ai5" id="ThX-51-Ey9"/>
                         <outlet property="summary" destination="4uL-Kl-6g7" id="xEh-eK-FKL"/>
+                        <outlet property="wishButton" destination="5mU-Zv-wKK" id="wc2-ad-Npe"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1237" y="-745"/>
+            <point key="canvasLocation" x="1154" y="-739"/>
         </scene>
         <!--My Book Controller - Read-->
         <scene sceneID="BfI-Pn-267">
@@ -427,6 +437,8 @@
         <class className="BookDetailsController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BookDetailsController.h"/>
             <relationships>
+                <relationship kind="action" name="addToRead:"/>
+                <relationship kind="action" name="addToReading:"/>
                 <relationship kind="action" name="addToWish:"/>
                 <relationship kind="outlet" name="author" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="bookImage" candidateClass="UIImageView"/>
@@ -436,7 +448,10 @@
                 <relationship kind="outlet" name="publishDate" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="publisher" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="rate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="readButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="readingButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="summary" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="wishButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="MyBookController" superclassName="MyTableViewController">
@@ -465,4 +480,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="c7i-DE-jBF"/>
+        <segue reference="ouh-5j-vjm"/>
+    </inferredMetricsTieBreakers>
 </document>

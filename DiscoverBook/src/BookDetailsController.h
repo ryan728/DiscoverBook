@@ -1,6 +1,8 @@
 #import <UIKit/UIKit.h>
 #import "DOUAPIEngine.h"
 
+@class DoubanEntrySubject;
+
 @interface BookDetailsController : UIViewController  <DOUHttpRequestDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *container;
 
@@ -15,6 +17,13 @@
 
 @property (strong, nonatomic) NSString *bookDetailsUrl;
 @property (strong, nonatomic) NSString *bookCollectionUrl;
+
+@property (strong, nonatomic) IBOutlet UIButton *wishButton;
+@property (strong, nonatomic) IBOutlet UIButton *readingButton;
+@property (strong, nonatomic) IBOutlet UIButton *readButton;
+
 - (IBAction)addToWish:(id)sender;
+- (IBAction)addToReading:(id)sender;
+- (IBAction)addToRead:(id)sender;
 
 @end
