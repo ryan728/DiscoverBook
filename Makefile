@@ -5,7 +5,7 @@ clean:
 .PHONY: test
 test:
 	osascript -e 'tell app "iPhone Simulator" to quit'
-	xcodebuild -scheme "DiscoverBook" -configuration Debug -sdk iphonesimulator build TEST_AFTER_BUILD=YES
+	xcodebuild -scheme "DiscoverBook" -configuration Debug -sdk iphonesimulator build TEST_AFTER_BUILD=YES ARCHS=i386 ONLY_ACTIVE_ARCH=NO
 
 .PHONY: update
 update:

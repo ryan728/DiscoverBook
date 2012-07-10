@@ -24,6 +24,25 @@
 		4950F75315AA988200190D85 /* BookDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C00DE15A34F59002572F2 /* BookDetailsController.m */; };
 		49703E9E15985760004CA5E9 /* DOUOAuthStore+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */; };
 		49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */; };
+		497489B315AC2FAE00CDE0C4 /* people_entry.xml in Resources */ = {isa = PBXBuildFile; fileRef = 497489B215AC2FAE00CDE0C4 /* people_entry.xml */; };
+		497489B515AC2FBC00CDE0C4 /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 497489B415AC2FBC00CDE0C4 /* UserSpec.m */; };
+		497489B815AC2FDD00CDE0C4 /* libDoubanAPIEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10DC15916B160092CF9D /* libDoubanAPIEngine.a */; };
+		497489B915AC301300CDE0C4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC35159C76E40092C640 /* User.m */; };
+		497489BA15AC301600CDE0C4 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BE40AF15ABC7EB002161A8 /* Book.m */; };
+		497489BC15AC306A00CDE0C4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E615916C2E0092CF9D /* CFNetwork.framework */; };
+		497489BD15AC307A00CDE0C4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EE15916C5C0092CF9D /* SenTestingKit.framework */; };
+		497489BE15AC308900CDE0C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10AA159072A30092CF9D /* CoreGraphics.framework */; };
+		497489BF15AC309900CDE0C4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E415916C220092CF9D /* libz.dylib */; };
+		497489C015AC30A100CDE0C4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E215916C180092CF9D /* libxml2.dylib */; };
+		497489C115AC30F300CDE0C4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A1343C15A68C3D00C7CACE /* AVFoundation.framework */; };
+		497489C215AC310000CDE0C4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998957515998E8A0048B5B3 /* QuartzCore.framework */; };
+		497489C315AC310D00CDE0C4 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A1343815A68C0400C7CACE /* OpenAL.framework */; };
+		497489C415AC310D00CDE0C4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497796E815A534BF00C8DEE0 /* OpenGLES.framework */; };
+		497489C515AC311A00CDE0C4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EC15916C4B0092CF9D /* MobileCoreServices.framework */; };
+		497489C615AC312700CDE0C4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EA15916C3D0092CF9D /* SystemConfiguration.framework */; };
+		497489C715AC31DD00CDE0C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E815916C360092CF9D /* Security.framework */; };
+		497489C815AC31F200CDE0C4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A1343A15A68C2E00C7CACE /* AudioToolbox.framework */; };
+		497489C915AC322A00CDE0C4 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 497796EA15A53C3100C8DEE0 /* libc++.dylib */; };
 		497796EB15A53C3100C8DEE0 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 497796EA15A53C3100C8DEE0 /* libc++.dylib */; };
 		4979473B15A1CADF00DA964E /* RootController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4979473A15A1CADF00DA964E /* RootController.mm */; };
 		49A1310F15A67BD400C7CACE /* SearchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 49A1310E15A67BD400C7CACE /* SearchViewController.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -40,7 +59,6 @@
 		49A5FC32159C76870092C640 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998957515998E8A0048B5B3 /* QuartzCore.framework */; };
 		49A5FC36159C76E40092C640 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC35159C76E40092C640 /* User.m */; };
 		49A5FC39159C76ED0092C640 /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC38159C76ED0092C640 /* IntrospectManager.m */; };
-		49A5FC62159C7B3A0092C640 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EE15916C5C0092CF9D /* SenTestingKit.framework */; };
 		49A5FC63159C7B3A0092C640 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A6159072A30092CF9D /* UIKit.framework */; };
 		49A5FC64159C7B3A0092C640 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10A8159072A30092CF9D /* Foundation.framework */; };
 		49A5FC74159C7BC30092C640 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A5FC55159C7A4C0092C640 /* libKiwi.a */; };
@@ -106,6 +124,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 80FF01D1141C3D980059E59D;
 			remoteInfo = Box2D;
+		};
+		497489B615AC2FD700CDE0C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D800D537146907B2009F64FD;
+			remoteInfo = DoubanAPIEngine;
 		};
 		49A1341A15A684CE00C7CACE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -270,6 +295,8 @@
 		49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUOAuthStore+Additions.m"; path = "src/DOUOAuthStore+Additions.m"; sourceTree = SOURCE_ROOT; };
 		49703EAC15985AF7004CA5E9 /* DOUService+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DOUService+Additions.h"; path = "src/DOUService+Additions.h"; sourceTree = SOURCE_ROOT; };
 		49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUService+Additions.m"; path = "src/DOUService+Additions.m"; sourceTree = SOURCE_ROOT; };
+		497489B215AC2FAE00CDE0C4 /* people_entry.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = people_entry.xml; path = test/resources/people_entry.xml; sourceTree = SOURCE_ROOT; };
+		497489B415AC2FBC00CDE0C4 /* UserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSpec.m; path = test/UserSpec.m; sourceTree = SOURCE_ROOT; };
 		497796E815A534BF00C8DEE0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		497796EA15A53C3100C8DEE0 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		4979473915A1CADF00DA964E /* RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootController.h; path = src/RootController.h; sourceTree = SOURCE_ROOT; };
@@ -360,8 +387,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497489C915AC322A00CDE0C4 /* libc++.dylib in Frameworks */,
+				497489C815AC31F200CDE0C4 /* AudioToolbox.framework in Frameworks */,
+				497489C715AC31DD00CDE0C4 /* Security.framework in Frameworks */,
+				497489C615AC312700CDE0C4 /* SystemConfiguration.framework in Frameworks */,
+				497489C515AC311A00CDE0C4 /* MobileCoreServices.framework in Frameworks */,
+				497489C315AC310D00CDE0C4 /* OpenAL.framework in Frameworks */,
+				497489C415AC310D00CDE0C4 /* OpenGLES.framework in Frameworks */,
+				497489C215AC310000CDE0C4 /* QuartzCore.framework in Frameworks */,
+				497489C115AC30F300CDE0C4 /* AVFoundation.framework in Frameworks */,
+				497489BC15AC306A00CDE0C4 /* CFNetwork.framework in Frameworks */,
+				497489C015AC30A100CDE0C4 /* libxml2.dylib in Frameworks */,
+				497489BF15AC309900CDE0C4 /* libz.dylib in Frameworks */,
+				497489BE15AC308900CDE0C4 /* CoreGraphics.framework in Frameworks */,
+				497489BD15AC307A00CDE0C4 /* SenTestingKit.framework in Frameworks */,
+				497489B815AC2FDD00CDE0C4 /* libDoubanAPIEngine.a in Frameworks */,
 				49A5FC74159C7BC30092C640 /* libKiwi.a in Frameworks */,
-				49A5FC62159C7B3A0092C640 /* SenTestingKit.framework in Frameworks */,
 				49A5FC63159C7B3A0092C640 /* UIKit.framework in Frameworks */,
 				49A5FC64159C7B3A0092C640 /* Foundation.framework in Frameworks */,
 			);
@@ -468,6 +509,14 @@
 			name = Douban;
 			sourceTree = "<group>";
 		};
+		497489B115AC2F8600CDE0C4 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				497489B215AC2FAE00CDE0C4 /* people_entry.xml */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
 		49A56C6415A678440057D161 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +555,8 @@
 		49A5FC65159C7B3A0092C640 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				497489B415AC2FBC00CDE0C4 /* UserSpec.m */,
+				497489B115AC2F8600CDE0C4 /* resources */,
 				4912EB86159C8047000D469C /* MathSpec.m */,
 				49A5FC66159C7B3A0092C640 /* Supporting Files */,
 			);
@@ -746,6 +797,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				497489B715AC2FD700CDE0C4 /* PBXTargetDependency */,
 			);
 			name = UnitTests;
 			productName = UnitTests;
@@ -940,6 +992,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				490D3C7115A2B782006A7FD3 /* InfoPlist.strings in Resources */,
+				497489B315AC2FAE00CDE0C4 /* people_entry.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -989,6 +1042,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4912EB87159C8047000D469C /* MathSpec.m in Sources */,
+				497489B515AC2FBC00CDE0C4 /* UserSpec.m in Sources */,
+				497489B915AC301300CDE0C4 /* User.m in Sources */,
+				497489BA15AC301600CDE0C4 /* Book.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1039,6 +1095,11 @@
 			isa = PBXTargetDependency;
 			name = Box2D;
 			targetProxy = 4950F75015AA958A00190D85 /* PBXContainerItemProxy */;
+		};
+		497489B715AC2FD700CDE0C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DoubanAPIEngine;
+			targetProxy = 497489B615AC2FD700CDE0C4 /* PBXContainerItemProxy */;
 		};
 		49A1341B15A684CE00C7CACE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1094,6 +1155,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4912EBB2159C896C000D469C /* UnitTests.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 			};
 			name = Debug;
 		};
@@ -1101,6 +1166,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4912EBB2159C896C000D469C /* UnitTests.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 			};
 			name = Release;
 		};
