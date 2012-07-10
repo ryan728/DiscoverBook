@@ -49,11 +49,14 @@ static NSString *DEFAULT_USER_TITLE;
 }
 
 + (void)clearDefaultUser {
+  [USERS removeAllObjects];
   [User saveDefaultUserWithId:nil andName:nil];
 }
 
 
 + (void)initDefaultUser:(DoubanEntryPeople *)people {
+  if (!people) return;
+
   User *user = [[User alloc] initWithDoubanEntryPeople:people];
   DEFAULT_USER_TITLE = user.title;
   [USERS setObject:user forKey:user.title];

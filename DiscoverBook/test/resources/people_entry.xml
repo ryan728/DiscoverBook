@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom"
-       xmlns:gd="http://schemas.google.com/g/2005"
-       xmlns:opensearch="http://a9.com/-/spec/opensearchrss/1.0/"
-       xmlns:db="http://www.douban.com/xmlns/">
-    <db:location id="beijing">北京</db:location>
-    <db:uid>ahbei</db:uid>
-    <title>阿北</title>
-    <content>
-        豆瓣的临时总管。现在多数时间在忙忙碌碌地为豆瓣添砖加瓦。坐在马桶上看书，算是一天中最放松的时间。
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:db="http://www.douban.com/xmlns/">
+    <id>http://api.douban.com/people/1032321</id>
+    <title>Michael Chen</title>
+    <link href="http://api.douban.com/people/1032321" rel="self"/>
+    <link href="http://www.douban.com/people/mechiland/" rel="alternate"/>
+    <link href="http://img3.douban.com/icon/u1032321-1.jpg" rel="icon"/>
+    <content>blog地址：michael.nona.name
     </content>
-    <link rel="self" href="http://api.douban.com/people/ahbei"/>
-    <link rel="alternate" href="http://www.douban.com/people/ahbei/"/>
-    <link rel="icon" href="http://www.douban.com/icon/u1000001.jpg"/>
-
-    <link rel="homepage" href="http://ahbei.com/"/>
-    <id>http://api.douban.com/people/ahbei</id>
+    <db:attribute name="status">friend</db:attribute>
+    <db:location id="xian">陕西西安</db:location>
+    <db:signature>压力山大</db:signature>
+    <db:uid>mechiland</db:uid>
+    <uri>http://api.douban.com/people/1032321</uri>
 </entry>
