@@ -54,17 +54,14 @@ static UIImage *DEFAULT_CONTACT_ICON = nil;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   UITabBarController *tabBarController = segue.destinationViewController;
-  NSArray *const viewControllers = tabBarController.viewControllers;
+  NSMutableArray *const viewControllers = [NSMutableArray arrayWithArray:tabBarController.viewControllers];
+  [viewControllers removeLastObject];
+  tabBarController.viewControllers = viewControllers;
   [viewControllers eachWithIndex:^(MyTableViewController *controller, NSUInteger i) {
     User *user = [self.myEntries objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     controller.userTitle = user.title;
-    if (i != viewControllers.count - 1) {
-      tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(jumpHome)];
-      [controller loadData];
-    } else {
-      UITabBarItem *item = [tabBarController.tabBar.items objectAtIndex:i];
-      item.enabled = NO;
-    }
+    tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(jumpHome)];
+    [controller loadData];
   }];
   [super prepareForSegue:segue sender:sender];
 }
