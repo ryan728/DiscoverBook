@@ -16,11 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2Je-gf-AXs">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myContactTableCell" id="2Je-gf-AXs">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -32,9 +32,12 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="mostViewed" id="7Ia-4R-q7C"/>
+                    <connections>
+                        <segue destination="FSD-gN-SjK" kind="push" identifier="peopleDetail" id="ZPy-vL-54e"/>
+                    </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-396" y="-1216"/>
+            <point key="canvasLocation" x="572" y="-1330"/>
         </scene>
         <!--My Contact Controller - Contacts-->
         <scene sceneID="D2f-pe-4fd">
@@ -46,11 +49,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myContactTableCell" id="f7B-l4-b5V">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myContactTableCell" id="f7B-l4-b5V">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -62,9 +65,12 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="TZv-vE-O1y"/>
+                    <connections>
+                        <segue destination="FSD-gN-SjK" kind="push" identifier="peopleDetail" id="AeS-f1-dJq"/>
+                    </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="21" y="-1127"/>
+            <point key="canvasLocation" x="572" y="-1949"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0B2-Da-JKW">
@@ -83,11 +89,11 @@
                         <segue destination="Hl6-oI-wZn" kind="relationship" relationship="viewControllers" id="DsB-0C-JMy"/>
                         <segue destination="p7g-pA-nVo" kind="relationship" relationship="viewControllers" id="XiX-Ts-i6l"/>
                         <segue destination="1Bp-E7-TCO" kind="relationship" relationship="viewControllers" id="Cjp-l4-kZX"/>
-                        <segue destination="PL6-wX-o2Q" kind="relationship" relationship="viewControllers" id="Zdk-yr-7A7"/>
+                        <segue destination="PL6-wX-o2Q" kind="relationship" relationship="viewControllers" id="Rqi-Zv-XDp"/>
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="26" y="-474"/>
+            <point key="canvasLocation" x="56" y="-476"/>
         </scene>
         <!--My Book Controller - Reading-->
         <scene sceneID="szv-tE-l3v">
@@ -257,7 +263,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1139" y="-1193"/>
+            <point key="canvasLocation" x="1237" y="-745"/>
         </scene>
         <!--My Book Controller - Read-->
         <scene sceneID="BfI-Pn-267">
@@ -414,7 +420,7 @@
                     <navigationItem key="navigationItem" title="Search" id="fXu-6r-IWi"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="26" y="176"/>
+            <point key="canvasLocation" x="36" y="952"/>
         </scene>
     </scenes>
     <classes>
@@ -459,7 +465,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="ouh-5j-vjm"/>
-    </inferredMetricsTieBreakers>
 </document>

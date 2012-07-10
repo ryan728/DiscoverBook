@@ -17,5 +17,8 @@ static NSUInteger const RESULT_BATCH_SIZE = 10;
 @interface MyTableViewController : UITableViewController <SearchHandler>
 
 @property(nonatomic, strong) NSMutableArray *myEntries;
+@property (nonatomic, strong) NSString *userTitle;
+
+-(void)loadData;
 
 @end

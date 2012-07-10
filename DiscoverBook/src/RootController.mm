@@ -1,4 +1,3 @@
-#import <QuartzCore/QuartzCore.h>
 #import "RootController.h"
 #import "DOUService+Additions.h"
 #import "DOUOAuthStore+Additions.h"
@@ -6,6 +5,7 @@
 #import "MyBookController.h"
 #import "User.h"
 #import "SearchViewController.h"
+#import "NSArray+Additions.h"
 
 
 @implementation RootController {
@@ -32,6 +32,13 @@ static DOUOAuthStore *authStore = nil;
   if ([segue.identifier isEqualToString:@"search"]) {
     SearchViewController *searchController = segue.destinationViewController;
     searchController.term = searchBar_.text;
+  }
+  if ([segue.identifier isEqualToString:@"showMyBooks"]) {
+    UITabBarController *tabBarController = segue.destinationViewController;
+    NSArray *const viewControllers = tabBarController.viewControllers;
+    [viewControllers each:^(MyTableViewController *controller) {
+      [controller loadData];
+    }];
   }
 }
 

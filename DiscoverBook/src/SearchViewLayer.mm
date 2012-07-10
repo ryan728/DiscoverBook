@@ -153,8 +153,7 @@ enum {
   int idx = (CCRANDOM_0_1() > .5 ? 0 : 1);
   int idy = (CCRANDOM_0_1() > .5 ? 0 : 1);
 
-//  const CGRect rect = CGRectMake(32 * idx, 32 * idy, 32, 32);
-  const CGRect rect = CGRectMake(0, 0, 32, 32);
+  const CGRect rect = CGRectMake(32 * idx, 32 * idy, 32, 32);
 //  CCSprite *sprite = [CCSprite spriteWithBatchNode:batch rect:rect];
   CCSprite *sprite = [CCSprite spriteWithFile:@"default_book_cover.jpg" rect:rect];
   CCSprite *bg = [CCSprite spriteWithFile:@"round_corner_bg.png"];

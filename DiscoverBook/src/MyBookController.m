@@ -6,7 +6,6 @@
 #import "User.h"
 #import "MyBookController.h"
 #import "TWImageView+Additions.h"
-#import "UIImageView+AFNetworking.h"
 #import "BookDetailsController.h"
 
 @implementation MyBookController
@@ -19,7 +18,7 @@ static UIImage *DEFAULT_BOOK_COVER_IMAGE = nil;
 }
 
 - (DOUQuery *)createQuery:(int)startIndex {
-  User *user = [User defaultUser];
+  User *user = [User findUserWithTitle:self.userTitle];
   NSDictionary *const parameters = [NSDictionary dictionaryWithObjects:Array(@"book", self.title.lowercaseString, [NSString stringWithFormat:@"%u", RESULT_BATCH_SIZE], [NSString stringWithFormat:@"%u", startIndex]) forKeys:Array(@"cat", @"status", @"max-results", @"start-index")];
   return [[DOUQuery alloc] initWithSubPath:[NSString stringWithFormat:@"/people/%@/collection", user.id] parameters:parameters];
 }
@@ -49,7 +48,6 @@ static UIImage *DEFAULT_BOOK_COVER_IMAGE = nil;
   NSURL *const imageUrl = [[book linkWithRelAttributeValue:@"image"] URL];
   [cell.imageView setImageWithAnimation:imageUrl andPlaceHolder:DEFAULT_BOOK_COVER_IMAGE];
 }
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     [super prepareForSegue:segue sender:sender];

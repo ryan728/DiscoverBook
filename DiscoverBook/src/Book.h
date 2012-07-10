@@ -1,0 +1,3 @@
+@interface Book : NSObject
+
+@end

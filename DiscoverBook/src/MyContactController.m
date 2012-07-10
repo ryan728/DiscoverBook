@@ -18,7 +18,7 @@ static UIImage *DEFAULT_CONTACT_ICON = nil;
 }
 
 - (DOUQuery *)createQuery:(int)startIndex {
-  User *user = [User defaultUser];
+  User *user = [User findUserWithTitle:self.userTitle];
   NSDictionary *const parameters = [NSDictionary dictionaryWithObjects:Array([NSString stringWithFormat:@"%u", RESULT_BATCH_SIZE], [NSString stringWithFormat:@"%u", startIndex]) forKeys:Array(@"max-results", @"start-index")];
   return [[DOUQuery alloc] initWithSubPath:[NSString stringWithFormat:@"/people/%@/%@", user.id, self.title.lowercaseString] parameters:parameters];
 }
@@ -40,5 +40,33 @@ static UIImage *DEFAULT_CONTACT_ICON = nil;
   return results;
 }
 
+- (void)jumpHome {
+  [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+  if (indexPath.row != self.myEntries.count) {
+    self.tabBarController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:self.userTitle style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self performSegueWithIdentifier:@"peopleDetail" sender:self];
+  }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  UITabBarController *tabBarController = segue.destinationViewController;
+  NSArray *const viewControllers = tabBarController.viewControllers;
+  [viewControllers eachWithIndex:^(MyTableViewController *controller, NSUInteger i) {
+    User *user = [self.myEntries objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    controller.userTitle = user.title;
+    if (i != viewControllers.count - 1) {
+      tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(jumpHome)];
+      [controller loadData];
+    } else {
+      UITabBarItem *item = [tabBarController.tabBar.items objectAtIndex:i];
+      item.enabled = NO;
+    }
+  }];
+  [super prepareForSegue:segue sender:sender];
+}
 
 @end

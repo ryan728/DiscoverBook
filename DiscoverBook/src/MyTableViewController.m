@@ -10,6 +10,7 @@
 
 #pragma mark - Properties
 @synthesize myEntries = myEntries_;
+@synthesize userTitle = userTitle_;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
   self = [super initWithCoder:aDecoder];
@@ -18,18 +19,23 @@
     myEntries_ = [[NSMutableArray alloc] init];
     currentIndex_ = 0;
     hasMore_ = YES;
-
-    if ([User defaultUser]) {
-      [self loadListFrom:0];
-    } else {
-      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultUserFetched:) name:@"UserInfoFetched" object:nil];
-    }
   }
   return self;
 }
 
+- (void)loadData {
+  User *const user = [User findUserWithTitle:userTitle_];
+  if (user) {
+    [self loadListFrom:0];
+    userTitle_ = user.title;
+  } else {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultUserFetched:) name:@"UserInfoFetched" object:nil];
+  }
+}
+
 - (void)defaultUserFetched:(NSNotification *)notification {
   [self loadListFrom:0];
+  userTitle_ = [User defaultUser].title;
 }
 
 - (void)loadListFrom:(int)startIndex {
@@ -43,8 +49,6 @@
       if (result.count != RESULT_BATCH_SIZE) {
         hasMore_ = NO;
       }
-
-//      [self.tableView reloadRowsAtIndexPaths:<#(NSArray *)indexPaths#> withRowAnimation:<#(UITableViewRowAnimation)animation#>]
       [self.tableView reloadData];
     } else {
       NSLog(@"request.error.description = %@", request.error.description);
