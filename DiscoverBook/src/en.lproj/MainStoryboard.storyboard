@@ -410,7 +410,7 @@
                         <outlet property="searchBar" destination="rh7-wp-Wpf" id="fnU-Sc-nHA"/>
                         <outlet property="signOutButton" destination="H9Q-bv-zIL" id="lT5-Ns-u4e"/>
                         <outlet property="woDuButton" destination="Mk1-dd-pfU" id="GJ9-Gw-YSz"/>
-                        <segue destination="FSD-gN-SjK" kind="push" identifier="showMyBooks" id="c7i-DE-jBF"/>
+                        <segue destination="FSD-gN-SjK" kind="push" identifier="showUserInfo" id="c7i-DE-jBF"/>
                         <segue destination="Ry0-kh-qcA" kind="push" identifier="search" id="UB3-wG-EyB"/>
                     </connections>
                 </viewController>

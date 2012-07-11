@@ -21,11 +21,22 @@
 		4946A68715A46D6000C16C87 /* TWImageView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A68615A46D6000C16C87 /* TWImageView+Additions.m */; };
 		4950F75215AA959000190D85 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4950F74915AA93E100190D85 /* libBox2D.a */; };
 		4950F75315AA988200190D85 /* BookDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C00DE15A34F59002572F2 /* BookDetailsController.m */; };
-		49703E9E15985760004CA5E9 /* DOUOAuthStore+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */; };
+		4954B8D515AD13A500FF2424 /* RootControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4954B8D415AD13A500FF2424 /* RootControllerSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4954B8D615AD153400FF2424 /* RootController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4979473A15A1CADF00DA964E /* RootController.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4954B8D715AD153A00FF2424 /* SearchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 49A1310E15A67BD400C7CACE /* SearchViewController.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4954B8D815AD172700FF2424 /* SearchViewLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 49A131AB15A67E5D00C7CACE /* SearchViewLayer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4954B8D915AD172B00FF2424 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 49A1343F15A68D1A00C7CACE /* GLES-Render.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4954B8DA15AD173000FF2424 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BE40B915AC00A0002161A8 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4954B8DD15AD176A00FF2424 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A56CEB15A678480057D161 /* libcocos2d.a */; };
+		4954B8E015AD177A00FF2424 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4950F74915AA93E100190D85 /* libBox2D.a */; };
+		4954B8FF15AD1C8200FF2424 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A64815A465D100C16C87 /* MyTableViewController.m */; };
+		4954B90115AD1C8800FF2424 /* MyBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BCF6AA1592BDC1005DD14E /* MyBookController.m */; };
+		4954B90215AD1C8E00FF2424 /* BookDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C00DE15A34F59002572F2 /* BookDetailsController.m */; };
+		4954B90315AD1C9300FF2424 /* MyContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A5D315A4570300C16C87 /* MyContactController.m */; };
+		4954B90415AD1D2100FF2424 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BCF6C21592CA22005DD14E /* NSArray+Additions.m */; };
 		49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */; };
 		497489B315AC2FAE00CDE0C4 /* people_entry.xml in Resources */ = {isa = PBXBuildFile; fileRef = 497489B215AC2FAE00CDE0C4 /* people_entry.xml */; };
 		497489B515AC2FBC00CDE0C4 /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 497489B415AC2FBC00CDE0C4 /* UserSpec.m */; };
-		497489B815AC2FDD00CDE0C4 /* libDoubanAPIEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10DC15916B160092CF9D /* libDoubanAPIEngine.a */; };
 		497489B915AC301300CDE0C4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC35159C76E40092C640 /* User.m */; };
 		497489BA15AC301600CDE0C4 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BE40AF15ABC7EB002161A8 /* Book.m */; };
 		497489BC15AC306A00CDE0C4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E615916C2E0092CF9D /* CFNetwork.framework */; };
@@ -100,6 +111,7 @@
 		49ED111015917D050092CFA6 /* default_book_cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA5 /* default_book_cover.jpg */; };
 		49ED111015917D050092CFA8 /* round_corner_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA7 /* round_corner_bg.png */; };
 		49ED111015917D050092CFAA /* default_contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA9 /* default_contact.png */; };
+		49F6D8E015AD403400A45C69 /* libDoubanAPIEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10DC15916B160092CF9D /* libDoubanAPIEngine.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,12 +136,19 @@
 			remoteGlobalIDString = 80FF01D1141C3D980059E59D;
 			remoteInfo = Box2D;
 		};
-		497489B615AC2FD700CDE0C4 /* PBXContainerItemProxy */ = {
+		4954B8DB15AD175F00FF2424 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */;
+			containerPortal = 49A56C6315A678440057D161 /* cocos2d-ios.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D800D537146907B2009F64FD;
-			remoteInfo = DoubanAPIEngine;
+			remoteGlobalIDString = 5018F24C0DFDEAC400C013A5;
+			remoteInfo = cocos2d;
+		};
+		4954B8DE15AD177700FF2424 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4950F73C15AA93E100190D85 /* Box2D.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 80FF01D1141C3D980059E59D;
+			remoteInfo = Box2D;
 		};
 		49A1341A15A684CE00C7CACE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -257,6 +276,13 @@
 			remoteGlobalIDString = D800D537146907B2009F64FD;
 			remoteInfo = DoubanAPIEngine;
 		};
+		49F6D8DE15AD402D00A45C69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49ED10D315916B150092CF9D /* DoubanAPIEngine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D800D537146907B2009F64FD;
+			remoteInfo = DoubanAPIEngine;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -289,8 +315,7 @@
 		494C00DE15A34F59002572F2 /* BookDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookDetailsController.m; path = src/BookDetailsController.m; sourceTree = SOURCE_ROOT; };
 		494C00DF15A34F59002572F2 /* BookDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookDetailsController.h; path = src/BookDetailsController.h; sourceTree = SOURCE_ROOT; };
 		4950F73C15AA93E100190D85 /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = ../lib/Box2D_v2.2.1/Build/xcode4/Box2D.xcodeproj; sourceTree = "<group>"; };
-		49703E9C15985760004CA5E9 /* DOUOAuthStore+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DOUOAuthStore+Additions.h"; path = "src/DOUOAuthStore+Additions.h"; sourceTree = SOURCE_ROOT; };
-		49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUOAuthStore+Additions.m"; path = "src/DOUOAuthStore+Additions.m"; sourceTree = SOURCE_ROOT; };
+		4954B8D415AD13A500FF2424 /* RootControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RootControllerSpec.mm; path = test/RootControllerSpec.mm; sourceTree = SOURCE_ROOT; };
 		49703EAC15985AF7004CA5E9 /* DOUService+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DOUService+Additions.h"; path = "src/DOUService+Additions.h"; sourceTree = SOURCE_ROOT; };
 		49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUService+Additions.m"; path = "src/DOUService+Additions.m"; sourceTree = SOURCE_ROOT; };
 		497489B215AC2FAE00CDE0C4 /* people_entry.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = people_entry.xml; path = test/resources/people_entry.xml; sourceTree = SOURCE_ROOT; };
@@ -385,6 +410,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F6D8E015AD403400A45C69 /* libDoubanAPIEngine.a in Frameworks */,
+				4954B8E015AD177A00FF2424 /* libBox2D.a in Frameworks */,
+				4954B8DD15AD176A00FF2424 /* libcocos2d.a in Frameworks */,
 				497489C915AC322A00CDE0C4 /* libc++.dylib in Frameworks */,
 				497489C815AC31F200CDE0C4 /* AudioToolbox.framework in Frameworks */,
 				497489C715AC31DD00CDE0C4 /* Security.framework in Frameworks */,
@@ -399,7 +427,6 @@
 				497489BF15AC309900CDE0C4 /* libz.dylib in Frameworks */,
 				497489BE15AC308900CDE0C4 /* CoreGraphics.framework in Frameworks */,
 				497489BD15AC307A00CDE0C4 /* SenTestingKit.framework in Frameworks */,
-				497489B815AC2FDD00CDE0C4 /* libDoubanAPIEngine.a in Frameworks */,
 				49A5FC74159C7BC30092C640 /* libKiwi.a in Frameworks */,
 				49A5FC63159C7B3A0092C640 /* UIKit.framework in Frameworks */,
 				49A5FC64159C7B3A0092C640 /* Foundation.framework in Frameworks */,
@@ -496,11 +523,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4954B8D215AD138A00FF2424 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4954B8D415AD13A500FF2424 /* RootControllerSpec.mm */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		4954B8D315AD139500FF2424 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				497489B415AC2FBC00CDE0C4 /* UserSpec.m */,
+			);
+			name = domain;
+			sourceTree = "<group>";
+		};
 		49703E9B159856B3004CA5E9 /* Douban */ = {
 			isa = PBXGroup;
 			children = (
-				49703E9C15985760004CA5E9 /* DOUOAuthStore+Additions.h */,
-				49703E9D15985760004CA5E9 /* DOUOAuthStore+Additions.m */,
 				49703EAC15985AF7004CA5E9 /* DOUService+Additions.h */,
 				49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */,
 			);
@@ -553,7 +594,8 @@
 		49A5FC65159C7B3A0092C640 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				497489B415AC2FBC00CDE0C4 /* UserSpec.m */,
+				4954B8D315AD139500FF2424 /* domain */,
+				4954B8D215AD138A00FF2424 /* controllers */,
 				497489B115AC2F8600CDE0C4 /* resources */,
 				49A5FC66159C7B3A0092C640 /* Supporting Files */,
 			);
@@ -621,8 +663,8 @@
 		49BCF6A81592BD70005DD14E /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				494C00DE15A34F59002572F2 /* BookDetailsController.m */,
 				494C00DF15A34F59002572F2 /* BookDetailsController.h */,
+				494C00DE15A34F59002572F2 /* BookDetailsController.m */,
 				49BCF6A91592BDC1005DD14E /* MyBookController.h */,
 				49BCF6AA1592BDC1005DD14E /* MyBookController.m */,
 				4979473915A1CADF00DA964E /* RootController.h */,
@@ -794,7 +836,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				497489B715AC2FD700CDE0C4 /* PBXTargetDependency */,
+				49F6D8DF15AD402D00A45C69 /* PBXTargetDependency */,
+				4954B8DF15AD177700FF2424 /* PBXTargetDependency */,
+				4954B8DC15AD175F00FF2424 /* PBXTargetDependency */,
 			);
 			name = UnitTests;
 			productName = UnitTests;
@@ -1041,6 +1085,17 @@
 				497489B515AC2FBC00CDE0C4 /* UserSpec.m in Sources */,
 				497489B915AC301300CDE0C4 /* User.m in Sources */,
 				497489BA15AC301600CDE0C4 /* Book.m in Sources */,
+				4954B8D515AD13A500FF2424 /* RootControllerSpec.mm in Sources */,
+				4954B8D615AD153400FF2424 /* RootController.mm in Sources */,
+				4954B8D715AD153A00FF2424 /* SearchViewController.mm in Sources */,
+				4954B8D815AD172700FF2424 /* SearchViewLayer.mm in Sources */,
+				4954B8D915AD172B00FF2424 /* GLES-Render.mm in Sources */,
+				4954B8DA15AD173000FF2424 /* EGORefreshTableHeaderView.m in Sources */,
+				4954B8FF15AD1C8200FF2424 /* MyTableViewController.m in Sources */,
+				4954B90115AD1C8800FF2424 /* MyBookController.m in Sources */,
+				4954B90215AD1C8E00FF2424 /* BookDetailsController.m in Sources */,
+				4954B90315AD1C9300FF2424 /* MyContactController.m in Sources */,
+				4954B90415AD1D2100FF2424 /* NSArray+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1053,7 +1108,6 @@
 				493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */,
 				49BCF6AB1592BDC1005DD14E /* MyBookController.m in Sources */,
 				49BCF6C31592CA22005DD14E /* NSArray+Additions.m in Sources */,
-				49703E9E15985760004CA5E9 /* DOUOAuthStore+Additions.m in Sources */,
 				49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */,
 				49A5FC36159C76E40092C640 /* User.m in Sources */,
 				49A5FC39159C76ED0092C640 /* IntrospectManager.m in Sources */,
@@ -1092,10 +1146,15 @@
 			name = Box2D;
 			targetProxy = 4950F75015AA958A00190D85 /* PBXContainerItemProxy */;
 		};
-		497489B715AC2FD700CDE0C4 /* PBXTargetDependency */ = {
+		4954B8DC15AD175F00FF2424 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = DoubanAPIEngine;
-			targetProxy = 497489B615AC2FD700CDE0C4 /* PBXContainerItemProxy */;
+			name = cocos2d;
+			targetProxy = 4954B8DB15AD175F00FF2424 /* PBXContainerItemProxy */;
+		};
+		4954B8DF15AD177700FF2424 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Box2D;
+			targetProxy = 4954B8DE15AD177700FF2424 /* PBXContainerItemProxy */;
 		};
 		49A1341B15A684CE00C7CACE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1116,6 +1175,11 @@
 			isa = PBXTargetDependency;
 			name = DoubanAPIEngine;
 			targetProxy = 49ED10DF15916BEE0092CF9D /* PBXContainerItemProxy */;
+		};
+		49F6D8DF15AD402D00A45C69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DoubanAPIEngine;
+			targetProxy = 49F6D8DE15AD402D00A45C69 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1151,10 +1215,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4912EBB2159C896C000D469C /* UnitTests.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
-				);
 			};
 			name = Debug;
 		};
@@ -1162,10 +1222,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4912EBB2159C896C000D469C /* UnitTests.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
-				);
 			};
 			name = Release;
 		};

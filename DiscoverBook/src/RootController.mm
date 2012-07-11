@@ -1,6 +1,5 @@
 #import "RootController.h"
 #import "DOUService+Additions.h"
-#import "DOUOAuthStore+Additions.h"
 #import "NSString+Additions.h"
 #import "MyBookController.h"
 #import "User.h"
@@ -21,19 +20,13 @@ static NSString *const kAPIKey = @"0f08a77e67e884452d19f67b37b98ccf";
 static NSString *const kPrivateKey = @"bec2de010015fa6e";
 static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 
-static DOUOAuthStore *authStore = nil;
-
-+ (void)initialize {
-  authStore = [DOUOAuthStore sharedInstance];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   [super prepareForSegue:segue sender:sender];
   if ([segue.identifier isEqualToString:@"search"]) {
     SearchViewController *searchController = segue.destinationViewController;
     searchController.term = searchBar_.text;
   }
-  if ([segue.identifier isEqualToString:@"showMyBooks"]) {
+  if ([segue.identifier isEqualToString:@"showUserInfo"]) {
     UITabBarController *tabBarController = segue.destinationViewController;
     NSArray *const viewControllers = tabBarController.viewControllers;
     [viewControllers each:^(MyTableViewController *controller) {
@@ -45,6 +38,7 @@ static DOUOAuthStore *authStore = nil;
 #pragma mark - View lifecycle
 
 - (void)viewWillAppear:(BOOL)animated {
+  DOUOAuthStore *const authStore = [DOUOAuthStore sharedInstance];
   signOutButton_.hidden = !authStore.hasValidAccessToken;
   signOutButton_.alpha = 1.0f;
 
@@ -56,12 +50,13 @@ static DOUOAuthStore *authStore = nil;
 }
 
 - (IBAction)woDu:(id)sender {
+  DOUOAuthStore *const authStore = [DOUOAuthStore sharedInstance];
   if (!authStore.hasValidAccessToken) {
     [self initWebView];
     [self.view addSubview:webView_];
   } else {
     [[DOUService sharedInstance] fetchUserInfo];
-    [self performSegueWithIdentifier:@"showMyBooks" sender:self];
+    [self performSegueWithIdentifier:@"showUserInfo" sender:self];
   }
 }
 
@@ -135,6 +130,7 @@ static DOUOAuthStore *authStore = nil;
 #pragma mark - DOUOAuthServiceDelegate
 
 - (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
+  DOUOAuthStore *const authStore = [DOUOAuthStore sharedInstance];
   NSLog(@"store.accessToken = %@", authStore.accessToken);
   [[DOUService sharedInstance] fetchUserInfo];
   [self dismissWebView];

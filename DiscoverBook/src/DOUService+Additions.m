@@ -12,12 +12,11 @@
       if (!request.error) {
         DoubanEntryPeople *people = [[DoubanEntryPeople alloc] initWithData:request.responseData];
         [User initDefaultUser:people];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"UserInfoFetched" object:self];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"UserInfoFetched" object:nil];
       } else {
         NSLog(@"request.error.description = %@", request.error.description);
       }
     };
-    DOUService *service = [DOUService sharedInstance];
-    [service get:query callback:completionBlock];
+    [self get:query callback:completionBlock];
 }
 @end
