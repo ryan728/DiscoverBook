@@ -1,14 +1,14 @@
 #import "RootController.h"
-#import "DOUService+Additions.h"
 #import "NSString+Additions.h"
 #import "MyBookController.h"
 #import "User.h"
 #import "SearchViewController.h"
 #import "NSArray+Additions.h"
-
+#import "DoubanService.h"
 
 @implementation RootController {
   UIWebView *webView_;
+  DoubanService *doubanService_;
 }
 #pragma mark - Properties
 
@@ -19,6 +19,15 @@
 static NSString *const kAPIKey = @"0f08a77e67e884452d19f67b37b98ccf";
 static NSString *const kPrivateKey = @"bec2de010015fa6e";
 static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+  self = [super initWithCoder:coder];
+  if (self) {
+    doubanService_ = [[DoubanService alloc]init];
+  }
+  return self;
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   [super prepareForSegue:segue sender:sender];
@@ -55,7 +64,7 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
     [self initWebView];
     [self.view addSubview:webView_];
   } else {
-    [[DOUService sharedInstance] fetchUserInfo];
+    [doubanService_ fetchUserInfo];
     [self performSegueWithIdentifier:@"showUserInfo" sender:self];
   }
 }
@@ -132,9 +141,9 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 - (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
   DOUOAuthStore *const authStore = [DOUOAuthStore sharedInstance];
   NSLog(@"store.accessToken = %@", authStore.accessToken);
-  [[DOUService sharedInstance] fetchUserInfo];
+  [doubanService_ fetchUserInfo];
   [self dismissWebView];
-  [self performSegueWithIdentifier:@"showMyBooks" sender:self];
+  [self performSegueWithIdentifier:@"showUserInfo" sender:self];
 }
 
 - (void)OAuthClient:(DOUOAuthService *)client didFailWithError:(NSError *)error {

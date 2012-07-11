@@ -1,6 +1,6 @@
 #import "DOUService.h"
 
-@interface DOUService (Additions)
+@interface DoubanService : NSObject
 
 - (void)fetchUserInfo;
 @end

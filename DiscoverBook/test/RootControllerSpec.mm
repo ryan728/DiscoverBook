@@ -3,6 +3,7 @@
 #import "SearchViewController.h"
 #import "Macros.h"
 #import "MyTableViewController.h"
+#import "User.h"
 
 SPEC_BEGIN(RootControllerSpec)
 
@@ -58,6 +59,7 @@ describe(@"RootControllerSpec", ^{
   });
 
   it(@"should show user name in button if has default user when view will appear", ^{
+    [User clearDefaultUser];
     NSUserDefaults *const userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:@"id" forKey:@"userId"];
     [userDefaults setObject:@"name" forKey:@"userName"];

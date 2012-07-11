@@ -34,7 +34,7 @@
 		4954B90215AD1C8E00FF2424 /* BookDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C00DE15A34F59002572F2 /* BookDetailsController.m */; };
 		4954B90315AD1C9300FF2424 /* MyContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A5D315A4570300C16C87 /* MyContactController.m */; };
 		4954B90415AD1D2100FF2424 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BCF6C21592CA22005DD14E /* NSArray+Additions.m */; };
-		49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */; };
+		49703EAE15985AF7004CA5E9 /* DoubanService.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DoubanService.m */; };
 		497489B315AC2FAE00CDE0C4 /* people_entry.xml in Resources */ = {isa = PBXBuildFile; fileRef = 497489B215AC2FAE00CDE0C4 /* people_entry.xml */; };
 		497489B515AC2FBC00CDE0C4 /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 497489B415AC2FBC00CDE0C4 /* UserSpec.m */; };
 		497489B915AC301300CDE0C4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5FC35159C76E40092C640 /* User.m */; };
@@ -112,6 +112,8 @@
 		49ED111015917D050092CFA8 /* round_corner_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA7 /* round_corner_bg.png */; };
 		49ED111015917D050092CFAA /* default_contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA9 /* default_contact.png */; };
 		49F6D8E015AD403400A45C69 /* libDoubanAPIEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10DC15916B160092CF9D /* libDoubanAPIEngine.a */; };
+		49F6D8E115AD4C5F00A45C69 /* DoubanService.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DoubanService.m */; };
+		49F6D8E515AD551200A45C69 /* DoubanServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F6D8E415AD551200A45C69 /* DoubanServiceSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -316,8 +318,8 @@
 		494C00DF15A34F59002572F2 /* BookDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookDetailsController.h; path = src/BookDetailsController.h; sourceTree = SOURCE_ROOT; };
 		4950F73C15AA93E100190D85 /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = ../lib/Box2D_v2.2.1/Build/xcode4/Box2D.xcodeproj; sourceTree = "<group>"; };
 		4954B8D415AD13A500FF2424 /* RootControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RootControllerSpec.mm; path = test/RootControllerSpec.mm; sourceTree = SOURCE_ROOT; };
-		49703EAC15985AF7004CA5E9 /* DOUService+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DOUService+Additions.h"; path = "src/DOUService+Additions.h"; sourceTree = SOURCE_ROOT; };
-		49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DOUService+Additions.m"; path = "src/DOUService+Additions.m"; sourceTree = SOURCE_ROOT; };
+		49703EAC15985AF7004CA5E9 /* DoubanService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanService.h; path = src/DoubanService.h; sourceTree = SOURCE_ROOT; };
+		49703EAD15985AF7004CA5E9 /* DoubanService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanService.m; path = src/DoubanService.m; sourceTree = SOURCE_ROOT; };
 		497489B215AC2FAE00CDE0C4 /* people_entry.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = people_entry.xml; path = test/resources/people_entry.xml; sourceTree = SOURCE_ROOT; };
 		497489B415AC2FBC00CDE0C4 /* UserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSpec.m; path = test/UserSpec.m; sourceTree = SOURCE_ROOT; };
 		497796E815A534BF00C8DEE0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -403,6 +405,7 @@
 		49ED111015917D050092CFA5 /* default_book_cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default_book_cover.jpg; path = resources/default_book_cover.jpg; sourceTree = "<group>"; };
 		49ED111015917D050092CFA7 /* round_corner_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = round_corner_bg.png; path = resources/round_corner_bg.png; sourceTree = "<group>"; };
 		49ED111015917D050092CFA9 /* default_contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_contact.png; path = resources/default_contact.png; sourceTree = "<group>"; };
+		49F6D8E415AD551200A45C69 /* DoubanServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanServiceSpec.m; path = test/DoubanServiceSpec.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -539,15 +542,6 @@
 			name = domain;
 			sourceTree = "<group>";
 		};
-		49703E9B159856B3004CA5E9 /* Douban */ = {
-			isa = PBXGroup;
-			children = (
-				49703EAC15985AF7004CA5E9 /* DOUService+Additions.h */,
-				49703EAD15985AF7004CA5E9 /* DOUService+Additions.m */,
-			);
-			name = Douban;
-			sourceTree = "<group>";
-		};
 		497489B115AC2F8600CDE0C4 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +588,7 @@
 		49A5FC65159C7B3A0092C640 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				49F6D8E315AD54F400A45C69 /* services */,
 				4954B8D315AD139500FF2424 /* domain */,
 				4954B8D215AD138A00FF2424 /* controllers */,
 				497489B115AC2F8600CDE0C4 /* resources */,
@@ -749,6 +744,7 @@
 		49ED10AC159072A30092CF9D /* src */ = {
 			isa = PBXGroup;
 			children = (
+				49F6D8E215AD521300A45C69 /* services */,
 				49A5FC33159C76A80092C640 /* managers */,
 				49BCF6C515985451005DD14E /* domain */,
 				49BCF6A81592BD70005DD14E /* controllers */,
@@ -801,7 +797,6 @@
 			isa = PBXGroup;
 			children = (
 				4946A68415A46D4000C16C87 /* UIKit */,
-				49703E9B159856B3004CA5E9 /* Douban */,
 				49BCF6C01592C9FA005DD14E /* Foundation */,
 				49BCF6C41592F0F5005DD14E /* Macros.h */,
 			);
@@ -819,6 +814,23 @@
 				49A131AB15A67E5D00C7CACE /* SearchViewLayer.mm */,
 			);
 			name = views;
+			sourceTree = "<group>";
+		};
+		49F6D8E215AD521300A45C69 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				49703EAC15985AF7004CA5E9 /* DoubanService.h */,
+				49703EAD15985AF7004CA5E9 /* DoubanService.m */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		49F6D8E315AD54F400A45C69 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				49F6D8E415AD551200A45C69 /* DoubanServiceSpec.m */,
+			);
+			name = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1096,6 +1108,8 @@
 				4954B90215AD1C8E00FF2424 /* BookDetailsController.m in Sources */,
 				4954B90315AD1C9300FF2424 /* MyContactController.m in Sources */,
 				4954B90415AD1D2100FF2424 /* NSArray+Additions.m in Sources */,
+				49F6D8E115AD4C5F00A45C69 /* DoubanService.m in Sources */,
+				49F6D8E515AD551200A45C69 /* DoubanServiceSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1108,7 +1122,7 @@
 				493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */,
 				49BCF6AB1592BDC1005DD14E /* MyBookController.m in Sources */,
 				49BCF6C31592CA22005DD14E /* NSArray+Additions.m in Sources */,
-				49703EAE15985AF7004CA5E9 /* DOUService+Additions.m in Sources */,
+				49703EAE15985AF7004CA5E9 /* DoubanService.m in Sources */,
 				49A5FC36159C76E40092C640 /* User.m in Sources */,
 				49A5FC39159C76ED0092C640 /* IntrospectManager.m in Sources */,
 				4912EBAE159C8745000D469C /* DCCrossHairView.m in Sources */,
@@ -1247,7 +1261,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Zhang (TED6CQ59XN)";
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
-				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/**";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				VERSION_INFO_BUILDER = 1.0;
 			};
 			name = Debug;
@@ -1258,7 +1272,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Zhang (TED6CQ59XN)";
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
-				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/**";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				VERSION_INFO_BUILDER = 1.0;
 			};
 			name = Release;
