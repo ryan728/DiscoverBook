@@ -87,7 +87,7 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 
 - (void)initWebView {
   webView_ = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0,
-          self.view.bounds.size.width, self.view.bounds.size.height - 49)];
+          self.view.bounds.size.width, self.view.bounds.size.height)];
   webView_.scalesPageToFit = YES;
   webView_.delegate = self;
   [webView_ loadRequest:[self createRequest]];
@@ -140,10 +140,12 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 
 - (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
   DOUOAuthStore *const authStore = [DOUOAuthStore sharedInstance];
-  NSLog(@"store.accessToken = %@", authStore.accessToken);
-  [doubanService_ fetchUserInfo];
   [self dismissWebView];
-  [self performSegueWithIdentifier:@"showUserInfo" sender:self];
+  if (authStore.hasValidAccessToken) {
+    NSLog(@"store.accessToken = %@", authStore.accessToken);
+    [doubanService_ fetchUserInfo];
+    [self performSegueWithIdentifier:@"showUserInfo" sender:self];
+  }
 }
 
 - (void)OAuthClient:(DOUOAuthService *)client didFailWithError:(NSError *)error {
