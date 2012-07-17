@@ -15,6 +15,9 @@
 		4912EBF6159D700A000D469C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4912EBF2159D700A000D469C /* libTestFlight.a */; };
 		4912EBF7159D700A000D469C /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4912EBF3159D700A000D469C /* README.txt */; };
 		4912EBF8159D700A000D469C /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4912EBF4159D700A000D469C /* release_notes.txt */; };
+		49203C4815B4ECA60047A757 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49203C4715B4ECA60047A757 /* Toast+UIView.m */; };
+		49203C4915B4ECA60047A757 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49203C4715B4ECA60047A757 /* Toast+UIView.m */; };
+		49203C7015B4F1310047A757 /* cry.png in Resources */ = {isa = PBXBuildFile; fileRef = 49203C6F15B4F1310047A757 /* cry.png */; };
 		493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FF15917A890092CF9D /* NSString+Additions.m */; };
 		4946A5D415A4570300C16C87 /* MyContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A5D315A4570300C16C87 /* MyContactController.m */; };
 		4946A64915A465D100C16C87 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A64815A465D100C16C87 /* MyTableViewController.m */; };
@@ -305,6 +308,9 @@
 		4912EBF3159D700A000D469C /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		4912EBF4159D700A000D469C /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
 		4912EBF5159D700A000D469C /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		49203C4615B4ECA60047A757 /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Toast+UIView.h"; path = "src/Toast+UIView.h"; sourceTree = SOURCE_ROOT; };
+		49203C4715B4ECA60047A757 /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Toast+UIView.m"; path = "src/Toast+UIView.m"; sourceTree = SOURCE_ROOT; };
+		49203C6F15B4F1310047A757 /* cry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cry.png; path = resources/cry.png; sourceTree = "<group>"; };
 		493BB48B159C7EA600E99887 /* UnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "UnitTests-Info.plist"; path = "test/UnitTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		493BB48C159C7EA600E99887 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UnitTests-Prefix.pch"; path = "test/UnitTests-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		493BB48F159C7EAC00E99887 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = test/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
@@ -511,6 +517,8 @@
 		4946A68415A46D4000C16C87 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				49203C4615B4ECA60047A757 /* Toast+UIView.h */,
+				49203C4715B4ECA60047A757 /* Toast+UIView.m */,
 				4946A68515A46D6000C16C87 /* TWImageView+Additions.h */,
 				4946A68615A46D6000C16C87 /* TWImageView+Additions.m */,
 			);
@@ -611,6 +619,7 @@
 		49B9D75115A17CAA00B4C734 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				49203C6F15B4F1310047A757 /* cry.png */,
 				49BE40BB15AC00C3002161A8 /* blackArrow.png */,
 				49BE40BC15AC00C3002161A8 /* blackArrow@2x.png */,
 				49BE40BD15AC00C3002161A8 /* blueArrow.png */,
@@ -1068,6 +1077,7 @@
 				49BE40C815AC00C3002161A8 /* grayArrow@2x.png in Resources */,
 				49BE40C915AC00C3002161A8 /* whiteArrow.png in Resources */,
 				49BE40CA15AC00C3002161A8 /* whiteArrow@2x.png in Resources */,
+				49203C7015B4F1310047A757 /* cry.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1110,6 +1120,7 @@
 				4954B90415AD1D2100FF2424 /* NSArray+Additions.m in Sources */,
 				49F6D8E115AD4C5F00A45C69 /* DoubanService.m in Sources */,
 				49F6D8E515AD551200A45C69 /* DoubanServiceSpec.m in Sources */,
+				49203C4915B4ECA60047A757 /* Toast+UIView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1149,6 +1160,7 @@
 				4950F75315AA988200190D85 /* BookDetailsController.m in Sources */,
 				49BE40B015ABC7EB002161A8 /* Book.m in Sources */,
 				49BE40BA15AC00A0002161A8 /* EGORefreshTableHeaderView.m in Sources */,
+				49203C4815B4ECA60047A757 /* Toast+UIView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1261,7 +1273,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Zhang (TED6CQ59XN)";
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
-				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				VERSION_INFO_BUILDER = 1.0;
 			};
 			name = Debug;
@@ -1272,7 +1284,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Zhang (TED6CQ59XN)";
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
-				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				VERSION_INFO_BUILDER = 1.0;
 			};
 			name = Release;

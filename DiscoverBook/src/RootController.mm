@@ -5,6 +5,8 @@
 #import "SearchViewController.h"
 #import "NSArray+Additions.h"
 #import "DoubanService.h"
+#import "Reachability.h"
+#import "Toast+UIView.h"
 
 @implementation RootController {
   UIWebView *webView_;
@@ -52,13 +54,21 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
   signOutButton_.alpha = 1.0f;
 
   User *const user = [User defaultUser];
-  if (user) {
+  if (user && authStore.hasValidAccessToken) {
     [woDuButton_ setTitle:user.title forState:UIControlStateNormal];
   }
   [super viewWillAppear:animated];
 }
 
+- (BOOL)networkNotWork {
+  return !([[Reachability reachabilityForInternetConnection] isReachable]);
+}
+
 - (IBAction)woDu:(id)sender {
+  if ([self networkNotWork]) {
+    [self.view makeNetworkToast];
+    return;
+  }
   DOUOAuthStore *const authStore = [DOUOAuthStore sharedInstance];
   if (!authStore.hasValidAccessToken) {
     [self initWebView];
@@ -121,6 +131,14 @@ static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
     return NO;
   }
   return YES;
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+  NSLog(@"---------------- error.description = %@", error.description);
+  if ([self networkNotWork]) {
+    [self.view makeNetworkToast];
+  }
+  [self dismissWebView];
 }
 
 - (void)dismissWebView {

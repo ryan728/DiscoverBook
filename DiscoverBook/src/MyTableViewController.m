@@ -2,6 +2,8 @@
 #import "DoubanEntrySubject.h"
 #import "User.h"
 #import "DOUService.h"
+#import "Reachability.h"
+#import "Toast+UIView.h"
 
 @implementation MyTableViewController {
   NSUInteger currentIndex_;
@@ -69,6 +71,9 @@
       [self.tableView reloadData];
     } else {
       NSLog(@"request.error.description = %@", request.error.description);
+      if (![Reachability reachabilityForInternetConnection].isReachable) {
+        [self.view makeNetworkToast];
+      }
     }
   };
   [service get:query callback:completionBlock];
