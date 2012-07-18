@@ -26,4 +26,9 @@
   [[CCDirector sharedDirector] runWithScene:[SearchViewLayer scene]];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+  [[CCDirector sharedDirector] end];
+}
+
 @end
