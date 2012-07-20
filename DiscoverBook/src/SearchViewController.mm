@@ -23,7 +23,7 @@
   self.view = glView;
 
   [CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
-  [[CCDirector sharedDirector] runWithScene:[SearchViewLayer scene]];
+  [[CCDirector sharedDirector] runWithScene:[SearchViewLayer sceneWithText:_term]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

@@ -5,7 +5,11 @@
 #import "CCLabelTTF.h"
 #import "CGPointExtension.h"
 #import "CCActionInterval.h"
-
+#import "DOUQuery.h"
+#import "DOUService.h"
+#import "DoubanFeedSubject.h"
+#import "NSArray+Additions.h"
+#import "Book.h"
 
 #define PTM_RATIO 32
 
@@ -17,15 +21,26 @@ enum {
 
 @implementation SearchViewLayer {
   NSMutableArray *movableSprites_;
-  CCSprite *selSprite;
-  b2Body *groundBody;
-  BOOL hasTouches;
-  CGSize screenSize;
+  CCSprite *selSprite_;
+  b2Body *groundBody_;
+  BOOL hasTouches_;
+  CGSize screenSize_;
+
+  NSMutableDictionary *books_;
+  NSMutableDictionary *bodies_;
 }
 
 + (CCScene *)scene {
   CCScene *scene = [CCScene node];
   SearchViewLayer *layer = [SearchViewLayer node];
+  [scene addChild:layer];
+  return scene;
+}
+
++ (CCScene *)sceneWithText:(NSString *)text {
+  CCScene *scene = [CCScene node];
+  SearchViewLayer *layer = [SearchViewLayer node];
+  [layer addTextSprite:text];
   [scene addChild:layer];
   return scene;
 }
@@ -49,39 +64,136 @@ enum {
   b2BodyDef groundBodyDef;
   groundBodyDef.position.Set(0, 0); // bottom-left corner
 
-  groundBody = world->CreateBody(&groundBodyDef);
+  groundBody_ = world->CreateBody(&groundBodyDef);
 
   b2EdgeShape groundBox;
-  groundBox.Set(b2Vec2(0, 0), b2Vec2(screenSize.width / PTM_RATIO, 0));
-  groundBody->CreateFixture(&groundBox, 0);
+  groundBox.Set(b2Vec2(0, 0), b2Vec2(screenSize_.width / PTM_RATIO, 0));
+  groundBody_->CreateFixture(&groundBox, 0);
 
   // top
-  groundBox.Set(b2Vec2(0, screenSize.height / PTM_RATIO), b2Vec2(screenSize.width / PTM_RATIO, screenSize.height / PTM_RATIO));
-  groundBody->CreateFixture(&groundBox, 0);
+  groundBox.Set(b2Vec2(0, screenSize_.height / PTM_RATIO), b2Vec2(screenSize_.width / PTM_RATIO, screenSize_.height / PTM_RATIO));
+  groundBody_->CreateFixture(&groundBox, 0);
 
   // left
-  groundBox.Set(b2Vec2(0, screenSize.height / PTM_RATIO), b2Vec2(0, 0));
-  groundBody->CreateFixture(&groundBox, 0);
+  groundBox.Set(b2Vec2(0, screenSize_.height / PTM_RATIO), b2Vec2(0, 0));
+  groundBody_->CreateFixture(&groundBox, 0);
 
   // right
-  groundBox.Set(b2Vec2(screenSize.width / PTM_RATIO, screenSize.height / PTM_RATIO), b2Vec2(screenSize.width / PTM_RATIO, 0));
-  groundBody->CreateFixture(&groundBox, 0);
-  return screenSize;
+  groundBox.Set(b2Vec2(screenSize_.width / PTM_RATIO, screenSize_.height / PTM_RATIO), b2Vec2(screenSize_.width / PTM_RATIO, 0));
+  groundBody_->CreateFixture(&groundBox, 0);
+  return screenSize_;
+}
+
+- (b2Body *)createB2BodyFor:(CCSprite *)sprite at:(CGPoint)p {
+// Define the dynamic body.
+  //Set up a 1m squared box in the physics world
+  b2BodyDef bodyDef;
+  bodyDef.type = b2_dynamicBody;
+
+  bodyDef.position.Set(p.x / PTM_RATIO, p.y / PTM_RATIO);
+  bodyDef.userData = sprite;
+  b2Body *body = world->CreateBody(&bodyDef);
+
+  // Define another box shape for our dynamic body.
+  b2PolygonShape dynamicBox;
+  dynamicBox.SetAsBox(.5f, .5f);//These are mid points for our 1m box
+
+  // Define the dynamic body fixture.
+  b2FixtureDef fixtureDef;
+  fixtureDef.shape = &dynamicBox;
+  fixtureDef.density = 1.0f;
+  fixtureDef.friction = 0.3f;
+  fixtureDef.restitution = 0.0f;
+  body->CreateFixture(&fixtureDef);
+  body->SetLinearDamping(600.0f);
+
+  return body;
+}
+
+- (b2Body *)addTextSprite:(NSString *)text {
+  CGPoint p = ccp(screenSize_.width / 2, screenSize_.height / 2);
+
+  const CGRect rect = CGRectMake(0, 0, 32, 32);
+  //  CCSprite *sprite = [CCSprite spriteWithBatchNode:batch rect:rect];
+  CCSprite *sprite = [CCSprite spriteWithTexture:[[CCTexture2D alloc] initWithString:text fontName:@"Arial-BoldMT" fontSize:14] rect:rect];
+  sprite.userData = text;
+
+  CCSprite *bg = [CCSprite spriteWithFile:@"round_corner_bg.png"];
+  [sprite addChild:bg z:1];
+
+  [movableSprites_ addObject:sprite];
+  sprite.position = ccp(p.x, p.y);
+  [self addChild:sprite];
+  const CGSize bgSize = bg.boundingBox.size;
+  bg.position = CGPointMake(bgSize.width / 2, bgSize.height / 2);
+
+  b2Body *body = [self createB2BodyFor:sprite at:p];
+  [self fireLongPress:sprite];
+  return body;
+}
+
+- (void)addBookSprite:(Book *)book to:(CCSprite *)sprite {
+  UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:book.imageUrl]]];
+  CCSprite *bookSprite = [CCSprite spriteWithCGImage:image.CGImage key:book.isbn];
+
+  CCSprite *bg = [CCSprite spriteWithFile:@"round_corner_bg.png"];
+  [bookSprite addChild:bg z:1];
+
+  [movableSprites_ addObject:bookSprite];
+  float radius = 180;
+  CGPoint p = CGPointMake(sprite.position.x + radius * sin(M_PI * CCRANDOM_0_1() * 2), sprite.position.y - radius * cos(M_PI * CCRANDOM_0_1() * 2));
+  bookSprite.position = p;
+  [self addChild:bookSprite];
+  const CGSize bgSize = bg.boundingBox.size;
+  bg.position = CGPointMake(bgSize.width / 2, bgSize.height / 2);
+
+  b2Body *bookBody = [self createB2BodyFor:bookSprite at:p];
+
+  for (b2Body *body = world->GetBodyList(); body; body = body->GetNext()) {
+    if (body->GetUserData() != NULL) {
+      if ((CCSprite *) body->GetUserData() == sprite) {
+        [self join:bookBody with:body];
+      }
+    }
+  }
 }
 
 - (void)addSprites {
 //  CCSpriteBatchNode *batch = [CCSpriteBatchNode batchNodeWithFile:@"default_book_cover.jpg" capacity:150];
 //  [self addChild:batch z:0 tag:kTagBatchNode];
 
-  b2Body *body1 = [self addNewSpriteWithCoords:ccp(screenSize.width / 2, screenSize.height / 2)];
-  b2Body *body2 = [self addNewSpriteWithCoords:ccp(screenSize.width / 3, screenSize.height / 3)];
+  b2Body *body1 = [self addNewSpriteWithCoords:ccp(screenSize_.width / 2, screenSize_.height / 2)];
+  b2Body *body2 = [self addNewSpriteWithCoords:ccp(screenSize_.width / 3, screenSize_.height / 3)];
   [self join:body1 with:body2];
 
 //    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Tap screen" fontName:@"Marker Felt" fontSize:32];
 //    [self addChild:label z:0];
 //    [label setColor:ccc3(0, 0, 255)];
 //    label.position = ccp(screenSize.width / 2, screenSize.height - 50);
+}
 
+- (b2Body *)addNewSpriteWithCoords:(CGPoint)p {
+  CCLOG(@"Add sprite %0.2f x %02.f", p.x, p.y);
+//  CCSpriteBatchNode *batch = (CCSpriteBatchNode *) [self getChildByTag:kTagBatchNode];
+
+  //We have a 64x64 sprite sheet with 4 different 32x32 images.  The following code is
+  //just randomly picking one of the images
+  int idx = (CCRANDOM_0_1() > .5 ? 0 : 1);
+  int idy = (CCRANDOM_0_1() > .5 ? 0 : 1);
+
+  const CGRect rect = CGRectMake(32 * idx, 32 * idy, 32, 32);
+//  CCSprite *sprite = [CCSprite spriteWithBatchNode:batch rect:rect];
+  CCSprite *sprite = [CCSprite spriteWithFile:@"default_book_cover.jpg" rect:rect];
+  CCSprite *bg = [CCSprite spriteWithFile:@"round_corner_bg.png"];
+  [sprite addChild:bg z:1];
+
+  [movableSprites_ addObject:sprite];
+  sprite.position = ccp(p.x, p.y);
+  [self addChild:sprite];
+  const CGSize bgSize = bg.boundingBox.size;
+  bg.position = CGPointMake(bgSize.width / 2, bgSize.height / 2);
+
+  return [self createB2BodyFor:sprite at:p];
 }
 
 - (id)init {
@@ -90,11 +202,13 @@ enum {
     movableSprites_ = [[NSMutableArray alloc] init];
     self.isTouchEnabled = YES;
     self.isAccelerometerEnabled = YES;
-    hasTouches = NO;
-    screenSize = [CCDirector sharedDirector].winSize;
+    hasTouches_ = NO;
+    screenSize_ = [CCDirector sharedDirector].winSize;
+
+    books_ = [[NSMutableDictionary alloc] init];
+    bodies_ = [[NSMutableDictionary alloc] init];
 
     [self initWorld];
-    [self addSprites];
     [self schedule:@selector(tick:)];
   }
 
@@ -120,7 +234,6 @@ enum {
   glEnable(GL_TEXTURE_2D);
   glEnableClientState(GL_COLOR_ARRAY);
   glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-
 }
 
 - (void)join:(b2Body *)body1 with:(b2Body *)body2 {
@@ -144,57 +257,30 @@ enum {
   world->CreateJoint(&rDef);
 }
 
-- (b2Body *)addNewSpriteWithCoords:(CGPoint)p {
-  CCLOG(@"Add sprite %0.2f x %02.f", p.x, p.y);
-//  CCSpriteBatchNode *batch = (CCSpriteBatchNode *) [self getChildByTag:kTagBatchNode];
-
-  //We have a 64x64 sprite sheet with 4 different 32x32 images.  The following code is
-  //just randomly picking one of the images
-  int idx = (CCRANDOM_0_1() > .5 ? 0 : 1);
-  int idy = (CCRANDOM_0_1() > .5 ? 0 : 1);
-
-  const CGRect rect = CGRectMake(32 * idx, 32 * idy, 32, 32);
-//  CCSprite *sprite = [CCSprite spriteWithBatchNode:batch rect:rect];
-  CCSprite *sprite = [CCSprite spriteWithFile:@"default_book_cover.jpg" rect:rect];
-  CCSprite *bg = [CCSprite spriteWithFile:@"round_corner_bg.png"];
-  [sprite addChild:bg z:1];
-
-  [movableSprites_ addObject:sprite];
-  sprite.position = ccp(p.x, p.y);
-  [self addChild:sprite];
-  const CGSize bgSize = bg.boundingBox.size;
-  bg.position = CGPointMake(bgSize.width / 2, bgSize.height / 2);
-
-  // Define the dynamic body.
-  //Set up a 1m squared box in the physics world
-  b2BodyDef bodyDef;
-  bodyDef.type = b2_dynamicBody;
-
-  bodyDef.position.Set(p.x / PTM_RATIO, p.y / PTM_RATIO);
-  bodyDef.userData = sprite;
-  b2Body *body = world->CreateBody(&bodyDef);
-
-  // Define another box shape for our dynamic body.
-  b2PolygonShape dynamicBox;
-  dynamicBox.SetAsBox(.5f, .5f);//These are mid points for our 1m box
-
-  // Define the dynamic body fixture.
-  b2FixtureDef fixtureDef;
-  fixtureDef.shape = &dynamicBox;
-  fixtureDef.density = 1.0f;
-  fixtureDef.friction = 0.3f;
-  fixtureDef.restitution = 0.0f;
-  body->CreateFixture(&fixtureDef);
-  body->SetLinearDamping(600.0f);
-
-  return body;
-}
-
 - (void)fireLongPress:(CCSprite *)sprite {
   id action = [CCSequence actions:[CCScaleTo actionWithDuration:0.3f scale:2.0f],
-  [CCScaleTo actionWithDuration:0.3f scale:1.0f], nil];
+                                  [CCScaleTo actionWithDuration:0.3f scale:1.0f], nil];
   CCRepeat *repeatAction = [CCRepeat actionWithAction:action times:5];
   [[sprite.children objectAtIndex:0] runAction:repeatAction];
+
+  NSString *term = (NSString *) sprite.userData;
+  NSDictionary *const parameters = [NSDictionary dictionaryWithObjects:
+          [NSArray arrayWithObjects:[NSString stringWithFormat:@"%u", 10], [NSString stringWithFormat:@"%u", 0], term, nil]
+          forKeys:[NSArray arrayWithObjects:@"max-results", @"start-index", @"q", nil]];
+  DOUQuery *query = [[DOUQuery alloc] initWithSubPath:@"/book/subjects" parameters:parameters];
+  DOUService *service = [DOUService sharedInstance];
+  DOUReqBlock completionBlock = ^(DOUHttpRequest *request) {
+    NSLog(@"---------------- request.responseString = %@", request.responseString);
+
+    DoubanFeedSubject *const feedSubject = [[DoubanFeedSubject alloc] initWithData:request.responseData];
+    NSArray *const entries = feedSubject.entries;
+    [entries each:^(DoubanEntrySubject *entry) {
+      Book *book = [[Book alloc] initWithEntry:entry];
+      [books_ setObject:book forKey:book.isbn];
+      [self addBookSprite:book to:sprite];
+    }];
+  };
+  [service get:query callback:completionBlock];
 }
 
 - (void)tick:(ccTime)dt {
@@ -216,7 +302,7 @@ enum {
     if (b->GetUserData() != NULL) {
       //Synchronize the AtlasSprites position and rotation with the corresponding body
       CCSprite *myActor = (CCSprite *) b->GetUserData();
-      if (myActor == selSprite && hasTouches) {
+      if (myActor == selSprite_ && hasTouches_) {
         b->SetTransform(b2Vec2(myActor.position.x / PTM_RATIO, myActor.position.y / PTM_RATIO), 0);
         b->SetActive(true);
       } else {
@@ -237,8 +323,8 @@ enum {
       break;
     }
   }
-  if (newSprite != selSprite) {
-    selSprite = newSprite;
+  if (newSprite != selSprite_) {
+    selSprite_ = newSprite;
   }
 }
 
@@ -246,9 +332,8 @@ enum {
   CGPoint touchLocation = [self convertTouchToNodeSpace:[touches anyObject]];
   [self selectSpriteForTouch:touchLocation];
   [self performSelector:@selector(fireLongPress:)
-             withObject:selSprite afterDelay:1.0f];
-  hasTouches = YES;
-  NSLog(@"---------------- start position) = %@", NSStringFromCGPoint(selSprite.position));
+             withObject:selSprite_ afterDelay:1.0f];
+  hasTouches_ = YES;
 }
 
 - (CGPoint)boundLayerPos:(CGPoint)newPos {
@@ -261,7 +346,7 @@ enum {
 }
 
 - (BOOL)spriteOutOfBound:(CGPoint)point {
-  const CGSize spriteSize = selSprite.boundingBox.size;
+  const CGSize spriteSize = selSprite_.boundingBox.size;
   const CGSize winSize = [CCDirector sharedDirector].winSize;
   if (point.y + spriteSize.height / 2 > winSize.height) {
     return YES;
@@ -279,13 +364,13 @@ enum {
 }
 
 - (void)panForTranslation:(CGPoint)translation {
-  if (selSprite) {
-    CGPoint newPos = ccpAdd(selSprite.position, translation);
+  if (selSprite_) {
+    CGPoint newPos = ccpAdd(selSprite_.position, translation);
 
     if ([self spriteOutOfBound:newPos]) {
       return;
     }
-    selSprite.position = newPos;
+    selSprite_.position = newPos;
   }
   //  else {
   //    CGPoint newPos = ccpAdd(self.position, translation);
@@ -294,7 +379,7 @@ enum {
 }
 
 - (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(fireLongPress:) object:selSprite];
+  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(fireLongPress:) object:selSprite_];
   UITouch *touch = [touches anyObject];
   CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
 
@@ -308,9 +393,8 @@ enum {
 
 - (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
   //  Add a new body/atlas sprite at the touched location
-  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(fireLongPress:) object:selSprite];
-  NSLog(@"---------------- end position) = %@", NSStringFromCGPoint(selSprite.position));
-  hasTouches = NO;
+  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(fireLongPress:) object:selSprite_];
+  hasTouches_ = NO;
   //  for (UITouch *touch in touches) {
   //    CGPoint location = [touch locationInView:[touch view]];
   //
@@ -338,6 +422,5 @@ enum {
 
   world->SetGravity(gravity);
 }
-
 
 @end

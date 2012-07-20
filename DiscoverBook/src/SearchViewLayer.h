@@ -10,5 +10,5 @@
 }
 
 +(CCScene *) scene;
--(b2Body *) addNewSpriteWithCoords:(CGPoint)p;
++(CCScene *) sceneWithText:(NSString *)text;
 @end
