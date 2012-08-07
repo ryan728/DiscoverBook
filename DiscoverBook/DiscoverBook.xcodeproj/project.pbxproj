@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49090A4415D10C9D0060A82A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49090A4015D10C9D0060A82A /* MainStoryboard_iPad.storyboard */; };
+		49090A4515D10C9D0060A82A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49090A4215D10C9D0060A82A /* MainStoryboard_iPhone.storyboard */; };
 		490D3C7115A2B782006A7FD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 493BB48E159C7EAC00E99887 /* InfoPlist.strings */; };
 		4912EBAE159C8745000D469C /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EBA6159C8745000D469C /* DCCrossHairView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4912EBAF159C8745000D469C /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912EBA8159C8745000D469C /* DCFrameView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -107,7 +109,6 @@
 		49ED10E915916C360092CF9D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10E815916C360092CF9D /* Security.framework */; };
 		49ED10EB15916C3D0092CF9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EA15916C3D0092CF9D /* SystemConfiguration.framework */; };
 		49ED10ED15916C4B0092CF9D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10EC15916C4B0092CF9D /* MobileCoreServices.framework */; };
-		49ED110715917B080092CF9D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49ED110515917B080092CF9D /* MainStoryboard.storyboard */; };
 		49ED110E15917B410092CF9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49ED110C15917B410092CF9D /* InfoPlist.strings */; };
 		49ED110F15917CFA0092CF9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED110115917A9E0092CF9D /* AppDelegate.m */; };
 		49ED111015917D050092CF9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED110A15917B240092CF9D /* main.m */; };
@@ -291,6 +292,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49090A4115D10C9D0060A82A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = src/en.lproj/MainStoryboard_iPad.storyboard; sourceTree = SOURCE_ROOT; };
+		49090A4315D10C9D0060A82A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = src/en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = SOURCE_ROOT; };
 		4912EB89159C8469000D469C /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Shared.xcconfig; path = config/Shared.xcconfig; sourceTree = "<group>"; };
 		4912EB8B159C8486000D469C /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = config/Debug.xcconfig; sourceTree = "<group>"; };
 		4912EB8D159C84A3000D469C /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = config/Release.xcconfig; sourceTree = "<group>"; };
@@ -403,7 +406,6 @@
 		49ED10FF15917A890092CF9D /* NSString+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "src/NSString+Additions.m"; sourceTree = SOURCE_ROOT; };
 		49ED110015917A9E0092CF9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		49ED110115917A9E0092CF9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = src/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		49ED110615917B080092CF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = src/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		49ED110815917B240092CF9D /* DiscoverBook-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DiscoverBook-Info.plist"; path = "src/DiscoverBook-Info.plist"; sourceTree = SOURCE_ROOT; };
 		49ED110915917B240092CF9D /* DiscoverBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DiscoverBook-Prefix.pch"; path = "src/DiscoverBook-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		49ED110A15917B240092CF9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = SOURCE_ROOT; };
@@ -753,6 +755,8 @@
 		49ED10AC159072A30092CF9D /* src */ = {
 			isa = PBXGroup;
 			children = (
+				49090A4015D10C9D0060A82A /* MainStoryboard_iPad.storyboard */,
+				49090A4215D10C9D0060A82A /* MainStoryboard_iPhone.storyboard */,
 				49F6D8E215AD521300A45C69 /* services */,
 				49A5FC33159C76A80092C640 /* managers */,
 				49BCF6C515985451005DD14E /* domain */,
@@ -760,7 +764,6 @@
 				49ED10FA159171D20092CF9D /* additions */,
 				49ED110015917A9E0092CF9D /* AppDelegate.h */,
 				49ED110115917A9E0092CF9D /* AppDelegate.m */,
-				49ED110515917B080092CF9D /* MainStoryboard.storyboard */,
 				49ED10AD159072A30092CF9D /* Supporting Files */,
 				49ED111015917D050092CFA4 /* views */,
 			);
@@ -1062,7 +1065,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49ED110715917B080092CF9D /* MainStoryboard.storyboard in Resources */,
 				49ED110E15917B410092CF9D /* InfoPlist.strings in Resources */,
 				4912EBF7159D700A000D469C /* README.txt in Resources */,
 				4912EBF8159D700A000D469C /* release_notes.txt in Resources */,
@@ -1078,6 +1080,8 @@
 				49BE40C915AC00C3002161A8 /* whiteArrow.png in Resources */,
 				49BE40CA15AC00C3002161A8 /* whiteArrow@2x.png in Resources */,
 				49203C7015B4F1310047A757 /* cry.png in Resources */,
+				49090A4415D10C9D0060A82A /* MainStoryboard_iPad.storyboard in Resources */,
+				49090A4515D10C9D0060A82A /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1210,20 +1214,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		49090A4015D10C9D0060A82A /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49090A4115D10C9D0060A82A /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		49090A4215D10C9D0060A82A /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49090A4315D10C9D0060A82A /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
 		493BB48E159C7EAC00E99887 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				493BB48F159C7EAC00E99887 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		49ED110515917B080092CF9D /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49ED110615917B080092CF9D /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		49ED110C15917B410092CF9D /* InfoPlist.strings */ = {
@@ -1272,7 +1284,9 @@
 			baseConfigurationReference = 4912EB8B159C8486000D469C /* Debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Zhang (TED6CQ59XN)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				VERSION_INFO_BUILDER = 1.0;
 			};
@@ -1283,7 +1297,9 @@
 			baseConfigurationReference = 4912EB8D159C84A3000D469C /* Release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Zhang (TED6CQ59XN)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				VERSION_INFO_BUILDER = 1.0;
 			};

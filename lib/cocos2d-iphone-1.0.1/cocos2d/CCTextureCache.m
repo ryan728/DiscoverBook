@@ -110,7 +110,7 @@ static CCTextureCache *sharedTextureCache;
 
 - (NSString*) description
 {
-	return [NSString stringWithFormat:@"<%@ = %08X | num of textures =  %i | keys: %@>",
+	return [NSString stringWithFormat:@"<%@ = %@ | num of textures =  %i | keys: %@>",
 			[self class],
 			self,
 			[textures_ count],

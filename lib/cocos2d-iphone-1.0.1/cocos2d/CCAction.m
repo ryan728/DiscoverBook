@@ -64,7 +64,7 @@
 
 -(NSString*) description
 {
-	return [NSString stringWithFormat:@"<%@ = %08X | Tag = %i>", [self class], self, tag_];
+	return [NSString stringWithFormat:@"<%@ = %@ | Tag = %i>", [self class], self, tag_];
 }
 
 -(id) copyWithZone: (NSZone*) zone
