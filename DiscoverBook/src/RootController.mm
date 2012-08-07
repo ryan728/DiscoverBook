@@ -7,6 +7,7 @@
 #import "DoubanService.h"
 #import "Reachability.h"
 #import "Toast+UIView.h"
+#import "GlobalConfig.h"
 
 @implementation RootController {
   UIWebView *webView_;
@@ -17,10 +18,6 @@
 @synthesize searchBar = searchBar_;
 @synthesize signOutButton = signOutButton_;
 @synthesize woDuButton = woDuButton_;
-
-static NSString *const kAPIKey = @"0f08a77e67e884452d19f67b37b98ccf";
-static NSString *const kPrivateKey = @"bec2de010015fa6e";
-static NSString *const kRedirectUrl = @"http://www.douban.com/location/mobile";
 
 - (id)initWithCoder:(NSCoder *)coder
 {

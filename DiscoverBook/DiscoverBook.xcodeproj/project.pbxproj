@@ -24,6 +24,16 @@
 		4946A5D415A4570300C16C87 /* MyContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A5D315A4570300C16C87 /* MyContactController.m */; };
 		4946A64915A465D100C16C87 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A64815A465D100C16C87 /* MyTableViewController.m */; };
 		4946A68715A46D6000C16C87 /* TWImageView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A68615A46D6000C16C87 /* TWImageView+Additions.m */; };
+		4948F7EB15D12C7800C15C23 /* WheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7E815D12C7800C15C23 /* WheelView.m */; };
+		4948F7EC15D12C7800C15C23 /* WheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7E815D12C7800C15C23 /* WheelView.m */; };
+		4948F7ED15D12C7800C15C23 /* WheelViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7EA15D12C7800C15C23 /* WheelViewCell.m */; };
+		4948F7EE15D12C7800C15C23 /* WheelViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7EA15D12C7800C15C23 /* WheelViewCell.m */; };
+		4948F7F215D12D8B00C15C23 /* RootViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7F115D12D8B00C15C23 /* RootViewController_iPad.m */; };
+		4948F7F315D12D8B00C15C23 /* RootViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7F115D12D8B00C15C23 /* RootViewController_iPad.m */; };
+		4948F7F615D12DC900C15C23 /* SpinGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7F515D12DC900C15C23 /* SpinGestureRecognizer.m */; };
+		4948F7F715D12DC900C15C23 /* SpinGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7F515D12DC900C15C23 /* SpinGestureRecognizer.m */; };
+		4948F7FA15D12F4900C15C23 /* GlobalConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7F915D12F4900C15C23 /* GlobalConfig.m */; };
+		4948F7FB15D12F4900C15C23 /* GlobalConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7F915D12F4900C15C23 /* GlobalConfig.m */; };
 		4950F75215AA959000190D85 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4950F74915AA93E100190D85 /* libBox2D.a */; };
 		4950F75315AA988200190D85 /* BookDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C00DE15A34F59002572F2 /* BookDetailsController.m */; };
 		4954B8D515AD13A500FF2424 /* RootControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4954B8D415AD13A500FF2424 /* RootControllerSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -323,6 +333,16 @@
 		4946A64815A465D100C16C87 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = src/MyTableViewController.m; sourceTree = SOURCE_ROOT; };
 		4946A68515A46D6000C16C87 /* TWImageView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TWImageView+Additions.h"; path = "src/TWImageView+Additions.h"; sourceTree = SOURCE_ROOT; };
 		4946A68615A46D6000C16C87 /* TWImageView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TWImageView+Additions.m"; path = "src/TWImageView+Additions.m"; sourceTree = SOURCE_ROOT; };
+		4948F7E715D12C7800C15C23 /* WheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WheelView.h; path = src/WheelView.h; sourceTree = SOURCE_ROOT; };
+		4948F7E815D12C7800C15C23 /* WheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WheelView.m; path = src/WheelView.m; sourceTree = SOURCE_ROOT; };
+		4948F7E915D12C7800C15C23 /* WheelViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WheelViewCell.h; path = src/WheelViewCell.h; sourceTree = SOURCE_ROOT; };
+		4948F7EA15D12C7800C15C23 /* WheelViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WheelViewCell.m; path = src/WheelViewCell.m; sourceTree = SOURCE_ROOT; };
+		4948F7F015D12D8B00C15C23 /* RootViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController_iPad.h; path = src/RootViewController_iPad.h; sourceTree = SOURCE_ROOT; };
+		4948F7F115D12D8B00C15C23 /* RootViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController_iPad.m; path = src/RootViewController_iPad.m; sourceTree = SOURCE_ROOT; };
+		4948F7F415D12DC900C15C23 /* SpinGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpinGestureRecognizer.h; path = src/SpinGestureRecognizer.h; sourceTree = SOURCE_ROOT; };
+		4948F7F515D12DC900C15C23 /* SpinGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpinGestureRecognizer.m; path = src/SpinGestureRecognizer.m; sourceTree = SOURCE_ROOT; };
+		4948F7F815D12F4900C15C23 /* GlobalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalConfig.h; path = src/GlobalConfig.h; sourceTree = SOURCE_ROOT; };
+		4948F7F915D12F4900C15C23 /* GlobalConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalConfig.m; path = src/GlobalConfig.m; sourceTree = SOURCE_ROOT; };
 		494C00DE15A34F59002572F2 /* BookDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookDetailsController.m; path = src/BookDetailsController.m; sourceTree = SOURCE_ROOT; };
 		494C00DF15A34F59002572F2 /* BookDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookDetailsController.h; path = src/BookDetailsController.h; sourceTree = SOURCE_ROOT; };
 		4950F73C15AA93E100190D85 /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = ../lib/Box2D_v2.2.1/Build/xcode4/Box2D.xcodeproj; sourceTree = "<group>"; };
@@ -527,6 +547,15 @@
 			name = UIKit;
 			sourceTree = "<group>";
 		};
+		4948F7EF15D12D6600C15C23 /* ipad */ = {
+			isa = PBXGroup;
+			children = (
+				4948F7F015D12D8B00C15C23 /* RootViewController_iPad.h */,
+				4948F7F115D12D8B00C15C23 /* RootViewController_iPad.m */,
+			);
+			name = ipad;
+			sourceTree = "<group>";
+		};
 		4950F73D15AA93E100190D85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,6 +698,7 @@
 		49BCF6A81592BD70005DD14E /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4948F7EF15D12D6600C15C23 /* ipad */,
 				494C00DF15A34F59002572F2 /* BookDetailsController.h */,
 				494C00DE15A34F59002572F2 /* BookDetailsController.m */,
 				49BCF6A91592BDC1005DD14E /* MyBookController.h */,
@@ -703,6 +733,8 @@
 				49A5FC35159C76E40092C640 /* User.m */,
 				49BE40AE15ABC7EB002161A8 /* Book.h */,
 				49BE40AF15ABC7EB002161A8 /* Book.m */,
+				4948F7F815D12F4900C15C23 /* GlobalConfig.h */,
+				4948F7F915D12F4900C15C23 /* GlobalConfig.m */,
 			);
 			name = domain;
 			sourceTree = "<group>";
@@ -755,8 +787,8 @@
 		49ED10AC159072A30092CF9D /* src */ = {
 			isa = PBXGroup;
 			children = (
-				49090A4015D10C9D0060A82A /* MainStoryboard_iPad.storyboard */,
 				49090A4215D10C9D0060A82A /* MainStoryboard_iPhone.storyboard */,
+				49090A4015D10C9D0060A82A /* MainStoryboard_iPad.storyboard */,
 				49F6D8E215AD521300A45C69 /* services */,
 				49A5FC33159C76A80092C640 /* managers */,
 				49BCF6C515985451005DD14E /* domain */,
@@ -818,6 +850,12 @@
 		49ED111015917D050092CFA4 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				4948F7F415D12DC900C15C23 /* SpinGestureRecognizer.h */,
+				4948F7F515D12DC900C15C23 /* SpinGestureRecognizer.m */,
+				4948F7E715D12C7800C15C23 /* WheelView.h */,
+				4948F7E815D12C7800C15C23 /* WheelView.m */,
+				4948F7E915D12C7800C15C23 /* WheelViewCell.h */,
+				4948F7EA15D12C7800C15C23 /* WheelViewCell.m */,
 				49BE40B815AC00A0002161A8 /* EGORefreshTableHeaderView.h */,
 				49BE40B915AC00A0002161A8 /* EGORefreshTableHeaderView.m */,
 				49A1343E15A68D1A00C7CACE /* GLES-Render.h */,
@@ -1125,6 +1163,11 @@
 				49F6D8E115AD4C5F00A45C69 /* DoubanService.m in Sources */,
 				49F6D8E515AD551200A45C69 /* DoubanServiceSpec.m in Sources */,
 				49203C4915B4ECA60047A757 /* Toast+UIView.m in Sources */,
+				4948F7EC15D12C7800C15C23 /* WheelView.m in Sources */,
+				4948F7EE15D12C7800C15C23 /* WheelViewCell.m in Sources */,
+				4948F7F315D12D8B00C15C23 /* RootViewController_iPad.m in Sources */,
+				4948F7F715D12DC900C15C23 /* SpinGestureRecognizer.m in Sources */,
+				4948F7FB15D12F4900C15C23 /* GlobalConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1165,6 +1208,11 @@
 				49BE40B015ABC7EB002161A8 /* Book.m in Sources */,
 				49BE40BA15AC00A0002161A8 /* EGORefreshTableHeaderView.m in Sources */,
 				49203C4815B4ECA60047A757 /* Toast+UIView.m in Sources */,
+				4948F7EB15D12C7800C15C23 /* WheelView.m in Sources */,
+				4948F7ED15D12C7800C15C23 /* WheelViewCell.m in Sources */,
+				4948F7F215D12D8B00C15C23 /* RootViewController_iPad.m in Sources */,
+				4948F7F615D12DC900C15C23 /* SpinGestureRecognizer.m in Sources */,
+				4948F7FA15D12F4900C15C23 /* GlobalConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
