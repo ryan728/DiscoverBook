@@ -3,4 +3,6 @@
 
 @interface RootViewController_iPad : UIViewController <WheelViewDataSource>
 
+@property (nonatomic, strong) IBOutlet WheelView *wheelView;
+
 @end

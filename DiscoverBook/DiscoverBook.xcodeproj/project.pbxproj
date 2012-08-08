@@ -34,6 +34,7 @@
 		4948F7F715D12DC900C15C23 /* SpinGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7F515D12DC900C15C23 /* SpinGestureRecognizer.m */; };
 		4948F7FA15D12F4900C15C23 /* GlobalConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7F915D12F4900C15C23 /* GlobalConfig.m */; };
 		4948F7FB15D12F4900C15C23 /* GlobalConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7F915D12F4900C15C23 /* GlobalConfig.m */; };
+		494976A715D1ED9500D44383 /* tags.txt in Resources */ = {isa = PBXBuildFile; fileRef = 494976A615D1ED9500D44383 /* tags.txt */; };
 		4950F75215AA959000190D85 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4950F74915AA93E100190D85 /* libBox2D.a */; };
 		4950F75315AA988200190D85 /* BookDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C00DE15A34F59002572F2 /* BookDetailsController.m */; };
 		4954B8D515AD13A500FF2424 /* RootControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4954B8D415AD13A500FF2424 /* RootControllerSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -343,6 +344,7 @@
 		4948F7F515D12DC900C15C23 /* SpinGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpinGestureRecognizer.m; path = src/SpinGestureRecognizer.m; sourceTree = SOURCE_ROOT; };
 		4948F7F815D12F4900C15C23 /* GlobalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalConfig.h; path = src/GlobalConfig.h; sourceTree = SOURCE_ROOT; };
 		4948F7F915D12F4900C15C23 /* GlobalConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalConfig.m; path = src/GlobalConfig.m; sourceTree = SOURCE_ROOT; };
+		494976A615D1ED9500D44383 /* tags.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = tags.txt; path = resources/tags.txt; sourceTree = "<group>"; };
 		494C00DE15A34F59002572F2 /* BookDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookDetailsController.m; path = src/BookDetailsController.m; sourceTree = SOURCE_ROOT; };
 		494C00DF15A34F59002572F2 /* BookDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookDetailsController.h; path = src/BookDetailsController.h; sourceTree = SOURCE_ROOT; };
 		4950F73C15AA93E100190D85 /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = ../lib/Box2D_v2.2.1/Build/xcode4/Box2D.xcodeproj; sourceTree = "<group>"; };
@@ -662,6 +664,7 @@
 				49ED111015917D050092CFA9 /* default_contact.png */,
 				49ED111015917D050092CFA7 /* round_corner_bg.png */,
 				49ED111015917D050092CFA5 /* default_book_cover.jpg */,
+				494976A615D1ED9500D44383 /* tags.txt */,
 			);
 			name = resources;
 			sourceTree = "<group>";
@@ -1120,6 +1123,7 @@
 				49203C7015B4F1310047A757 /* cry.png in Resources */,
 				49090A4415D10C9D0060A82A /* MainStoryboard_iPad.storyboard in Resources */,
 				49090A4515D10C9D0060A82A /* MainStoryboard_iPhone.storyboard in Resources */,
+				494976A715D1ED9500D44383 /* tags.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -47,7 +47,8 @@
 }
 
 - (void)setAngle:(CGFloat)angle {
-  CGPoint center = CGPointMake(CGRectGetMidX([self bounds]), CGRectGetMidY([self bounds]));
+  CGPoint center = CGPointMake(CGRectGetMidX([self bounds]) - 50, CGRectGetMidY([self bounds]) - 80);
+
   CGFloat radiusX = MIN([self bounds].size.width,
                         [self bounds].size.height) * 0.35;
   CGFloat radiusY = radiusX;
