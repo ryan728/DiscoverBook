@@ -20,6 +20,8 @@
 		49203C4815B4ECA60047A757 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49203C4715B4ECA60047A757 /* Toast+UIView.m */; };
 		49203C4915B4ECA60047A757 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49203C4715B4ECA60047A757 /* Toast+UIView.m */; };
 		49203C7015B4F1310047A757 /* cry.png in Resources */ = {isa = PBXBuildFile; fileRef = 49203C6F15B4F1310047A757 /* cry.png */; };
+		4930BB4915D3974000AE6256 /* DoubanAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4930BB4815D3974000AE6256 /* DoubanAuthorizationViewController.m */; };
+		4930BB4A15D3974000AE6256 /* DoubanAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4930BB4815D3974000AE6256 /* DoubanAuthorizationViewController.m */; };
 		493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FF15917A890092CF9D /* NSString+Additions.m */; };
 		4946A5D415A4570300C16C87 /* MyContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A5D315A4570300C16C87 /* MyContactController.m */; };
 		4946A64915A465D100C16C87 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A64815A465D100C16C87 /* MyTableViewController.m */; };
@@ -325,6 +327,8 @@
 		49203C4615B4ECA60047A757 /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Toast+UIView.h"; path = "src/Toast+UIView.h"; sourceTree = SOURCE_ROOT; };
 		49203C4715B4ECA60047A757 /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Toast+UIView.m"; path = "src/Toast+UIView.m"; sourceTree = SOURCE_ROOT; };
 		49203C6F15B4F1310047A757 /* cry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cry.png; path = resources/cry.png; sourceTree = "<group>"; };
+		4930BB4715D3974000AE6256 /* DoubanAuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanAuthorizationViewController.h; path = src/DoubanAuthorizationViewController.h; sourceTree = SOURCE_ROOT; };
+		4930BB4815D3974000AE6256 /* DoubanAuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanAuthorizationViewController.m; path = src/DoubanAuthorizationViewController.m; sourceTree = SOURCE_ROOT; };
 		493BB48B159C7EA600E99887 /* UnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "UnitTests-Info.plist"; path = "test/UnitTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		493BB48C159C7EA600E99887 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UnitTests-Prefix.pch"; path = "test/UnitTests-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		493BB48F159C7EAC00E99887 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = test/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
@@ -538,6 +542,13 @@
 			path = ../lib/TestFlightSDK1.0;
 			sourceTree = "<group>";
 		};
+		4930BB4615D391AA00AE6256 /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iphone;
+			sourceTree = "<group>";
+		};
 		4946A68415A46D4000C16C87 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -701,6 +712,7 @@
 		49BCF6A81592BD70005DD14E /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4930BB4615D391AA00AE6256 /* iphone */,
 				4948F7EF15D12D6600C15C23 /* ipad */,
 				494C00DF15A34F59002572F2 /* BookDetailsController.h */,
 				494C00DE15A34F59002572F2 /* BookDetailsController.m */,
@@ -714,6 +726,8 @@
 				4946A64815A465D100C16C87 /* MyTableViewController.m */,
 				49A1310D15A67BD400C7CACE /* SearchViewController.h */,
 				49A1310E15A67BD400C7CACE /* SearchViewController.mm */,
+				4930BB4715D3974000AE6256 /* DoubanAuthorizationViewController.h */,
+				4930BB4815D3974000AE6256 /* DoubanAuthorizationViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -1172,6 +1186,7 @@
 				4948F7F315D12D8B00C15C23 /* RootViewController_iPad.m in Sources */,
 				4948F7F715D12DC900C15C23 /* SpinGestureRecognizer.m in Sources */,
 				4948F7FB15D12F4900C15C23 /* GlobalConfig.m in Sources */,
+				4930BB4A15D3974000AE6256 /* DoubanAuthorizationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1217,6 +1232,7 @@
 				4948F7F215D12D8B00C15C23 /* RootViewController_iPad.m in Sources */,
 				4948F7F615D12DC900C15C23 /* SpinGestureRecognizer.m in Sources */,
 				4948F7FA15D12F4900C15C23 /* GlobalConfig.m in Sources */,
+				4930BB4915D3974000AE6256 /* DoubanAuthorizationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

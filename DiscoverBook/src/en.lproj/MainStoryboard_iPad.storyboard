@@ -27,19 +27,94 @@
                                     <outlet property="dataSource" destination="LiR-5C-ecm" id="v3F-tc-KKB"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FgS-2L-yt0">
+                                <rect key="frame" x="313" y="512" width="141" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOut:" destination="LiR-5C-ecm" eventType="touchUpInside" id="cso-fq-MAu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LIf-4n-AHW">
+                                <rect key="frame" x="313" y="450" width="141" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Wo Du">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="woDu:" destination="LiR-5C-ecm" eventType="touchUpInside" id="J5v-Jn-n9V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="7fx-zl-knC" id="oeB-KS-rg1"/>
+                        <outlet property="signOutButton" destination="FgS-2L-yt0" id="mnl-uC-yQO"/>
                         <outlet property="wheelView" destination="C4b-zw-No9" id="PDd-qr-cUL"/>
+                        <outlet property="woDuButton" destination="LIf-4n-AHW" id="ZMx-1A-ROp"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-3427" y="-1593"/>
         </scene>
+        <!--Douban Authorization View Controller - Douban-->
+        <scene sceneID="AJz-uK-Ho5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Stt-YS-Axy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="doubanAuthorizationController" title="Douban" modalPresentationStyle="formSheet" id="Lv3-8l-I3U" customClass="DoubanAuthorizationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mep-Gt-zpG">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="BHD-P3-w1n">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="webView" destination="BHD-P3-w1n" id="m6W-Tw-Xai"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-3427" y="-2919"/>
+        </scene>
     </scenes>
     <classes>
-        <class className="RootViewController_iPad" superclassName="UIViewController">
+        <class className="DoubanAuthorizationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DoubanAuthorizationViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="RootController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RootController.h"/>
+            <relationships>
+                <relationship kind="action" name="signOut:"/>
+                <relationship kind="action" name="woDu:"/>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="signOutButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="woDuButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="RootViewController_iPad" superclassName="RootController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController_iPad.h"/>
             <relationships>
                 <relationship kind="outlet" name="wheelView" candidateClass="WheelView"/>

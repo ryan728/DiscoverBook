@@ -8,9 +8,9 @@
 #import "Reachability.h"
 #import "Toast+UIView.h"
 #import "GlobalConfig.h"
+#import "DoubanAuthorizationViewController.h"
 
 @implementation RootController {
-  UIWebView *webView_;
   DoubanService *doubanService_;
 }
 #pragma mark - Properties
@@ -68,8 +68,10 @@
   }
   DOUOAuthStore *const authStore = [DOUOAuthStore sharedInstance];
   if (!authStore.hasValidAccessToken) {
-    [self initWebView];
-    [self.view addSubview:webView_];
+    DoubanAuthorizationViewController *authorizationController = [self.storyboard instantiateViewControllerWithIdentifier:@"doubanAuthorizationController"];
+    authorizationController.modalPresentationStyle = UIModalPresentationFormSheet;
+    authorizationController.authDelegate = self;
+    [self presentModalViewController:authorizationController animated:YES];
   } else {
     [doubanService_ fetchUserInfo];
     [self performSegueWithIdentifier:@"showUserInfo" sender:self];
@@ -92,80 +94,16 @@
   ];
 }
 
-- (void)initWebView {
-  webView_ = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0,
-          self.view.bounds.size.width, self.view.bounds.size.height)];
-  webView_.scalesPageToFit = YES;
-  webView_.delegate = self;
-  [webView_ loadRequest:[self createRequest]];
-}
-
-
-- (NSURLRequest *)createRequest {
-  NSString *str = [NSString stringWithFormat:@"https://www.douban.com/service/auth2/auth?client_id=%@&redirect_uri=%@&response_type=code", kAPIKey, kRedirectUrl];
-  NSString *urlStr = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-  return [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
-}
-
-#pragma mark UIWebViewDelegate
-
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-  NSString *const urlString = request.URL.absoluteString;
-  if ([urlString hasPrefix:kRedirectUrl]) {
-    NSString *const authQuery = request.URL.query;
-    NSMutableDictionary *const parsedQueryDictionary = [authQuery explodeToDictionaryInnerGlue:@"=" outterGlue:@"&"];
-    NSString *code = [parsedQueryDictionary objectForKey:@"code"];
-
-    DOUOAuthService *authService = [DOUOAuthService sharedInstance];
-    authService.authorizationURL = kTokenUrl;
-    authService.delegate = self;
-    authService.clientId = kAPIKey;
-    authService.clientSecret = kPrivateKey;
-    authService.callbackURL = kRedirectUrl;
-    authService.authorizationCode = code;
-
-    [authService validateAuthorizationCodeWithCallback:nil];
-    return NO;
-  }
-  return YES;
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-  NSLog(@"---------------- error.description = %@", error.description);
-  if ([self networkNotWork]) {
-    [self.view makeNetworkToast];
-  }
-  [self dismissWebView];
-}
-
-- (void)dismissWebView {
-  [UIView animateWithDuration:1.0
-                   animations:^void() {
-                     webView_.alpha = 0;
-                   }
-                   completion:^void(BOOL finished) {
-                     if (finished) {
-                       [webView_ removeFromSuperview];
-                     }
-                   }
-  ];
-}
-
-#pragma mark - DOUOAuthServiceDelegate
-
-- (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
-  DOUOAuthStore *const authStore = [DOUOAuthStore sharedInstance];
-  [self dismissWebView];
-  if (authStore.hasValidAccessToken) {
-    NSLog(@"store.accessToken = %@", authStore.accessToken);
-    [doubanService_ fetchUserInfo];
-    [self performSegueWithIdentifier:@"showUserInfo" sender:self];
-  }
-}
-
-- (void)OAuthClient:(DOUOAuthService *)client didFailWithError:(NSError *)error {
-  NSLog(@"failed®!");
-  [self dismissWebView];
+- (void)validateAuthorizationCode:(NSString *)code{
+  DOUOAuthService *authService = [DOUOAuthService sharedInstance];
+  authService.authorizationURL = kTokenUrl;
+  authService.delegate = self;
+  authService.clientId = kAPIKey;
+  authService.clientSecret = kPrivateKey;
+  authService.callbackURL = kRedirectUrl;
+  authService.authorizationCode = code;
+  
+  [authService validateAuthorizationCodeWithCallback:nil];
 }
 
 #pragma mark - UISearchBarDelegate
@@ -178,4 +116,18 @@
   [searchBar_ resignFirstResponder];
 }
 
+#pragma mark - DOUOAuthServiceDelegate
+
+- (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
+  DOUOAuthStore *const authStore = [DOUOAuthStore sharedInstance];
+  if (authStore.hasValidAccessToken) {
+    NSLog(@"store.accessToken = %@", authStore.accessToken);
+    [[[DoubanService alloc]init] fetchUserInfo];
+    [self performSegueWithIdentifier:@"showUserInfo" sender:self];
+  }
+}
+
+- (void)OAuthClient:(DOUOAuthService *)client didFailWithError:(NSError *)error {
+  NSLog(@"-------------------------------failed®!");
+}
 @end

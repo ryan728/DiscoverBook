@@ -4,6 +4,7 @@
 #import "Macros.h"
 #import "MyTableViewController.h"
 #import "User.h"
+#import "DOUAPIEngine.h"
 
 SPEC_BEGIN(RootControllerSpec)
 

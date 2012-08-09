@@ -9,6 +9,7 @@
 #import "Toast+UIView.h"
 #import "NSArray+Additions.h"
 #import "TWImageView+Additions.h"
+#import "DoubanAuthorizationViewController.h"
 
 @interface RootViewController_iPad ()
 
