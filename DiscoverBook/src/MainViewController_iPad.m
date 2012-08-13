@@ -1,9 +1,10 @@
 #import "MainViewController_iPad.h"
-#import "MyBookController.h"
+#import "MyTableViewController_iPad.h"
+#import "BookSearchHandler.h"
 
 @interface MainViewController_iPad ()
 
-@property MyBookController *tableScene;
+@property MyTableViewController_iPad *tableScene;
 
 @end
 
@@ -16,7 +17,9 @@
   [super viewDidLoad];
   self.tableScene = [self.storyboard instantiateViewControllerWithIdentifier:@"tableScene"];
   self.tableScene.title = @"reading";
+  self.tableScene.searchHandler = [[BookSearchHandler alloc] init];
   [self addChildViewController:self.tableScene];
+  [self.tableScene didMoveToParentViewController:self];
   [self.tableScene loadData];
 }
 

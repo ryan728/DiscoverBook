@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
-#import "MyTableViewController.h"
+#import "MyTableViewController_iphone.h"
 
-@interface MyBookController : MyTableViewController
+@interface MyBookController : MyTableViewController_iphone
 
 @end

@@ -3,4 +3,5 @@
 @interface DoubanService : NSObject
 
 - (void)fetchUserInfo;
+
 @end

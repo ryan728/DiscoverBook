@@ -42,7 +42,7 @@
 - (void)handleShowUserInfoSegue:(UIStoryboardSegue *)segue {
   UITabBarController *tabBarController = segue.destinationViewController;
   NSArray *const viewControllers = tabBarController.viewControllers;
-  [viewControllers each:^(MyTableViewController *controller) {
+  [viewControllers each:^(MyTableViewController_iphone *controller) {
     [controller loadData];
   }];
 }

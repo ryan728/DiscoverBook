@@ -2,7 +2,7 @@
 #import "RootController.h"
 #import "SearchViewController.h"
 #import "Macros.h"
-#import "MyTableViewController.h"
+#import "MyTableViewController_iphone.h"
 #import "User.h"
 #import "DOUAPIEngine.h"
 
@@ -38,8 +38,8 @@ describe(@"RootControllerSpec", ^{
     UIStoryboardSegue *const segue = [UIStoryboardSegue mock];
     [[segue should] receive:@selector(identifier) andReturn:@"showUserInfo" withCount:2];
     UITabBarController *tabBarController = [UITabBarController mock];
-    MyTableViewController *viewController1 = [MyTableViewController mock];
-    MyTableViewController *viewController2 = [MyTableViewController mock];
+    MyTableViewController_iphone *viewController1 = [MyTableViewController_iphone mock];
+    MyTableViewController_iphone *viewController2 = [MyTableViewController_iphone mock];
     NSArray *viewControllers = Array(viewController1, viewController2);
     [[tabBarController should]receive:@selector(viewControllers) andReturn:viewControllers];
     [[segue should] receive:@selector(destinationViewController) andReturn:tabBarController];

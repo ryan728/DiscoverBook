@@ -24,7 +24,7 @@
 		4930BB4A15D3974000AE6256 /* DoubanAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4930BB4815D3974000AE6256 /* DoubanAuthorizationViewController.m */; };
 		493FC5A11591A9B900652D98 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ED10FF15917A890092CF9D /* NSString+Additions.m */; };
 		4946A5D415A4570300C16C87 /* MyContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A5D315A4570300C16C87 /* MyContactController.m */; };
-		4946A64915A465D100C16C87 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A64815A465D100C16C87 /* MyTableViewController.m */; };
+		4946A64915A465D100C16C87 /* MyTableViewController_iphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A64815A465D100C16C87 /* MyTableViewController_iphone.m */; };
 		4946A68715A46D6000C16C87 /* TWImageView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A68615A46D6000C16C87 /* TWImageView+Additions.m */; };
 		4948F7EB15D12C7800C15C23 /* WheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7E815D12C7800C15C23 /* WheelView.m */; };
 		4948F7EC15D12C7800C15C23 /* WheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4948F7E815D12C7800C15C23 /* WheelView.m */; };
@@ -47,11 +47,13 @@
 		4954B8DA15AD173000FF2424 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BE40B915AC00A0002161A8 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4954B8DD15AD176A00FF2424 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A56CEB15A678480057D161 /* libcocos2d.a */; };
 		4954B8E015AD177A00FF2424 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4950F74915AA93E100190D85 /* libBox2D.a */; };
-		4954B8FF15AD1C8200FF2424 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A64815A465D100C16C87 /* MyTableViewController.m */; };
+		4954B8FF15AD1C8200FF2424 /* MyTableViewController_iphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A64815A465D100C16C87 /* MyTableViewController_iphone.m */; };
 		4954B90115AD1C8800FF2424 /* MyBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BCF6AA1592BDC1005DD14E /* MyBookController.m */; };
 		4954B90215AD1C8E00FF2424 /* BookDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C00DE15A34F59002572F2 /* BookDetailsController.m */; };
 		4954B90315AD1C9300FF2424 /* MyContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946A5D315A4570300C16C87 /* MyContactController.m */; };
 		4954B90415AD1D2100FF2424 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BCF6C21592CA22005DD14E /* NSArray+Additions.m */; };
+		495D9F5715D8B30B007A4F95 /* MyTableViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 495D9F5615D8B30B007A4F95 /* MyTableViewController_iPad.m */; };
+		495D9F5815D8B30B007A4F95 /* MyTableViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 495D9F5615D8B30B007A4F95 /* MyTableViewController_iPad.m */; };
 		49703EAE15985AF7004CA5E9 /* DoubanService.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DoubanService.m */; };
 		497489B315AC2FAE00CDE0C4 /* people_entry.xml in Resources */ = {isa = PBXBuildFile; fileRef = 497489B215AC2FAE00CDE0C4 /* people_entry.xml */; };
 		497489B515AC2FBC00CDE0C4 /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 497489B415AC2FBC00CDE0C4 /* UserSpec.m */; };
@@ -130,11 +132,17 @@
 		49ED111015917D050092CFAA /* default_contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA9 /* default_contact.png */; };
 		49F06E0215D884E500EBB382 /* MainViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F06E0115D884E500EBB382 /* MainViewController_iPad.m */; };
 		49F06E0315D884E500EBB382 /* MainViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F06E0115D884E500EBB382 /* MainViewController_iPad.m */; };
-		49F06E0615D886BF00EBB382 /* MyItemViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F06E0515D886BF00EBB382 /* MyItemViewController_iPad.m */; };
-		49F06E0715D886BF00EBB382 /* MyItemViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F06E0515D886BF00EBB382 /* MyItemViewController_iPad.m */; };
 		49F6D8E015AD403400A45C69 /* libDoubanAPIEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10DC15916B160092CF9D /* libDoubanAPIEngine.a */; };
 		49F6D8E115AD4C5F00A45C69 /* DoubanService.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DoubanService.m */; };
 		49F6D8E515AD551200A45C69 /* DoubanServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F6D8E415AD551200A45C69 /* DoubanServiceSpec.m */; };
+		49F6D8E515AD551200A45C6B /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F6D8E515AD551200A45C6A /* MyTableViewController.m */; };
+		49F6D8E515AD551200A45C6C /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F6D8E515AD551200A45C6A /* MyTableViewController.m */; };
+		49F6D8E515AD551200A45C73 /* SearchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F6D8E515AD551200A45C72 /* SearchHandler.m */; };
+		49F6D8E515AD551200A45C74 /* SearchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F6D8E515AD551200A45C72 /* SearchHandler.m */; };
+		49F6D8E515AD551200A45C7B /* BookSearchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F6D8E515AD551200A45C7A /* BookSearchHandler.m */; };
+		49F6D8E515AD551200A45C7C /* BookSearchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F6D8E515AD551200A45C7A /* BookSearchHandler.m */; };
+		49F6D8E515AD551200A45C7F /* ContactSearchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F6D8E515AD551200A45C7E /* ContactSearchHandler.m */; };
+		49F6D8E515AD551200A45C80 /* ContactSearchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F6D8E515AD551200A45C7E /* ContactSearchHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -338,8 +346,8 @@
 		493BB48F159C7EAC00E99887 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = test/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		4946A5D215A4570300C16C87 /* MyContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyContactController.h; path = src/MyContactController.h; sourceTree = SOURCE_ROOT; };
 		4946A5D315A4570300C16C87 /* MyContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyContactController.m; path = src/MyContactController.m; sourceTree = SOURCE_ROOT; };
-		4946A64715A465D100C16C87 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController.h; path = src/MyTableViewController.h; sourceTree = SOURCE_ROOT; };
-		4946A64815A465D100C16C87 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = src/MyTableViewController.m; sourceTree = SOURCE_ROOT; };
+		4946A64715A465D100C16C87 /* MyTableViewController_iphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController_iphone.h; path = src/MyTableViewController_iphone.h; sourceTree = SOURCE_ROOT; };
+		4946A64815A465D100C16C87 /* MyTableViewController_iphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController_iphone.m; path = src/MyTableViewController_iphone.m; sourceTree = SOURCE_ROOT; };
 		4946A68515A46D6000C16C87 /* TWImageView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TWImageView+Additions.h"; path = "src/TWImageView+Additions.h"; sourceTree = SOURCE_ROOT; };
 		4946A68615A46D6000C16C87 /* TWImageView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TWImageView+Additions.m"; path = "src/TWImageView+Additions.m"; sourceTree = SOURCE_ROOT; };
 		4948F7E715D12C7800C15C23 /* WheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WheelView.h; path = src/WheelView.h; sourceTree = SOURCE_ROOT; };
@@ -357,6 +365,8 @@
 		494C00DF15A34F59002572F2 /* BookDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookDetailsController.h; path = src/BookDetailsController.h; sourceTree = SOURCE_ROOT; };
 		4950F73C15AA93E100190D85 /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = ../lib/Box2D_v2.2.1/Build/xcode4/Box2D.xcodeproj; sourceTree = "<group>"; };
 		4954B8D415AD13A500FF2424 /* RootControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RootControllerSpec.mm; path = test/RootControllerSpec.mm; sourceTree = SOURCE_ROOT; };
+		495D9F5515D8B30B007A4F95 /* MyTableViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController_iPad.h; path = src/MyTableViewController_iPad.h; sourceTree = SOURCE_ROOT; };
+		495D9F5615D8B30B007A4F95 /* MyTableViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController_iPad.m; path = src/MyTableViewController_iPad.m; sourceTree = SOURCE_ROOT; };
 		49703EAC15985AF7004CA5E9 /* DoubanService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanService.h; path = src/DoubanService.h; sourceTree = SOURCE_ROOT; };
 		49703EAD15985AF7004CA5E9 /* DoubanService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanService.m; path = src/DoubanService.m; sourceTree = SOURCE_ROOT; };
 		497489B215AC2FAE00CDE0C4 /* people_entry.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = people_entry.xml; path = test/resources/people_entry.xml; sourceTree = SOURCE_ROOT; };
@@ -445,10 +455,18 @@
 		49ED111015917D050092CFA9 /* default_contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_contact.png; path = resources/default_contact.png; sourceTree = "<group>"; };
 		49F06E0015D884E500EBB382 /* MainViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController_iPad.h; path = src/MainViewController_iPad.h; sourceTree = SOURCE_ROOT; };
 		49F06E0115D884E500EBB382 /* MainViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController_iPad.m; path = src/MainViewController_iPad.m; sourceTree = SOURCE_ROOT; };
-		49F06E0415D886BF00EBB382 /* MyItemViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyItemViewController_iPad.h; path = src/MyItemViewController_iPad.h; sourceTree = SOURCE_ROOT; };
-		49F06E0515D886BF00EBB382 /* MyItemViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyItemViewController_iPad.m; path = src/MyItemViewController_iPad.m; sourceTree = SOURCE_ROOT; };
 		49F06E0B15D891AA00EBB382 /* RootViewController_SegueHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController_SegueHandler.h; path = src/RootViewController_SegueHandler.h; sourceTree = SOURCE_ROOT; };
 		49F6D8E415AD551200A45C69 /* DoubanServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanServiceSpec.m; path = test/DoubanServiceSpec.m; sourceTree = SOURCE_ROOT; };
+		49F6D8E515AD551200A45C6A /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = DiscoverBook.xcodeproj/MyTableViewController.m; sourceTree = SOURCE_ROOT; };
+		49F6D8E515AD551200A45C6D /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController.h; path = DiscoverBook.xcodeproj/MyTableViewController.h; sourceTree = SOURCE_ROOT; };
+		49F6D8E515AD551200A45C71 /* MyTableViewController_ResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController_ResponseHandler.h; path = DiscoverBook.xcodeproj/MyTableViewController_ResponseHandler.h; sourceTree = SOURCE_ROOT; };
+		49F6D8E515AD551200A45C72 /* SearchHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchHandler.m; path = DiscoverBook.xcodeproj/SearchHandler.m; sourceTree = SOURCE_ROOT; };
+		49F6D8E515AD551200A45C75 /* SearchHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchHandler.h; path = DiscoverBook.xcodeproj/SearchHandler.h; sourceTree = SOURCE_ROOT; };
+		49F6D8E515AD551200A45C79 /* SearchHandler_protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchHandler_protected.h; path = DiscoverBook.xcodeproj/SearchHandler_protected.h; sourceTree = SOURCE_ROOT; };
+		49F6D8E515AD551200A45C7A /* BookSearchHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookSearchHandler.m; path = DiscoverBook.xcodeproj/BookSearchHandler.m; sourceTree = SOURCE_ROOT; };
+		49F6D8E515AD551200A45C7D /* BookSearchHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookSearchHandler.h; path = DiscoverBook.xcodeproj/BookSearchHandler.h; sourceTree = SOURCE_ROOT; };
+		49F6D8E515AD551200A45C7E /* ContactSearchHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactSearchHandler.m; path = DiscoverBook.xcodeproj/ContactSearchHandler.m; sourceTree = SOURCE_ROOT; };
+		49F6D8E515AD551200A45C81 /* ContactSearchHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactSearchHandler.h; path = DiscoverBook.xcodeproj/ContactSearchHandler.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -554,6 +572,14 @@
 		4930BB4615D391AA00AE6256 /* iphone */ = {
 			isa = PBXGroup;
 			children = (
+				49BCF6A91592BDC1005DD14E /* MyBookController.h */,
+				49BCF6AA1592BDC1005DD14E /* MyBookController.m */,
+				494C00DF15A34F59002572F2 /* BookDetailsController.h */,
+				494C00DE15A34F59002572F2 /* BookDetailsController.m */,
+				4946A5D215A4570300C16C87 /* MyContactController.h */,
+				4946A5D315A4570300C16C87 /* MyContactController.m */,
+				4946A64715A465D100C16C87 /* MyTableViewController_iphone.h */,
+				4946A64815A465D100C16C87 /* MyTableViewController_iphone.m */,
 			);
 			name = iphone;
 			sourceTree = "<group>";
@@ -576,8 +602,8 @@
 				4948F7F115D12D8B00C15C23 /* RootViewController_iPad.m */,
 				49F06E0015D884E500EBB382 /* MainViewController_iPad.h */,
 				49F06E0115D884E500EBB382 /* MainViewController_iPad.m */,
-				49F06E0415D886BF00EBB382 /* MyItemViewController_iPad.h */,
-				49F06E0515D886BF00EBB382 /* MyItemViewController_iPad.m */,
+				495D9F5515D8B30B007A4F95 /* MyTableViewController_iPad.h */,
+				495D9F5615D8B30B007A4F95 /* MyTableViewController_iPad.m */,
 			);
 			name = ipad;
 			sourceTree = "<group>";
@@ -725,19 +751,14 @@
 		49BCF6A81592BD70005DD14E /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				49F6D8E515AD551200A45C71 /* MyTableViewController_ResponseHandler.h */,
+				49F6D8E515AD551200A45C6D /* MyTableViewController.h */,
+				49F6D8E515AD551200A45C6A /* MyTableViewController.m */,
 				4930BB4615D391AA00AE6256 /* iphone */,
 				4948F7EF15D12D6600C15C23 /* ipad */,
-				494C00DF15A34F59002572F2 /* BookDetailsController.h */,
-				494C00DE15A34F59002572F2 /* BookDetailsController.m */,
-				49BCF6A91592BDC1005DD14E /* MyBookController.h */,
-				49BCF6AA1592BDC1005DD14E /* MyBookController.m */,
 				4979473915A1CADF00DA964E /* RootController.h */,
 				4979473A15A1CADF00DA964E /* RootController.mm */,
 				49F06E0B15D891AA00EBB382 /* RootViewController_SegueHandler.h */,
-				4946A5D215A4570300C16C87 /* MyContactController.h */,
-				4946A5D315A4570300C16C87 /* MyContactController.m */,
-				4946A64715A465D100C16C87 /* MyTableViewController.h */,
-				4946A64815A465D100C16C87 /* MyTableViewController.m */,
 				49A1310D15A67BD400C7CACE /* SearchViewController.h */,
 				49A1310E15A67BD400C7CACE /* SearchViewController.mm */,
 				4930BB4715D3974000AE6256 /* DoubanAuthorizationViewController.h */,
@@ -900,6 +921,13 @@
 		49F6D8E215AD521300A45C69 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				49F6D8E515AD551200A45C81 /* ContactSearchHandler.h */,
+				49F6D8E515AD551200A45C7E /* ContactSearchHandler.m */,
+				49F6D8E515AD551200A45C7D /* BookSearchHandler.h */,
+				49F6D8E515AD551200A45C7A /* BookSearchHandler.m */,
+				49F6D8E515AD551200A45C79 /* SearchHandler_protected.h */,
+				49F6D8E515AD551200A45C75 /* SearchHandler.h */,
+				49F6D8E515AD551200A45C72 /* SearchHandler.m */,
 				49703EAC15985AF7004CA5E9 /* DoubanService.h */,
 				49703EAD15985AF7004CA5E9 /* DoubanService.m */,
 			);
@@ -1187,7 +1215,7 @@
 				4954B8D815AD172700FF2424 /* SearchViewLayer.mm in Sources */,
 				4954B8D915AD172B00FF2424 /* GLES-Render.mm in Sources */,
 				4954B8DA15AD173000FF2424 /* EGORefreshTableHeaderView.m in Sources */,
-				4954B8FF15AD1C8200FF2424 /* MyTableViewController.m in Sources */,
+				4954B8FF15AD1C8200FF2424 /* MyTableViewController_iphone.m in Sources */,
 				4954B90115AD1C8800FF2424 /* MyBookController.m in Sources */,
 				4954B90215AD1C8E00FF2424 /* BookDetailsController.m in Sources */,
 				4954B90315AD1C9300FF2424 /* MyContactController.m in Sources */,
@@ -1202,7 +1230,11 @@
 				4948F7FB15D12F4900C15C23 /* GlobalConfig.m in Sources */,
 				4930BB4A15D3974000AE6256 /* DoubanAuthorizationViewController.m in Sources */,
 				49F06E0315D884E500EBB382 /* MainViewController_iPad.m in Sources */,
-				49F06E0715D886BF00EBB382 /* MyItemViewController_iPad.m in Sources */,
+				49F6D8E515AD551200A45C6C /* MyTableViewController.m in Sources */,
+				49F6D8E515AD551200A45C74 /* SearchHandler.m in Sources */,
+				49F6D8E515AD551200A45C7C /* BookSearchHandler.m in Sources */,
+				49F6D8E515AD551200A45C80 /* ContactSearchHandler.m in Sources */,
+				495D9F5815D8B30B007A4F95 /* MyTableViewController_iPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1234,7 +1266,7 @@
 				49B9D78415A1843500B4C734 /* UIImageView+AFNetworking.m in Sources */,
 				4979473B15A1CADF00DA964E /* RootController.mm in Sources */,
 				4946A5D415A4570300C16C87 /* MyContactController.m in Sources */,
-				4946A64915A465D100C16C87 /* MyTableViewController.m in Sources */,
+				4946A64915A465D100C16C87 /* MyTableViewController_iphone.m in Sources */,
 				4946A68715A46D6000C16C87 /* TWImageView+Additions.m in Sources */,
 				49A1310F15A67BD400C7CACE /* SearchViewController.mm in Sources */,
 				49A131AC15A67E5D00C7CACE /* SearchViewLayer.mm in Sources */,
@@ -1250,7 +1282,11 @@
 				4948F7FA15D12F4900C15C23 /* GlobalConfig.m in Sources */,
 				4930BB4915D3974000AE6256 /* DoubanAuthorizationViewController.m in Sources */,
 				49F06E0215D884E500EBB382 /* MainViewController_iPad.m in Sources */,
-				49F06E0615D886BF00EBB382 /* MyItemViewController_iPad.m in Sources */,
+				49F6D8E515AD551200A45C6B /* MyTableViewController.m in Sources */,
+				49F6D8E515AD551200A45C73 /* SearchHandler.m in Sources */,
+				49F6D8E515AD551200A45C7B /* BookSearchHandler.m in Sources */,
+				49F6D8E515AD551200A45C7F /* ContactSearchHandler.m in Sources */,
+				495D9F5715D8B30B007A4F95 /* MyTableViewController_iPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1373,7 +1409,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				VERSION_INFO_BUILDER = 1.0;
 			};
 			name = Debug;
@@ -1386,7 +1422,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				VERSION_INFO_BUILDER = 1.0;
 			};
 			name = Release;
