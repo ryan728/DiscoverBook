@@ -18,7 +18,7 @@
 
 
 - (void)renderCell:(UITableViewCell *)cell at:(NSIndexPath *)indexPath {
-  DoubanEntrySubject *book = [self.myEntries objectAtIndex:indexPath.row];
+  DoubanEntrySubject *book = [self.searchHandler entryAtIndex:indexPath.row];
   cell.textLabel.text = book.title.stringValue;
 
   NSMutableString *authors = [NSMutableString string];
@@ -35,7 +35,7 @@
   [super prepareForSegue:segue sender:sender];
 
   BookDetailsController *const bookDetailsController = segue.destinationViewController;
-  DoubanEntrySubject *currentBook = [self.myEntries objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+  DoubanEntrySubject *currentBook = [self.searchHandler entryAtIndex:self.tableView.indexPathForSelectedRow.row];
   bookDetailsController.bookDetailsUrl = currentBook.identifier;
   NSString *collectionLink = [[currentBook linkWithRelAttributeValue:@"collection"] href];
   [bookDetailsController setBookCollectionUrl:collectionLink];

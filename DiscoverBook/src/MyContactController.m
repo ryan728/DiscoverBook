@@ -15,7 +15,7 @@
 }
 
 - (void)renderCell:(UITableViewCell *)cell at:(NSIndexPath *)indexPath {
-  User *user = [self.myEntries objectAtIndex:indexPath.row];
+  User *user = [self.searchHandler entryAtIndex:indexPath.row];
   cell.textLabel.text = user.title;
   cell.detailTextLabel.text = user.signature;
   [cell.imageView setImageWithAnimation:user.imageUrl andPlaceHolder:DEFAULT_CONTACT_ICON];
@@ -27,8 +27,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [super tableView:tableView didSelectRowAtIndexPath:indexPath];
-  if (indexPath.row != self.myEntries.count) {
-    self.tabBarController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:self.userTitle style:UIBarButtonItemStylePlain target:nil action:nil];
+  if (indexPath.row != self.searchHandler.currentCount) {
+    self.tabBarController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:self.searchHandler.userTitle style:UIBarButtonItemStylePlain target:nil action:nil];
     [self performSegueWithIdentifier:@"peopleDetail" sender:self];
   }
 }
@@ -39,8 +39,8 @@
   [viewControllers removeLastObject];
   tabBarController.viewControllers = viewControllers;
   [viewControllers eachWithIndex:^(MyTableViewController *controller, NSUInteger i) {
-    User *user = [self.myEntries objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    controller.userTitle = user.title;
+    User *user = [self.searchHandler entryAtIndex:self.tableView.indexPathForSelectedRow.row];
+    controller.searchHandler.userTitle = user.title;
     tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(jumpHome)];
     [controller loadData];
   }];

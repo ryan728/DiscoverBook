@@ -27,7 +27,7 @@
 }
 
 - (void)renderCell:(UITableViewCell *)cell at:(NSIndexPath *)indexPath {
-  DoubanEntrySubject *book = [self.myEntries objectAtIndex:indexPath.row];
+  DoubanEntrySubject *book = [self.searchHandler entryAtIndex:indexPath.row];
   cell.textLabel.text = book.title.stringValue;
   
   NSMutableString *authors = [NSMutableString string];

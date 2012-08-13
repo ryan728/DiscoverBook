@@ -9,8 +9,6 @@ extern UIImage *DEFAULT_BOOK_COVER_IMAGE;
 
 @interface MyTableViewController : UITableViewController <SearchHandlerDelegate>
 
-@property(nonatomic, strong) NSMutableArray *myEntries;
-@property(nonatomic, strong) NSString *userTitle;
 @property (nonatomic, strong) SearchHandler *searchHandler;
 
 -(void)loadData;

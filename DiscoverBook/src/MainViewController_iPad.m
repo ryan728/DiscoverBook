@@ -11,6 +11,20 @@
 @implementation MainViewController_iPad
 
 @synthesize tableScene = _tableScene;
+@synthesize displayTypeControl = _displayTypeControl;
+
+- (void)displayTypeChanged:(id)sender {
+  switch ([sender selectedSegmentIndex]) {
+    case 0:
+      break;
+    case 1:
+      break;
+    case 2:
+      break;
+    default:
+      break;
+  }
+}
 
 - (void)viewDidLoad
 {
@@ -21,6 +35,8 @@
   [self addChildViewController:self.tableScene];
   [self.tableScene didMoveToParentViewController:self];
   [self.tableScene loadData];
+
+  [_displayTypeControl addTarget:self action:@selector(displayTypeChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

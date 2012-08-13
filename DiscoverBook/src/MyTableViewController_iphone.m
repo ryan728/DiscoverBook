@@ -1,4 +1,5 @@
 #import "MyTableViewController_iphone.h"
+#import "DOUAPIEngine.h"
 
 @implementation MyTableViewController_iphone {
   BOOL reloading_;
@@ -18,9 +19,9 @@
   [refreshHeaderView_ refreshLastUpdatedDate];
 }
 
-- (void) handleResult:(NSArray *)result startFrom:(NSInteger)startIndex withRequest:(DOUHttpRequest *)request{
+- (void)handleResultFor:(DOUHttpRequest *)request {
   [self doneLoadingTableViewData];
-  [super handleResult:result startFrom:startIndex withRequest:request];
+  [super handleResultFor:request];
 }
 
 #pragma mark Data Source Loading / Reloading Methods

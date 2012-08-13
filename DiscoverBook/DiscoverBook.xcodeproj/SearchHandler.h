@@ -5,6 +5,7 @@
 
 @protocol SearchHandlerDelegate;
 @class DOUHttpRequest;
+@class DoubanEntrySubject;
 
 @interface SearchHandler : NSObject
 
@@ -12,12 +13,16 @@
 @property (strong, nonatomic) NSString *userTitle;
 @property (strong, nonatomic) id<SearchHandlerDelegate> delegate;
 
-- (void)loadListFrom:(int)startIndex;
+- (void)load;
+- (NSUInteger)currentCount;
+- (NSUInteger)cellCount;
+- (id)entryAtIndex:(NSInteger)index;
 
+- (void)loadMore;
 @end
 
 @protocol SearchHandlerDelegate
 
-- (void)handleResult:(NSArray *)result startFrom:(NSInteger)startIndex withRequest:(DOUHttpRequest *)request;
+- (void)handleResultFor:(DOUHttpRequest *)request;
 
 @end
