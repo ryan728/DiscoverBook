@@ -128,6 +128,10 @@
 		49ED111015917D050092CFA6 /* default_book_cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA5 /* default_book_cover.jpg */; };
 		49ED111015917D050092CFA8 /* round_corner_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA7 /* round_corner_bg.png */; };
 		49ED111015917D050092CFAA /* default_contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ED111015917D050092CFA9 /* default_contact.png */; };
+		49F06E0215D884E500EBB382 /* MainViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F06E0115D884E500EBB382 /* MainViewController_iPad.m */; };
+		49F06E0315D884E500EBB382 /* MainViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F06E0115D884E500EBB382 /* MainViewController_iPad.m */; };
+		49F06E0615D886BF00EBB382 /* MyItemViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F06E0515D886BF00EBB382 /* MyItemViewController_iPad.m */; };
+		49F06E0715D886BF00EBB382 /* MyItemViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F06E0515D886BF00EBB382 /* MyItemViewController_iPad.m */; };
 		49F6D8E015AD403400A45C69 /* libDoubanAPIEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ED10DC15916B160092CF9D /* libDoubanAPIEngine.a */; };
 		49F6D8E115AD4C5F00A45C69 /* DoubanService.m in Sources */ = {isa = PBXBuildFile; fileRef = 49703EAD15985AF7004CA5E9 /* DoubanService.m */; };
 		49F6D8E515AD551200A45C69 /* DoubanServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F6D8E415AD551200A45C69 /* DoubanServiceSpec.m */; };
@@ -439,6 +443,11 @@
 		49ED111015917D050092CFA5 /* default_book_cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default_book_cover.jpg; path = resources/default_book_cover.jpg; sourceTree = "<group>"; };
 		49ED111015917D050092CFA7 /* round_corner_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = round_corner_bg.png; path = resources/round_corner_bg.png; sourceTree = "<group>"; };
 		49ED111015917D050092CFA9 /* default_contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_contact.png; path = resources/default_contact.png; sourceTree = "<group>"; };
+		49F06E0015D884E500EBB382 /* MainViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController_iPad.h; path = src/MainViewController_iPad.h; sourceTree = SOURCE_ROOT; };
+		49F06E0115D884E500EBB382 /* MainViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController_iPad.m; path = src/MainViewController_iPad.m; sourceTree = SOURCE_ROOT; };
+		49F06E0415D886BF00EBB382 /* MyItemViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyItemViewController_iPad.h; path = src/MyItemViewController_iPad.h; sourceTree = SOURCE_ROOT; };
+		49F06E0515D886BF00EBB382 /* MyItemViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyItemViewController_iPad.m; path = src/MyItemViewController_iPad.m; sourceTree = SOURCE_ROOT; };
+		49F06E0B15D891AA00EBB382 /* RootViewController_SegueHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController_SegueHandler.h; path = src/RootViewController_SegueHandler.h; sourceTree = SOURCE_ROOT; };
 		49F6D8E415AD551200A45C69 /* DoubanServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanServiceSpec.m; path = test/DoubanServiceSpec.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -565,6 +574,10 @@
 			children = (
 				4948F7F015D12D8B00C15C23 /* RootViewController_iPad.h */,
 				4948F7F115D12D8B00C15C23 /* RootViewController_iPad.m */,
+				49F06E0015D884E500EBB382 /* MainViewController_iPad.h */,
+				49F06E0115D884E500EBB382 /* MainViewController_iPad.m */,
+				49F06E0415D886BF00EBB382 /* MyItemViewController_iPad.h */,
+				49F06E0515D886BF00EBB382 /* MyItemViewController_iPad.m */,
 			);
 			name = ipad;
 			sourceTree = "<group>";
@@ -720,6 +733,7 @@
 				49BCF6AA1592BDC1005DD14E /* MyBookController.m */,
 				4979473915A1CADF00DA964E /* RootController.h */,
 				4979473A15A1CADF00DA964E /* RootController.mm */,
+				49F06E0B15D891AA00EBB382 /* RootViewController_SegueHandler.h */,
 				4946A5D215A4570300C16C87 /* MyContactController.h */,
 				4946A5D315A4570300C16C87 /* MyContactController.m */,
 				4946A64715A465D100C16C87 /* MyTableViewController.h */,
@@ -1187,6 +1201,8 @@
 				4948F7F715D12DC900C15C23 /* SpinGestureRecognizer.m in Sources */,
 				4948F7FB15D12F4900C15C23 /* GlobalConfig.m in Sources */,
 				4930BB4A15D3974000AE6256 /* DoubanAuthorizationViewController.m in Sources */,
+				49F06E0315D884E500EBB382 /* MainViewController_iPad.m in Sources */,
+				49F06E0715D886BF00EBB382 /* MyItemViewController_iPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1233,6 +1249,8 @@
 				4948F7F615D12DC900C15C23 /* SpinGestureRecognizer.m in Sources */,
 				4948F7FA15D12F4900C15C23 /* GlobalConfig.m in Sources */,
 				4930BB4915D3974000AE6256 /* DoubanAuthorizationViewController.m in Sources */,
+				49F06E0215D884E500EBB382 /* MainViewController_iPad.m in Sources */,
+				49F06E0615D886BF00EBB382 /* MyItemViewController_iPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

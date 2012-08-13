@@ -1,4 +1,4 @@
-exception handling
+eception handling
 add tests (lei)
 book detail page (jp)
 change status of book (read, reading, wish)
@@ -7,6 +7,15 @@ books/contacts network (native, suoqin)
 add sprite for text, people, and book
 add many sprites
 use search result as sprite
+
+# for ipad
+add main display scene
+	add list view
+	add icon view
+	add cover flow view
+
+add selection scene
+
 
 use ThoughtWorks account to sign app
 test flight script

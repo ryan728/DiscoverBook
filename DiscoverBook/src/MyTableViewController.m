@@ -60,6 +60,7 @@
   DOUQuery *query = [self createQuery:startIndex];
   DOUService *service = [DOUService sharedInstance];
   DOUReqBlock completionBlock = ^(DOUHttpRequest *request) {
+    NSLog(@"------------------- response : %@", request.responseString);
     [self doneLoadingTableViewData];
     if (startIndex == 0) {
       [myEntries_ removeAllObjects];

@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "WheelView.h"
-#import "RootController.h"
+#import "RootViewController_SegueHandler.h"
 
 @interface RootViewController_iPad : RootController <WheelViewDataSource>
 

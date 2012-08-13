@@ -10,6 +10,7 @@
 #import "NSArray+Additions.h"
 #import "TWImageView+Additions.h"
 #import "DoubanAuthorizationViewController.h"
+#import "MainViewController_iPad.h"
 
 @interface RootViewController_iPad ()
 
@@ -85,6 +86,10 @@ static NSArray *kBookTags = nil;
   } else {
     self.wheelView.style = WheelViewStyleWheel;
   }
+}
+
+- (void)handleShowUserInfoSegue:(UIStoryboardSegue *)segue {
+  
 }
 
 #pragma - WheelViewDataSource

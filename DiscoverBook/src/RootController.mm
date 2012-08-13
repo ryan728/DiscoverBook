@@ -1,4 +1,4 @@
-#import "RootController.h"
+#import "RootViewController_SegueHandler.h"
 #import "NSString+Additions.h"
 #import "MyBookController.h"
 #import "User.h"
@@ -35,12 +35,16 @@
     searchController.term = searchBar_.text;
   }
   if ([segue.identifier isEqualToString:@"showUserInfo"]) {
-    UITabBarController *tabBarController = segue.destinationViewController;
-    NSArray *const viewControllers = tabBarController.viewControllers;
-    [viewControllers each:^(MyTableViewController *controller) {
-      [controller loadData];
-    }];
+    [self handleShowUserInfoSegue:segue];
   }
+}
+
+- (void)handleShowUserInfoSegue:(UIStoryboardSegue *)segue {
+  UITabBarController *tabBarController = segue.destinationViewController;
+  NSArray *const viewControllers = tabBarController.viewControllers;
+  [viewControllers each:^(MyTableViewController *controller) {
+    [controller loadData];
+  }];
 }
 
 #pragma mark - View lifecycle
@@ -93,6 +97,8 @@
                    }
   ];
 }
+
+#pragma - DoubanAuthorizationViewDelegate
 
 - (void)validateAuthorizationCode:(NSString *)code{
   DOUOAuthService *authService = [DOUOAuthService sharedInstance];
