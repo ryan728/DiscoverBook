@@ -4,4 +4,6 @@
 
 - (void)fetchUserInfo;
 
+- (void)fetchRandomBooksWithCallBack:(void (^)(NSArray* result, DOUHttpRequest *request))callback;
+
 @end
