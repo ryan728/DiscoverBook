@@ -1,13 +1,10 @@
 #import "RootViewController_iPad.h"
 #import "GlobalConfig.h"
 #import "WheelViewCell.h"
-#import "DoubanFeedSubject.h"
 #import "Reachability.h"
 #import "Toast+UIView.h"
 #import "NSArray+Additions.h"
 #import "TWImageView+Additions.h"
-#import "DoubanAuthorizationViewController.h"
-#import "MainViewController_iPad.h"
 #import "DoubanService.h"
 #import "Book.h"
 

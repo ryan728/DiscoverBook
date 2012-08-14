@@ -2,7 +2,6 @@
 #import "DOUQuery.h"
 #import "DOUAPIEngine.h"
 #import "GlobalConfig.h"
-#import "DoubanEntrySubject.h"
 #import "User.h"
 #import "NSArray+Additions.h"
 

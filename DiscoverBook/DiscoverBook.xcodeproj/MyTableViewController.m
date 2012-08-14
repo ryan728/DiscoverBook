@@ -1,6 +1,5 @@
 #import "MyTableViewController_ResponseHandler.h"
 #import "DoubanEntrySubject.h"
-#import "User.h"
 #import "DOUService.h"
 #import "Reachability.h"
 #import "Toast+UIView.h"

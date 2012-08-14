@@ -1,6 +1,5 @@
 #import "DoubanAuthorizationViewController.h"
 #import "GlobalConfig.h"
-#import "User.h"
 #import "Reachability.h"
 #import "Toast+UIView.h"
 #import "NSString+Additions.h"
