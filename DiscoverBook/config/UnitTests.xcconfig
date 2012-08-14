@@ -5,7 +5,7 @@ PRODUCT_NAME = $(TARGET_NAME)
 WRAPPER_EXTENSION = octest
 FRAMEWORK_SEARCH_PATHS = $(SDKROOT)/Developer/Library/Frameworks $(DEVELOPER_LIBRARY_DIR)/Frameworks
 HEADER_SEARCH_PATHS = DoubanAPIEngine/OtherSources/** DoubanAPIEngine/Sources/** ${SDK_DIR}/usr/include/libxml2 ${PROJECT_DIR}/../lib/Box2D_v2.2.1/
-USER_HEADER_SEARCH_PATHS = $(SRCROOT)/../lib/Kiwi/Kiwi ${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/**
+USER_HEADER_SEARCH_PATHS = $(SRCROOT)/../lib/Kiwi/Kiwi ${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** ${PROJECT_DIR}/../lib/AQGridView/**
 GCC_PRECOMPILE_PREFIX_HEADER = YES
 GCC_PREFIX_HEADER = test/UnitTests-Prefix.pch
 

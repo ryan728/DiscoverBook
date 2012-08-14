@@ -4,23 +4,33 @@
 #import "GlobalConfig.h"
 #import "DoubanEntrySubject.h"
 #import "User.h"
+#import "NSArray+Additions.h"
 
 @implementation SearchHandler {
   NSMutableArray *_myEntries;
   BOOL _hasMore;
+  NSMutableArray *_delegates;
 }
 
 @synthesize userTitle = _userTitle;
 @synthesize title = _title;
-@synthesize delegate = _delegate;
 
 - (id)init {
   self = [super init];
   if (self) {
     _myEntries = [[NSMutableArray alloc] init];
     _hasMore = YES;
+    _delegates = [NSMutableArray array];
   }
   return self;
+}
+
+- (void)addDelegate:(id<SearchHandlerDelegate>)delegate{
+  [_delegates addObject:delegate];
+}
+
+- (void)removeDelegate:(id<SearchHandlerDelegate>)delegate{
+  [_delegates removeObject:delegate];
 }
 
 - (NSUInteger)currentCount {
@@ -66,9 +76,10 @@
       NSArray *const result = [self parseResult:request];
       _hasMore = (result.count == kBatchSize);
       [_myEntries addObjectsFromArray:result];
-      if (_delegate) {
-        [_delegate handleResultFor:request];
-      }
+
+      [_delegates each:^(id<SearchHandlerDelegate> delegate) {
+        [delegate handleResultFor:request];
+      }];
     }
   };
   [service get:query callback:completionBlock];

@@ -1,5 +1,6 @@
 #import "BookSearchHandler.h"
 #import "User.h"
+#import "Book.h"
 #import "Macros.h"
 #import "DOUQuery.h"
 #import "DoubanFeedSubject.h"
@@ -24,7 +25,7 @@
   NSMutableArray *results = [[NSMutableArray alloc] init];
   [entries each:^(DoubanEntrySubject *entry) {
     DoubanEntrySubject *subject = [[DoubanEntrySubject alloc] initWithXMLElement:[[[entry XMLElement] elementsForName:@"db:subject"] objectAtIndex:0] parent:nil];
-    [results addObject:subject];
+    [results addObject:[[Book alloc] initWithEntry:subject]];
   }];
   return results;
 }

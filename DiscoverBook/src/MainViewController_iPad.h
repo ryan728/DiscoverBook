@@ -4,6 +4,4 @@
 
 @property (nonatomic, strong) IBOutlet UISegmentedControl *displayTypeControl;
 
-- (void)loadData;
-
 @end

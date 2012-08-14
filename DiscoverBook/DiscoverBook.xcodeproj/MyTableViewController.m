@@ -31,7 +31,7 @@ UIImage *DEFAULT_BOOK_COVER_IMAGE = nil;
 
 - (void)setSearchHandler:(SearchHandler *)searchHandler {
   searchHandler.title = self.title;
-  searchHandler.delegate = self;
+  [searchHandler addDelegate:self];
   _searchHandler = searchHandler;
 }
 
@@ -41,7 +41,6 @@ UIImage *DEFAULT_BOOK_COVER_IMAGE = nil;
 
 
 - (void)handleResultFor:(DOUHttpRequest *)request {
-  NSLog(@"------------------- response : %@", request.responseString);
   if (!request.error) {
     [self.tableView reloadData];
   } else {

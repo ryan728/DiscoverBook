@@ -11,7 +11,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HC-uW-h3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Friends" id="PL6-wX-o2Q" customClass="MyContactController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="O1K-eV-v9b">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -44,7 +44,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9E-2c-Sxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="" title="Contacts" id="1Bp-E7-TCO" customClass="MyContactController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YTp-QU-mbD">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -100,7 +100,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UA1-1r-5fw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Reading" id="CIy-4e-ON8" customClass="MyBookController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ozF-KP-ZGj">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -129,15 +129,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwC-XL-Orf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Skx-Rg-Vhu" customClass="BookDetailsController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D5c-oS-FFm">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" id="TFF-KA-8M7">
-                                <rect key="frame" x="-4" y="1" width="339" height="367"/>
+                                <rect key="frame" x="-4" y="1" width="339" height="411"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="wAe-wh-bE8">
-                                        <rect key="frame" x="23" y="49" width="87" height="103"/>
+                                        <rect key="frame" x="23" y="54" width="87" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Z2A-Gg-MA8">
@@ -280,7 +280,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ri-qa-set" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Read" id="p7g-pA-nVo" customClass="MyBookController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ND2-r3-0dW">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -310,7 +310,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8H-dW-fDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Wish" id="Hl6-oI-wZn" customClass="MyBookController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BUP-t2-3kL">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -457,63 +457,13 @@
             <point key="canvasLocation" x="36" y="952"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="BookDetailsController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BookDetailsController.h"/>
-            <relationships>
-                <relationship kind="action" name="addToRead:"/>
-                <relationship kind="action" name="addToReading:"/>
-                <relationship kind="action" name="addToWish:"/>
-                <relationship kind="outlet" name="author" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="bookImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="bookTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="container" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="numberOfRaters" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="publishDate" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="publisher" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="rate" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="readButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="readingButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="summary" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="wishButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="DoubanAuthorizationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DoubanAuthorizationViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="MyBookController" superclassName="MyTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyBookController.h"/>
-        </class>
-        <class className="MyContactController" superclassName="MyTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyContactController.h"/>
-        </class>
-        <class className="MyTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyTableViewController.h"/>
-        </class>
-        <class className="RootController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RootController.h"/>
-            <relationships>
-                <relationship kind="action" name="signOut:"/>
-                <relationship kind="action" name="woDu:"/>
-                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
-                <relationship kind="outlet" name="signOutButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="woDuButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SearchViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="c7i-DE-jBF"/>
+        <segue reference="AeS-f1-dJq"/>
         <segue reference="ouh-5j-vjm"/>
     </inferredMetricsTieBreakers>
 </document>

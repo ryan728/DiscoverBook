@@ -413,7 +413,7 @@ int vorbis_synthesis_blockin(vorbis_dsp_state *v,vorbis_block *vb){
     if(vb->granulepos!=-1 && v->granulepos!=vb->granulepos){
       
       if(v->granulepos>vb->granulepos){
-	long extra=v->granulepos-vb->granulepos;
+	long extra=(long)v->granulepos-(long)vb->granulepos;
 	
 	if(extra)
 	  if(vb->eofflag){

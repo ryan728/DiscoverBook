@@ -5,6 +5,7 @@
 #import "TWImageView+Additions.h"
 #import "BookDetailsController.h"
 #import "BookSearchHandler.h"
+#import "Book.h"
 
 @implementation MyBookController
 
@@ -16,19 +17,11 @@
   return self;
 }
 
-
 - (void)renderCell:(UITableViewCell *)cell at:(NSIndexPath *)indexPath {
-  DoubanEntrySubject *book = [self.searchHandler entryAtIndex:indexPath.row];
-  cell.textLabel.text = book.title.stringValue;
-
-  NSMutableString *authors = [NSMutableString string];
-  [book.authors each:^(GDataAtomAuthor *author) {
-    [authors appendString:author.name];
-  }];
-  cell.detailTextLabel.text = authors;
-
-  NSURL *const imageUrl = [[book linkWithRelAttributeValue:@"image"] URL];
-  [cell.imageView setImageWithAnimation:imageUrl andPlaceHolder:DEFAULT_BOOK_COVER_IMAGE];
+  Book *book = [self.searchHandler entryAtIndex:indexPath.row];
+  cell.textLabel.text = book.title;
+  cell.detailTextLabel.text = book.authorsString;
+  [cell.imageView setImageWithAnimation:book.imageUrl andPlaceHolder:DEFAULT_BOOK_COVER_IMAGE];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

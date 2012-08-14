@@ -11,14 +11,15 @@
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *userTitle;
-@property (strong, nonatomic) id<SearchHandlerDelegate> delegate;
 
 - (void)load;
 - (NSUInteger)currentCount;
 - (NSUInteger)cellCount;
 - (id)entryAtIndex:(NSInteger)index;
-
 - (void)loadMore;
+- (void)addDelegate:(id<SearchHandlerDelegate>) delegate;
+- (void)removeDelegate:(id<SearchHandlerDelegate>)delegate;
+
 @end
 
 @protocol SearchHandlerDelegate

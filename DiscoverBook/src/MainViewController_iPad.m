@@ -1,23 +1,24 @@
 #import "MainViewController_iPad.h"
 #import "MyTableViewController_iPad.h"
+#import "GridViewController.h"
 #import "BookSearchHandler.h"
 
-@interface MainViewController_iPad ()
+@implementation MainViewController_iPad {
+  MyTableViewController_iPad *_tableScene;
+  GridViewController *_gridScene;
+}
 
-@property MyTableViewController_iPad *tableScene;
-
-@end
-
-@implementation MainViewController_iPad
-
-@synthesize tableScene = _tableScene;
 @synthesize displayTypeControl = _displayTypeControl;
 
 - (void)displayTypeChanged:(id)sender {
   switch ([sender selectedSegmentIndex]) {
     case 0:
+      [_gridScene.gridView removeFromSuperview];
+      [_tableScene didMoveToParentViewController:self];
       break;
     case 1:
+      [_tableScene.view removeFromSuperview];
+      [_gridScene didMoveToParentViewController:self];
       break;
     case 2:
       break;
@@ -29,12 +30,22 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.tableScene = [self.storyboard instantiateViewControllerWithIdentifier:@"tableScene"];
-  self.tableScene.title = @"reading";
-  self.tableScene.searchHandler = [[BookSearchHandler alloc] init];
-  [self addChildViewController:self.tableScene];
-  [self.tableScene didMoveToParentViewController:self];
-  [self.tableScene loadData];
+  
+  BookSearchHandler *searchHandler = [[BookSearchHandler alloc] init];
+  
+  _tableScene = [self.storyboard instantiateViewControllerWithIdentifier:@"tableScene"];
+  _tableScene.searchHandler = searchHandler;
+  [searchHandler addDelegate:_tableScene];
+  [self addChildViewController:_tableScene];
+  [_tableScene didMoveToParentViewController:self];
+  
+  _gridScene = [self.storyboard instantiateViewControllerWithIdentifier:@"gridScene"];
+  _gridScene.searchHandler = searchHandler;
+  [self addChildViewController:_gridScene];
+  [searchHandler addDelegate:_gridScene];
+  
+  searchHandler.title =  @"reading";
+  [searchHandler load];
 
   [_displayTypeControl addTarget:self action:@selector(displayTypeChanged:) forControlEvents:UIControlEventValueChanged];
 }
@@ -42,10 +53,6 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
   return YES;
-}
-
-- (void) loadData {
-  [self.tableScene loadData];
 }
 
 

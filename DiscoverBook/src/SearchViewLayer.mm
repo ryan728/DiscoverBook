@@ -133,7 +133,7 @@ enum {
 }
 
 - (void)addBookSprite:(Book *)book to:(CCSprite *)sprite {
-  UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:book.imageUrl]]];
+  UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:book.imageUrl]];
   CCSprite *bookSprite = [CCSprite spriteWithCGImage:image.CGImage key:book.isbn];
 
   CCSprite *bg = [CCSprite spriteWithFile:@"round_corner_bg.png"];

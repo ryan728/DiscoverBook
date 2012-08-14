@@ -10,3 +10,6 @@
 [submodule "lib/AFNetworking"]
 	path = lib/AFNetworking
 	url = git://github.com/AFNetworking/AFNetworking.git
+[submodule "lib/AQGridView"]
+	path = lib/AQGridView
+	url = git@github.com:ryan728/AQGridView.git

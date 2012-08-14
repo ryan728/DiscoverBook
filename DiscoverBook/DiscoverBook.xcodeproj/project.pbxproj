@@ -75,6 +75,12 @@
 		497489C915AC322A00CDE0C4 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 497796EA15A53C3100C8DEE0 /* libc++.dylib */; };
 		497796EB15A53C3100C8DEE0 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 497796EA15A53C3100C8DEE0 /* libc++.dylib */; };
 		4979473B15A1CADF00DA964E /* RootController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4979473A15A1CADF00DA964E /* RootController.mm */; };
+		4991CF3A15D9D6CD004BE549 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4991CF3915D9D6CD004BE549 /* GridViewController.m */; };
+		4991CF3B15D9D6CD004BE549 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4991CF3915D9D6CD004BE549 /* GridViewController.m */; };
+		4991CF4215D9DF8E004BE549 /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4991CF4115D9DF8E004BE549 /* GridCell.m */; };
+		4991CF4315D9DF8E004BE549 /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4991CF4115D9DF8E004BE549 /* GridCell.m */; };
+		4991CF4415D9EC5A004BE549 /* libAQGridView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4991CF3315D9D655004BE549 /* libAQGridView.a */; };
+		4991CF4715D9ED28004BE549 /* libAQGridView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4991CF3315D9D655004BE549 /* libAQGridView.a */; };
 		49A1310F15A67BD400C7CACE /* SearchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 49A1310E15A67BD400C7CACE /* SearchViewController.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49A131AC15A67E5D00C7CACE /* SearchViewLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 49A131AB15A67E5D00C7CACE /* SearchViewLayer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49A1341915A6848700C7CACE /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A56CEB15A678480057D161 /* libcocos2d.a */; };
@@ -180,6 +186,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 80FF01D1141C3D980059E59D;
 			remoteInfo = Box2D;
+		};
+		4991CF3215D9D655004BE549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4991CF2B15D9D655004BE549 /* AQGridView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = AQGridView;
+		};
+		4991CF3C15D9D6F6004BE549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4991CF2B15D9D655004BE549 /* AQGridView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = AQGridView;
+		};
+		4991CF4515D9ED22004BE549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4991CF2B15D9D655004BE549 /* AQGridView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = AQGridView;
 		};
 		49A1341A15A684CE00C7CACE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -375,6 +402,11 @@
 		497796EA15A53C3100C8DEE0 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		4979473915A1CADF00DA964E /* RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootController.h; path = src/RootController.h; sourceTree = SOURCE_ROOT; };
 		4979473A15A1CADF00DA964E /* RootController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RootController.mm; path = src/RootController.mm; sourceTree = SOURCE_ROOT; };
+		4991CF2B15D9D655004BE549 /* AQGridView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AQGridView.xcodeproj; path = ../lib/AQGridView/AQGridView.xcodeproj; sourceTree = "<group>"; };
+		4991CF3815D9D6CD004BE549 /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridViewController.h; path = src/GridViewController.h; sourceTree = SOURCE_ROOT; };
+		4991CF3915D9D6CD004BE549 /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridViewController.m; path = src/GridViewController.m; sourceTree = SOURCE_ROOT; };
+		4991CF4015D9DF8E004BE549 /* GridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridCell.h; path = src/GridCell.h; sourceTree = SOURCE_ROOT; };
+		4991CF4115D9DF8E004BE549 /* GridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridCell.m; path = src/GridCell.m; sourceTree = SOURCE_ROOT; };
 		4998957515998E8A0048B5B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		49A1310D15A67BD400C7CACE /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = src/SearchViewController.h; sourceTree = SOURCE_ROOT; };
 		49A1310E15A67BD400C7CACE /* SearchViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SearchViewController.mm; path = src/SearchViewController.mm; sourceTree = SOURCE_ROOT; };
@@ -474,6 +506,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4991CF4715D9ED28004BE549 /* libAQGridView.a in Frameworks */,
 				49F6D8E015AD403400A45C69 /* libDoubanAPIEngine.a in Frameworks */,
 				4954B8E015AD177A00FF2424 /* libBox2D.a in Frameworks */,
 				4954B8DD15AD176A00FF2424 /* libcocos2d.a in Frameworks */,
@@ -501,6 +534,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4991CF4415D9EC5A004BE549 /* libAQGridView.a in Frameworks */,
 				4950F75215AA959000190D85 /* libBox2D.a in Frameworks */,
 				49A1344215A6915F00C7CACE /* libvorbis.a in Frameworks */,
 				49A1343D15A68C3D00C7CACE /* AVFoundation.framework in Frameworks */,
@@ -604,6 +638,8 @@
 				49F06E0115D884E500EBB382 /* MainViewController_iPad.m */,
 				495D9F5515D8B30B007A4F95 /* MyTableViewController_iPad.h */,
 				495D9F5615D8B30B007A4F95 /* MyTableViewController_iPad.m */,
+				4991CF3815D9D6CD004BE549 /* GridViewController.h */,
+				4991CF3915D9D6CD004BE549 /* GridViewController.m */,
 			);
 			name = ipad;
 			sourceTree = "<group>";
@@ -639,6 +675,14 @@
 				497489B215AC2FAE00CDE0C4 /* people_entry.xml */,
 			);
 			name = resources;
+			sourceTree = "<group>";
+		};
+		4991CF2C15D9D655004BE549 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4991CF3315D9D655004BE549 /* libAQGridView.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		49A56C6415A678440057D161 /* Products */ = {
@@ -869,6 +913,7 @@
 		49ED10D115916AE30092CF9D /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				4991CF2B15D9D655004BE549 /* AQGridView.xcodeproj */,
 				49B9D76515A1843500B4C734 /* AFNetworking */,
 				4912EBF1159D700A000D469C /* TestFlightSDK1.0 */,
 				4912EBA4159C8745000D469C /* DCIntrospect */,
@@ -914,6 +959,8 @@
 				49A1343F15A68D1A00C7CACE /* GLES-Render.mm */,
 				49A131AA15A67E5D00C7CACE /* SearchViewLayer.h */,
 				49A131AB15A67E5D00C7CACE /* SearchViewLayer.mm */,
+				4991CF4015D9DF8E004BE549 /* GridCell.h */,
+				4991CF4115D9DF8E004BE549 /* GridCell.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -957,6 +1004,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4991CF4615D9ED22004BE549 /* PBXTargetDependency */,
 				49F6D8DF15AD402D00A45C69 /* PBXTargetDependency */,
 				4954B8DF15AD177700FF2424 /* PBXTargetDependency */,
 				4954B8DC15AD175F00FF2424 /* PBXTargetDependency */,
@@ -977,6 +1025,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4991CF3D15D9D6F6004BE549 /* PBXTargetDependency */,
 				4950F75115AA958A00190D85 /* PBXTargetDependency */,
 				49A1341D15A684D700C7CACE /* PBXTargetDependency */,
 				49A1341B15A684CE00C7CACE /* PBXTargetDependency */,
@@ -1008,6 +1057,10 @@
 			productRefGroup = 49ED10A3159072A30092CF9D /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 4991CF2C15D9D655004BE549 /* Products */;
+					ProjectRef = 4991CF2B15D9D655004BE549 /* AQGridView.xcodeproj */;
+				},
 				{
 					ProductGroup = 4950F73D15AA93E100190D85 /* Products */;
 					ProjectRef = 4950F73C15AA93E100190D85 /* Box2D.xcodeproj */;
@@ -1046,6 +1099,13 @@
 			fileType = archive.ar;
 			path = libGLUI.a;
 			remoteRef = 4950F74A15AA93E100190D85 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4991CF3315D9D655004BE549 /* libAQGridView.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAQGridView.a;
+			remoteRef = 4991CF3215D9D655004BE549 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		49A56CEB15A678480057D161 /* libcocos2d.a */ = {
@@ -1235,6 +1295,8 @@
 				49F6D8E515AD551200A45C7C /* BookSearchHandler.m in Sources */,
 				49F6D8E515AD551200A45C80 /* ContactSearchHandler.m in Sources */,
 				495D9F5815D8B30B007A4F95 /* MyTableViewController_iPad.m in Sources */,
+				4991CF3B15D9D6CD004BE549 /* GridViewController.m in Sources */,
+				4991CF4315D9DF8E004BE549 /* GridCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1287,6 +1349,8 @@
 				49F6D8E515AD551200A45C7B /* BookSearchHandler.m in Sources */,
 				49F6D8E515AD551200A45C7F /* ContactSearchHandler.m in Sources */,
 				495D9F5715D8B30B007A4F95 /* MyTableViewController_iPad.m in Sources */,
+				4991CF3A15D9D6CD004BE549 /* GridViewController.m in Sources */,
+				4991CF4215D9DF8E004BE549 /* GridCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1307,6 +1371,16 @@
 			isa = PBXTargetDependency;
 			name = Box2D;
 			targetProxy = 4954B8DE15AD177700FF2424 /* PBXContainerItemProxy */;
+		};
+		4991CF3D15D9D6F6004BE549 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AQGridView;
+			targetProxy = 4991CF3C15D9D6F6004BE549 /* PBXContainerItemProxy */;
+		};
+		4991CF4615D9ED22004BE549 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AQGridView;
+			targetProxy = 4991CF4515D9ED22004BE549 /* PBXContainerItemProxy */;
 		};
 		49A1341B15A684CE00C7CACE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1409,7 +1483,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				VERSION_INFO_BUILDER = 1.0;
 			};
 			name = Debug;
@@ -1422,7 +1495,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PROVISIONING_PROFILE = "84920B61-1329-41BF-A85D-C8864A5B43EC";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** ${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/cocos2d-iphone-1.0.1/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/** \"${PROJECT_DIR}/../lib/douban-objc-client/DoubanAPIEngine/**";
 				VERSION_INFO_BUILDER = 1.0;
 			};
 			name = Release;
